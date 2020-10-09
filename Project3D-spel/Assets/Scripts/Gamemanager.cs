@@ -11,11 +11,11 @@ public enum TraigeLevel
     Orange=3,
     Red=4,
     Black=5,
-}
+} //level traige determens how bad het is with a patient
 
 public class Gamemanager : MonoBehaviour
 {
-    //patient class has traige color and set the time they have to live
+    //patient class has traige color and set the time they have to live and to check if there saved or if they are dead
     public class Patient
     {
         protected TraigeLevel patientLevel;
@@ -82,6 +82,18 @@ public class Gamemanager : MonoBehaviour
             }
         }
     }
+
+    static public bool CheckPatient(Patient patient)
+    {
+        if (patient.IsDead == true || patient.IsSaved == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }//check if the patient is dead or saved, used for clossing this scene
 
     List<Patient> patientList = new List<Patient>();
     // Start is called before the first frame update
@@ -188,6 +200,11 @@ public class Gamemanager : MonoBehaviour
         /*foreach (Patient patient in patientList)
         {
             patient.CheckTime();
+        }*/
+
+        /*if (patientList.TrueForAll(CheckPatient))
+        {
+
         }*/
     }
 }
