@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Diagnostics;
+using UnityEngine.UI;
 
 public enum TraigeLevel
 {
@@ -132,6 +133,7 @@ public class Patient : MonoBehaviour
         {
             if (hit.name=="Player")
             {
+                UnityEngine.Debug.Log("Hit");
                 text.SetActive(true);
 
                 if (Input.GetKeyDown(KeyCode.E))
@@ -145,4 +147,6 @@ public class Patient : MonoBehaviour
             }
         }
     }
+
+    
 }

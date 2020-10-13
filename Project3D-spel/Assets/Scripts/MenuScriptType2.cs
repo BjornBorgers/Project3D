@@ -56,14 +56,11 @@ public class MenuScriptType2 : MonoBehaviour
                     switch (gameObject.name)
                     {
                         case "RadialmenuB":
-                            Collider[] hitColliders = Physics.OverlapSphere(Player.transform.position, 5);
-                            Debug.Log("RMB");
-                            foreach (var hit in hitColliders)
+                            Collider[] hitCollidersB = Physics.OverlapSphere(Player.transform.position, 5);
+                            foreach (var hit in hitCollidersB)
                             {
-                                Debug.Log("HIT");
-                                if (hit.name=="patient")
+                                if (hit.name.Contains("patient"))
                                 {
-                                    Debug.Log("FOUNDPATIENT");
                                     bool hasProblem = false;
                                     List<IProblems> newList = hit.GetComponent<Patient>().patient.ProblemsList;
                                     for (int i = 0; i < hit.GetComponent<Patient>().patient.ProblemsList.Count; i++)
@@ -78,17 +75,41 @@ public class MenuScriptType2 : MonoBehaviour
                                     {
                                         patientAudio.GetComponent<AudioSource>().clip=badBreathingClip;
                                         patientAudio.GetComponent<AudioSource>().Play();
-                                        Debug.Log("PROP");
                                     }
                                     else
                                     {
                                         patientAudio.GetComponent<AudioSource>().clip = goodBreathingClip;
                                          patientAudio.GetComponent<AudioSource>().Play();
-                                        Debug.Log("NOPROP");
                                     }
                                 }
                             }
                                 break;
+
+                        case "RadialmenuC":
+                            Collider[] hitCollidersC = Physics.OverlapSphere(Player.transform.position, 5);
+                            foreach (var hit in hitCollidersC)
+                            {
+                                if (hit.name.Contains("patient"))
+                                {
+                                    bool hasProblem = false;
+                                    List<IProblems> newList = hit.GetComponent<Patient>().patient.ProblemsList;
+                                    for (int i = 0; i < hit.GetComponent<Patient>().patient.ProblemsList.Count; i++)
+                                    {
+                                        if (hit.GetComponent<Patient>().patient.ProblemsList[i].Name() == "Heart")
+                                        {
+                                            hasProblem = true;
+                                        }
+                                    }
+
+                                    if (hasProblem == true)
+                                    {
+                                        patientAudio.GetComponent<AudioSource>().clip = heartClip;
+                                        patientAudio.GetComponent<AudioSource>().Play();
+                                    }
+                                }
+                            }
+                            break;
+
                         default:
                             break;
                     }
