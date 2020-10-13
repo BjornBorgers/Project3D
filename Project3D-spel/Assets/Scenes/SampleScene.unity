@@ -1474,7 +1474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2446,6 +2446,11 @@ MonoBehaviour:
   - {fileID: 2056961568}
   - {fileID: 1746460002}
   - {fileID: 761673915}
+  Player: {fileID: 922833112}
+  patientAudio: {fileID: 943431350}
+  heartClip: {fileID: 8300000, guid: 57a46b9da7b69ab4e809ec5ce78d803c, type: 3}
+  badBreathingClip: {fileID: 8300000, guid: 0b55ee3415e85304381e3180f50a7040, type: 3}
+  goodBreathingClip: {fileID: 8300000, guid: 10fe96385d872994f97fe52581de5dfe, type: 3}
 --- !u!1 &452450785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2790,6 +2795,11 @@ MonoBehaviour:
   - {fileID: 219926924}
   - {fileID: 164795398}
   - {fileID: 2139978663}
+  Player: {fileID: 922833112}
+  patientAudio: {fileID: 943431350}
+  heartClip: {fileID: 8300000, guid: 57a46b9da7b69ab4e809ec5ce78d803c, type: 3}
+  badBreathingClip: {fileID: 8300000, guid: 0b55ee3415e85304381e3180f50a7040, type: 3}
+  goodBreathingClip: {fileID: 8300000, guid: 10fe96385d872994f97fe52581de5dfe, type: 3}
 --- !u!1 &516510559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,7 +2850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4698,7 +4708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5878,8 +5888,9 @@ GameObject:
   - component: {fileID: 943431353}
   - component: {fileID: 943431352}
   - component: {fileID: 943431355}
+  - component: {fileID: 943431357}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: patient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5975,6 +5986,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 925994883}
   radialMenu: {fileID: 1204216645}
+--- !u!82 &943431357
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943431350}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 3402019276958884979, guid: d88cc66c0394101469dbfbd76d0665f8, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &956492301
 GameObject:
   m_ObjectHideFlags: 0
@@ -6034,6 +6141,11 @@ MonoBehaviour:
   - {fileID: 1821957614}
   - {fileID: 382173171}
   - {fileID: 647162502}
+  Player: {fileID: 922833112}
+  patientAudio: {fileID: 943431350}
+  heartClip: {fileID: 8300000, guid: 57a46b9da7b69ab4e809ec5ce78d803c, type: 3}
+  badBreathingClip: {fileID: 8300000, guid: 0b55ee3415e85304381e3180f50a7040, type: 3}
+  goodBreathingClip: {fileID: 8300000, guid: 10fe96385d872994f97fe52581de5dfe, type: 3}
 --- !u!1 &997059118
 GameObject:
   m_ObjectHideFlags: 0
@@ -7886,6 +7998,11 @@ MonoBehaviour:
   - {fileID: 876254140}
   - {fileID: 904438131}
   - {fileID: 463262340}
+  Player: {fileID: 922833112}
+  patientAudio: {fileID: 943431350}
+  heartClip: {fileID: 8300000, guid: 57a46b9da7b69ab4e809ec5ce78d803c, type: 3}
+  badBreathingClip: {fileID: 8300000, guid: 0b55ee3415e85304381e3180f50a7040, type: 3}
+  goodBreathingClip: {fileID: 8300000, guid: 10fe96385d872994f97fe52581de5dfe, type: 3}
 --- !u!1 &1507955721
 GameObject:
   m_ObjectHideFlags: 0
@@ -8095,6 +8212,11 @@ MonoBehaviour:
   - {fileID: 1430137170}
   - {fileID: 1107573771}
   - {fileID: 618329426}
+  Player: {fileID: 922833112}
+  patientAudio: {fileID: 943431350}
+  heartClip: {fileID: 8300000, guid: 57a46b9da7b69ab4e809ec5ce78d803c, type: 3}
+  badBreathingClip: {fileID: 8300000, guid: 0b55ee3415e85304381e3180f50a7040, type: 3}
+  goodBreathingClip: {fileID: 8300000, guid: 10fe96385d872994f97fe52581de5dfe, type: 3}
 --- !u!1 &1550306669
 GameObject:
   m_ObjectHideFlags: 0
@@ -9164,6 +9286,11 @@ MonoBehaviour:
   - {fileID: 151826300}
   - {fileID: 1038904108}
   - {fileID: 715655285}
+  Player: {fileID: 922833112}
+  patientAudio: {fileID: 943431350}
+  heartClip: {fileID: 8300000, guid: 57a46b9da7b69ab4e809ec5ce78d803c, type: 3}
+  badBreathingClip: {fileID: 8300000, guid: 0b55ee3415e85304381e3180f50a7040, type: 3}
+  goodBreathingClip: {fileID: 8300000, guid: 10fe96385d872994f97fe52581de5dfe, type: 3}
 --- !u!1 &1739143932
 GameObject:
   m_ObjectHideFlags: 0

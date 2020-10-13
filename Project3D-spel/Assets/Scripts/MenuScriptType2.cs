@@ -12,6 +12,14 @@ public class MenuScriptType2 : MonoBehaviour
 
     public GameObject[] menuItems;
 
+    public GameObject Player;
+
+    public GameObject patientAudio;
+
+    public AudioClip heartClip;
+    public AudioClip badBreathingClip;
+    public AudioClip goodBreathingClip;
+
     private MenuItemScript menuItemSc;
     private MenuItemScript previousMenuItemSc;
     // Start is called before the first frame update
@@ -45,6 +53,45 @@ public class MenuScriptType2 : MonoBehaviour
             switch (selection)
             {
                 case 0:
+                    switch (gameObject.name)
+                    {
+                        case "RadialmenuB":
+                            Collider[] hitColliders = Physics.OverlapSphere(Player.transform.position, 5);
+                            Debug.Log("RMB");
+                            foreach (var hit in hitColliders)
+                            {
+                                Debug.Log("HIT");
+                                if (hit.name=="patient")
+                                {
+                                    Debug.Log("FOUNDPATIENT");
+                                    bool hasProblem = false;
+                                    List<IProblems> newList = hit.GetComponent<Patient>().patient.ProblemsList;
+                                    for (int i = 0; i < hit.GetComponent<Patient>().patient.ProblemsList.Count; i++)
+                                    {
+                                        if (hit.GetComponent<Patient>().patient.ProblemsList[i].Name() == "breathing")
+                                        {
+                                            hasProblem = true;
+                                        }
+                                    }
+
+                                    if (hasProblem==true)
+                                    {
+                                        patientAudio.GetComponent<AudioSource>().clip=badBreathingClip;
+                                        patientAudio.GetComponent<AudioSource>().Play();
+                                        Debug.Log("PROP");
+                                    }
+                                    else
+                                    {
+                                        patientAudio.GetComponent<AudioSource>().clip = goodBreathingClip;
+                                         patientAudio.GetComponent<AudioSource>().Play();
+                                        Debug.Log("NOPROP");
+                                    }
+                                }
+                            }
+                                break;
+                        default:
+                            break;
+                    }
                     break;
                 case 1:
                     firstMenu.SetActive(true);

@@ -17,6 +17,7 @@ public class Patient : MonoBehaviour
 {
     public GameObject text;
     public GameObject radialMenu;
+
     public class PatientStat
     {
         protected TraigeLevel patientLevel;
@@ -24,12 +25,14 @@ public class Patient : MonoBehaviour
         protected bool isDead = false;
         protected bool isSaved = false;
         protected Stopwatch lifeTimer;
+        protected List<IProblems> problemsList = new List<IProblems>();
 
         public TraigeLevel PatientLevel { get => patientLevel; set => patientLevel = value; }
         public int TimeToLife { get => timeToLife; set => timeToLife = value; }
         public bool IsDead { get => isDead; set => isDead = value; }
         public bool IsSaved { get => isSaved; set => isSaved = value; }
         public Stopwatch LifeTimer { get => lifeTimer; set => lifeTimer = value; }
+        public List<IProblems> ProblemsList { get => problemsList; set => problemsList = value; }
 
         public PatientStat(TraigeLevel NPatientLevel)
         {
@@ -93,10 +96,31 @@ public class Patient : MonoBehaviour
                 }
             }
         }
+
+        public void GiveProblem()
+        {
+            switch (Random.Range(0,2))
+            {
+                case 0:
+                    Breathing breathing = new Breathing();
+                    ProblemsList.Add(breathing);
+                    break;
+
+                case 1:
+                    HeartStopped heart = new HeartStopped();
+                    ProblemsList.Add(heart);
+                    break;
+
+                default:
+                    break;
+            }
+        }
     }
+    public PatientStat patient = new PatientStat(TraigeLevel.Green);
     // Start is called before the first frame update
     void Start()
     {
+        patient.GiveProblem();
         
     }
 

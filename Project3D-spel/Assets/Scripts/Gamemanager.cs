@@ -14,14 +14,6 @@ public class Gamemanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*foreach (Patient patient in patientList)
-        {
-            patient.CheckTime();
-        }*/
-
-        /*if (patientList.TrueForAll(CheckPatient))
-        {
-
-        }*/
+       
     }
 }
