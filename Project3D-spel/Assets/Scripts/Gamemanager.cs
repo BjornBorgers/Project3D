@@ -66,6 +66,17 @@ public class Gamemanager : MonoBehaviour
             LifeTimer.Start();
         }
 
+        public void PauseTimer()
+        {
+            lifeTimer.Stop();
+
+        }
+
+        public void RestartTimer()
+        {
+            LifeTimer.Restart();
+        }
+
         public void CheckTime()
         {
             if (IsDead==true||IsSaved==true)
@@ -95,7 +106,7 @@ public class Gamemanager : MonoBehaviour
         }
     }//check if the patient is dead or saved, used for clossing this scene
 
-    List<Patient> patientList = new List<Patient>();
+    static public List<Patient> patientList = new List<Patient>();
     // Start is called before the first frame update
     void Start()
     {
