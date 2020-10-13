@@ -12,6 +12,14 @@ public class MenuScriptType2 : MonoBehaviour
 
     public GameObject[] menuItems;
 
+    public GameObject Player;
+
+    public GameObject patientAudio;
+
+    public AudioClip heartClip;
+    public AudioClip badBreathingClip;
+    public AudioClip goodBreathingClip;
+
     private MenuItemScript menuItemSc;
     private MenuItemScript previousMenuItemSc;
     // Start is called before the first frame update
@@ -45,6 +53,66 @@ public class MenuScriptType2 : MonoBehaviour
             switch (selection)
             {
                 case 0:
+                    switch (gameObject.name)
+                    {
+                        case "RadialmenuB":
+                            Collider[] hitCollidersB = Physics.OverlapSphere(Player.transform.position, 5);
+                            foreach (var hit in hitCollidersB)
+                            {
+                                if (hit.name.Contains("patient"))
+                                {
+                                    bool hasProblem = false;
+                                    List<IProblems> newList = hit.GetComponent<Patient>().patient.ProblemsList;
+                                    for (int i = 0; i < hit.GetComponent<Patient>().patient.ProblemsList.Count; i++)
+                                    {
+                                        if (hit.GetComponent<Patient>().patient.ProblemsList[i].Name() == "breathing")
+                                        {
+                                            hasProblem = true;
+                                        }
+                                    }
+
+                                    if (hasProblem==true)
+                                    {
+                                        patientAudio.GetComponent<AudioSource>().clip=badBreathingClip;
+                                        patientAudio.GetComponent<AudioSource>().Play();
+                                    }
+                                    else
+                                    {
+                                        patientAudio.GetComponent<AudioSource>().clip = goodBreathingClip;
+                                         patientAudio.GetComponent<AudioSource>().Play();
+                                    }
+                                }
+                            }
+                                break;
+
+                        case "RadialmenuC":
+                            Collider[] hitCollidersC = Physics.OverlapSphere(Player.transform.position, 5);
+                            foreach (var hit in hitCollidersC)
+                            {
+                                if (hit.name.Contains("patient"))
+                                {
+                                    bool hasProblem = false;
+                                    List<IProblems> newList = hit.GetComponent<Patient>().patient.ProblemsList;
+                                    for (int i = 0; i < hit.GetComponent<Patient>().patient.ProblemsList.Count; i++)
+                                    {
+                                        if (hit.GetComponent<Patient>().patient.ProblemsList[i].Name() == "Heart")
+                                        {
+                                            hasProblem = true;
+                                        }
+                                    }
+
+                                    if (hasProblem == true)
+                                    {
+                                        patientAudio.GetComponent<AudioSource>().clip = heartClip;
+                                        patientAudio.GetComponent<AudioSource>().Play();
+                                    }
+                                }
+                            }
+                            break;
+
+                        default:
+                            break;
+                    }
                     break;
                 case 1:
                     firstMenu.SetActive(true);

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MenuItemTriage : MonoBehaviour
 {
-    Color hoverColor = Color.cyan;
+    Color hoverColor = Color.white;
     public int colorNum;
     Color baseColor = Color.gray;
     public Image backGround;
@@ -25,10 +25,10 @@ public class MenuItemTriage : MonoBehaviour
                 baseColor = Color.green;
                 break;
             case 3:
-                baseColor = Color.yellow;
+                baseColor = new Color(255, 50, 0);
                 break;
             case 4:
-                baseColor = new Color(255,165,0);
+                baseColor = Color.yellow;
                 break;
             case 5:
                 baseColor = Color.red;
