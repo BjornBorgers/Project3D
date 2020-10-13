@@ -15,6 +15,8 @@ public enum TraigeLevel
 
 public class Patient : MonoBehaviour
 {
+    public GameObject text;
+    public GameObject radialMenu;
     public class PatientStat
     {
         protected TraigeLevel patientLevel;
@@ -106,7 +108,16 @@ public class Patient : MonoBehaviour
         {
             if (hit.name=="Player")
             {
+                text.SetActive(true);
 
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    radialMenu.SetActive(true);
+                }
+            }
+            else
+            {
+                text.SetActive(false);
             }
         }
     }

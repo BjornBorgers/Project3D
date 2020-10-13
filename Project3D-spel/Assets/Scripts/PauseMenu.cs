@@ -28,7 +28,7 @@ public class PauseMenu : MonoBehaviour
         gameObject.SetActive(false);
         hudScreen.SetActive(true);
         Cursor.visible = false;
-        player.GetComponent<CameraMouse>().enabled = player.GetComponent<CameraMouse>().enabled;
-        player.GetComponent<PlayerMovement>().enabled = player.GetComponent<PlayerMovement>().enabled;
+        player.GetComponent<CameraMouse>().enabled = !player.GetComponent<CameraMouse>().enabled;
+        player.GetComponent<PlayerMovement>().enabled = !player.GetComponent<PlayerMovement>().enabled;
     }
 }
