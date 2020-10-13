@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public GameObject hudScreen;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        foreach (Gamemanager.Patient patient in Gamemanager.patientList)
-        {
-            patient.PauseTimer();
-        }
+        Cursor.visible = true;
+        hudScreen.SetActive(false);
+        player.GetComponent<CameraMouse>().enabled= !player.GetComponent<CameraMouse>().enabled;
+        player.GetComponent<PlayerMovement>().enabled = !player.GetComponent<PlayerMovement>().enabled;
     }
 
     // Update is called once per frame
@@ -23,10 +25,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Continue()
     {
-        foreach (Gamemanager.Patient patient in Gamemanager.patientList)
-        {
-            patient.RestartTimer();
-        }
         gameObject.SetActive(false);
+        hudScreen.SetActive(true);
+        Cursor.visible = false;
+        player.GetComponent<CameraMouse>().enabled = player.GetComponent<CameraMouse>().enabled;
+        player.GetComponent<PlayerMovement>().enabled = player.GetComponent<PlayerMovement>().enabled;
     }
 }

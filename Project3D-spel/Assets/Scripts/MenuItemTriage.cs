@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MenuItemTriage : MonoBehaviour
 {
-    Color hoverColor = Color.cyan;
+    Color hoverColor = Color.white;
     public int colorNum;
     Color baseColor = Color.gray;
     public Image backGround;

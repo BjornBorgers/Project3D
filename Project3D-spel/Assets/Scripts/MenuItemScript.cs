@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class MenuItemScript : MonoBehaviour
 {
-    Color hoverColor = Color.cyan;
-    Color baseColor=new Color(74,72,70);
+    Color hoverColor = Color.white;
+    Color baseColor = Color.gray;
     public Image backGround;
     public GameObject description;
     // Start is called before the first frame update
