@@ -2486,10 +2486,9 @@ MonoBehaviour:
   - {fileID: 1746460002}
   - {fileID: 761673915}
   Player: {fileID: 922833112}
-  patientAudio: {fileID: 943431350}
   heartClip: {fileID: 8300000, guid: 57a46b9da7b69ab4e809ec5ce78d803c, type: 3}
-  badBreathingClip: {fileID: 8300000, guid: 0b55ee3415e85304381e3180f50a7040, type: 3}
-  goodBreathingClip: {fileID: 8300000, guid: 10fe96385d872994f97fe52581de5dfe, type: 3}
+  badBreathingClip: {fileID: 8300000, guid: 6306f363b9030f44591e315123208b40, type: 3}
+  goodBreathingClip: {fileID: 8300000, guid: 77b8aabb1913e1b468dedf464645f28b, type: 3}
 --- !u!1 &452450785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2835,10 +2834,9 @@ MonoBehaviour:
   - {fileID: 164795398}
   - {fileID: 2139978663}
   Player: {fileID: 922833112}
-  patientAudio: {fileID: 943431350}
   heartClip: {fileID: 8300000, guid: 57a46b9da7b69ab4e809ec5ce78d803c, type: 3}
-  badBreathingClip: {fileID: 8300000, guid: 0b55ee3415e85304381e3180f50a7040, type: 3}
-  goodBreathingClip: {fileID: 8300000, guid: 10fe96385d872994f97fe52581de5dfe, type: 3}
+  badBreathingClip: {fileID: 8300000, guid: 6306f363b9030f44591e315123208b40, type: 3}
+  goodBreathingClip: {fileID: 8300000, guid: 77b8aabb1913e1b468dedf464645f28b, type: 3}
 --- !u!1 &516510559
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,9 +3934,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -3946,23 +3944,50 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -10.0039835
+      outSlope: -10.0039835
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.2
+      value: 0.5
+      inSlope: -2.5009959
+      outSlope: -2.5009959
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4
+      value: 0.25
+      inSlope: -0.62524897
+      outSlope: -0.62524897
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.8
+      value: 0.125
+      inSlope: -0.15631224
+      outSlope: -0.15631224
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.10003988
+      outSlope: -0.10003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -3971,7 +3996,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -6447,9 +6472,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -6457,23 +6482,50 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -10.0039835
+      outSlope: -10.0039835
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.2
+      value: 0.5
+      inSlope: -2.5009959
+      outSlope: -2.5009959
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4
+      value: 0.25
+      inSlope: -0.62524897
+      outSlope: -0.62524897
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.8
+      value: 0.125
+      inSlope: -0.15631224
+      outSlope: -0.15631224
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.10003988
+      outSlope: -0.10003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -6482,7 +6534,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -6582,10 +6634,9 @@ MonoBehaviour:
   - {fileID: 382173171}
   - {fileID: 647162502}
   Player: {fileID: 922833112}
-  patientAudio: {fileID: 943431350}
   heartClip: {fileID: 8300000, guid: 57a46b9da7b69ab4e809ec5ce78d803c, type: 3}
-  badBreathingClip: {fileID: 8300000, guid: 0b55ee3415e85304381e3180f50a7040, type: 3}
-  goodBreathingClip: {fileID: 8300000, guid: 10fe96385d872994f97fe52581de5dfe, type: 3}
+  badBreathingClip: {fileID: 8300000, guid: 6306f363b9030f44591e315123208b40, type: 3}
+  goodBreathingClip: {fileID: 8300000, guid: 77b8aabb1913e1b468dedf464645f28b, type: 3}
 --- !u!1 &959119359
 GameObject:
   m_ObjectHideFlags: 0
@@ -8680,10 +8731,9 @@ MonoBehaviour:
   - {fileID: 904438131}
   - {fileID: 463262340}
   Player: {fileID: 922833112}
-  patientAudio: {fileID: 943431350}
   heartClip: {fileID: 8300000, guid: 57a46b9da7b69ab4e809ec5ce78d803c, type: 3}
-  badBreathingClip: {fileID: 8300000, guid: 0b55ee3415e85304381e3180f50a7040, type: 3}
-  goodBreathingClip: {fileID: 8300000, guid: 10fe96385d872994f97fe52581de5dfe, type: 3}
+  badBreathingClip: {fileID: 8300000, guid: 6306f363b9030f44591e315123208b40, type: 3}
+  goodBreathingClip: {fileID: 8300000, guid: 77b8aabb1913e1b468dedf464645f28b, type: 3}
 --- !u!1 &1486812171
 GameObject:
   m_ObjectHideFlags: 0
@@ -8973,10 +9023,9 @@ MonoBehaviour:
   - {fileID: 1107573771}
   - {fileID: 618329426}
   Player: {fileID: 922833112}
-  patientAudio: {fileID: 943431350}
   heartClip: {fileID: 8300000, guid: 57a46b9da7b69ab4e809ec5ce78d803c, type: 3}
-  badBreathingClip: {fileID: 8300000, guid: 0b55ee3415e85304381e3180f50a7040, type: 3}
-  goodBreathingClip: {fileID: 8300000, guid: 10fe96385d872994f97fe52581de5dfe, type: 3}
+  badBreathingClip: {fileID: 8300000, guid: 6306f363b9030f44591e315123208b40, type: 3}
+  goodBreathingClip: {fileID: 8300000, guid: 77b8aabb1913e1b468dedf464645f28b, type: 3}
 --- !u!1 &1550306669
 GameObject:
   m_ObjectHideFlags: 0
@@ -10047,10 +10096,9 @@ MonoBehaviour:
   - {fileID: 1038904108}
   - {fileID: 715655285}
   Player: {fileID: 922833112}
-  patientAudio: {fileID: 943431350}
   heartClip: {fileID: 8300000, guid: 57a46b9da7b69ab4e809ec5ce78d803c, type: 3}
-  badBreathingClip: {fileID: 8300000, guid: 0b55ee3415e85304381e3180f50a7040, type: 3}
-  goodBreathingClip: {fileID: 8300000, guid: 10fe96385d872994f97fe52581de5dfe, type: 3}
+  badBreathingClip: {fileID: 8300000, guid: 6306f363b9030f44591e315123208b40, type: 3}
+  goodBreathingClip: {fileID: 8300000, guid: 77b8aabb1913e1b468dedf464645f28b, type: 3}
 --- !u!1 &1739143932
 GameObject:
   m_ObjectHideFlags: 0
@@ -10866,9 +10914,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -10876,23 +10924,50 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -10.0039835
+      outSlope: -10.0039835
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      time: 0.2
+      value: 0.5
+      inSlope: -2.5009959
+      outSlope: -2.5009959
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4
+      value: 0.25
+      inSlope: -0.62524897
+      outSlope: -0.62524897
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.8
+      value: 0.125
+      inSlope: -0.15631224
+      outSlope: -0.15631224
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.99728394
+      value: 0
+      inSlope: -0.10003988
+      outSlope: -0.10003988
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -10901,7 +10976,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

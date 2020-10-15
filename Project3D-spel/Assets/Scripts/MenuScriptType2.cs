@@ -14,8 +14,6 @@ public class MenuScriptType2 : MonoBehaviour
 
     public GameObject Player;
 
-    public GameObject patientAudio;
-
     public AudioClip heartClip;
     public AudioClip badBreathingClip;
     public AudioClip goodBreathingClip;
@@ -73,13 +71,13 @@ public class MenuScriptType2 : MonoBehaviour
 
                                     if (hasProblem==true)
                                     {
-                                        patientAudio.GetComponent<AudioSource>().clip=badBreathingClip;
-                                        patientAudio.GetComponent<AudioSource>().Play();
+                                        hit.GetComponent<Patient>().GetComponent<AudioSource>().clip= badBreathingClip;
+                                        hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
                                     }
                                     else
                                     {
-                                        patientAudio.GetComponent<AudioSource>().clip = goodBreathingClip;
-                                         patientAudio.GetComponent<AudioSource>().Play();
+                                        hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = goodBreathingClip;
+                                        hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
                                     }
                                 }
                             }
@@ -101,10 +99,10 @@ public class MenuScriptType2 : MonoBehaviour
                                         }
                                     }
 
-                                    if (hasProblem == true)
+                                    if (hasProblem == false)
                                     {
-                                        patientAudio.GetComponent<AudioSource>().clip = heartClip;
-                                        patientAudio.GetComponent<AudioSource>().Play();
+                                        hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = heartClip;
+                                        hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
                                     }
                                 }
                             }
