@@ -54,21 +54,26 @@ public class TriageMenu : MonoBehaviour
                     Collider[] hitColliders0 = Physics.OverlapSphere(Player.transform.position, 5);
                     foreach (var hit in hitColliders0)
                     {
+                        Debug.Log("Hit-Color");
                         switch (hit.name)
                         {
                             case "patient":
                                 TriadeBackGroundA.color = new Color(255,100,0);
+                                Debug.Log("Hit-Orange");
                                 break;
 
                             case "patient(1)":
                                 TriadeBackGroundB.color = new Color(255, 100, 0);
+                                Debug.Log("Hit-Orange");
                                 break;
 
                             case "patient(2)":
                                 TriadeBackGroundC.color = new Color(255, 100, 0);
+                                Debug.Log("Hit-Orange");
                                 break;
 
                             default:
+                                Debug.Log("Hit-Def");
                                 break;
                         }
                     }
