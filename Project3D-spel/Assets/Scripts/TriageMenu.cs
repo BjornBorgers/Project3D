@@ -57,17 +57,17 @@ public class TriageMenu : MonoBehaviour
                         Debug.Log("Hit-Color");
                         switch (hit.name)
                         {
-                            case "patient":
+                            case "patient-A":
                                 TriadeBackGroundA.color = new Color(255,100,0);
                                 Debug.Log("Hit-Orange");
                                 break;
 
-                            case "patient(1)":
+                            case "patient-B":
                                 TriadeBackGroundB.color = new Color(255, 100, 0);
                                 Debug.Log("Hit-Orange");
                                 break;
 
-                            case "patient(2)":
+                            case "patient-C":
                                 TriadeBackGroundC.color = new Color(255, 100, 0);
                                 Debug.Log("Hit-Orange");
                                 break;
@@ -84,15 +84,15 @@ public class TriageMenu : MonoBehaviour
                     {
                         switch (hit.name)
                         {
-                            case "patient":
+                            case "patient-A":
                                 TriadeBackGroundA.color = Color.yellow;
                                 break;
 
-                            case "patient(1)":
+                            case "patient-B":
                                 TriadeBackGroundB.color = Color.yellow;
                                 break;
 
-                            case "patient(2)":
+                            case "patient-C":
                                 TriadeBackGroundC.color = Color.yellow;
                                 break;
 
@@ -107,15 +107,15 @@ public class TriageMenu : MonoBehaviour
                     {
                         switch (hit.name)
                         {
-                            case "patient":
+                            case "patient-A":
                                 TriadeBackGroundA.color = Color.red;
                                 break;
 
-                            case "patient(1)":
+                            case "patient-B":
                                 TriadeBackGroundB.color = Color.red;
                                 break;
 
-                            case "patient(2)":
+                            case "patient-C":
                                 TriadeBackGroundC.color = Color.red;
                                 break;
 
@@ -130,15 +130,15 @@ public class TriageMenu : MonoBehaviour
                     {
                         switch (hit.name)
                         {
-                            case "patient":
+                            case "patient-A":
                                 TriadeBackGroundA.color = Color.black;
                                 break;
 
-                            case "patient(1)":
+                            case "patient-B":
                                 TriadeBackGroundB.color = Color.black;
                                 break;
 
-                            case "patient(2)":
+                            case "patient-C":
                                 TriadeBackGroundC.color = Color.black;
                                 break;
 
@@ -157,15 +157,15 @@ public class TriageMenu : MonoBehaviour
                     {
                         switch (hit.name)
                         {
-                            case "patient":
+                            case "patient-A":
                                 TriadeBackGroundA.color = Color.blue;
                                 break;
 
-                            case "patient(1)":
+                            case "patient-B":
                                 TriadeBackGroundB.color = Color.blue;
                                 break;
 
-                            case "patient(2)":
+                            case "patient-C":
                                 TriadeBackGroundC.color = Color.blue;
                                 break;
 
@@ -180,15 +180,15 @@ public class TriageMenu : MonoBehaviour
                     {
                         switch (hit.name)
                         {
-                            case "patient":
+                            case "patient-A":
                                 TriadeBackGroundA.color = Color.green;
                                 break;
 
-                            case "patient(1)":
+                            case "patient-B":
                                 TriadeBackGroundB.color = Color.green;
                                 break;
 
-                            case "patient(2)":
+                            case "patient-C":
                                 TriadeBackGroundC.color = Color.green;
                                 break;
 

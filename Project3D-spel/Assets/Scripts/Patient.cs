@@ -18,112 +18,70 @@ public class Patient : MonoBehaviour
 {
     public GameObject text;
     public GameObject radialMenu;
-    public GameObject HeartNum;
+    public GameObject heartText;
+    public TraigeLevel level;
+    Stopwatch lifeTimer = new Stopwatch();
+    public bool heartProblem;
+    public bool breathingProblem;
+    public bool armProblem;
+    public bool legProblem;
+    int timeToLife;
+    bool isDead = false;
+    bool isSaved = false;
+    public List<IProblems> problemsList = new List<IProblems>();
 
-    public class PatientStat
-    {
-        protected TraigeLevel patientLevel;
-        protected int timeToLife;
-        protected bool isDead = false;
-        protected bool isSaved = false;
-        protected Stopwatch lifeTimer;
-        protected List<IProblems> problemsList = new List<IProblems>();
 
-        public TraigeLevel PatientLevel { get => patientLevel; set => patientLevel = value; }
-        public int TimeToLife { get => timeToLife; set => timeToLife = value; }
-        public bool IsDead { get => isDead; set => isDead = value; }
-        public bool IsSaved { get => isSaved; set => isSaved = value; }
-        public Stopwatch LifeTimer { get => lifeTimer; set => lifeTimer = value; }
-        public List<IProblems> ProblemsList { get => problemsList; set => problemsList = value; }
-
-        public PatientStat(TraigeLevel NPatientLevel)
-        {
-            switch (NPatientLevel)
-            {
-                case TraigeLevel.Blue:
-                    IsSaved = true;
-                    timeToLife = 720000;
-                    break;
-                case TraigeLevel.Green:
-                    timeToLife = 720000;
-                    break;
-                case TraigeLevel.Yellow:
-                    timeToLife = 600000;
-                    break;
-                case TraigeLevel.Orange:
-                    timeToLife = 480000;
-                    break;
-                case TraigeLevel.Red:
-                    timeToLife = 300000;
-                    break;
-                case TraigeLevel.Black:
-                    IsDead = true;
-                    timeToLife = 60000;
-                    break;
-                default:
-                    break;
-            }
-
-            LifeTimer = new Stopwatch();
-        }
-
-        public void StartTimer()
-        {
-            LifeTimer.Start();
-        }
-
-        public void PauseTimer()
-        {
-            lifeTimer.Stop();
-
-        }
-
-        public void RestartTimer()
-        {
-            LifeTimer.Restart();
-        }
-
-        public void CheckTime()
-        {
-            if (IsDead == true || IsSaved == true)
-            {
-                LifeTimer.Stop();
-            }
-            else
-            {
-                if (LifeTimer.ElapsedMilliseconds >= TimeToLife)
-                {
-                    IsDead = true;
-                    LifeTimer.Stop();
-                }
-            }
-        }
-
-        public void GiveProblem()
-        {
-            switch (Random.Range(0,2))
-            {
-                case 0:
-                    Breathing breathing = new Breathing();
-                    ProblemsList.Add(breathing);
-                    break;
-
-                case 1:
-                    HeartStopped heart = new HeartStopped();
-                    ProblemsList.Add(heart);
-                    break;
-
-                default:
-                    break;
-            }
-        }
-    }
-    public PatientStat patient = new PatientStat(TraigeLevel.Green);
     // Start is called before the first frame update
     void Start()
     {
-        patient.GiveProblem();
-        
+        switch (level)
+        {
+            case TraigeLevel.Blue:
+                isSaved = true;
+                timeToLife = 720000;
+                break;
+            case TraigeLevel.Green:
+                timeToLife = 720000;
+                break;
+            case TraigeLevel.Yellow:
+                timeToLife = 600000;
+                break;
+            case TraigeLevel.Orange:
+                timeToLife = 480000;
+                break;
+            case TraigeLevel.Red:
+                timeToLife = 300000;
+                break;
+            case TraigeLevel.Black:
+                isDead = true;
+                timeToLife = 60000;
+                break;
+            default:
+                break;
+        }
+
+        StartTimer();
+
+        if (heartProblem == true)
+        {
+            HeartStopped heart = new HeartStopped();
+            problemsList.Add(heart);
+        }
+        if (breathingProblem == true)
+        {
+            Breathing breathing = new Breathing();
+            problemsList.Add(breathing);
+        }
+        if (armProblem == true)
+        {
+            BrokenArm arm = new BrokenArm();
+            problemsList.Add(arm);
+        }
+        if (legProblem == true)
+        {
+            BrokenLeg leg = new BrokenLeg();
+            problemsList.Add(leg);
+        }
     }
 
     // Update is called once per frame
@@ -132,7 +90,7 @@ public class Patient : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 5);
         foreach (var hit in hitColliders)
         {
-            if (hit.name=="Player")
+            if (hit.name == "Player")
             {
                 UnityEngine.Debug.Log("Hit");
                 text.SetActive(true);
@@ -149,11 +107,40 @@ public class Patient : MonoBehaviour
         }
     }
 
-    public void ShowHeart(string num)
+    public void StopTime()
     {
-        HeartNum.GetComponent<Text>().text = num;
-        HeartNum.SetActive(true);
+        lifeTimer.Stop();
     }
 
-    
+    public void StartTimer()
+    {
+        lifeTimer.Start();
+    }
+
+    public void RestartTimer()
+    {
+        lifeTimer.Restart();
+    }
+
+    public void CheckTime()
+    {
+        if (isDead == true || isSaved == true)
+        {
+            lifeTimer.Stop();
+        }
+        else
+        {
+            if (lifeTimer.ElapsedMilliseconds >= timeToLife)
+            {
+                isDead = true;
+                lifeTimer.Stop();
+            }
+        }
+    }
+
+    public void ShowHeart(string num)
+    {
+        heartText.GetComponent<Text>().text = num;
+        heartText.SetActive(true);
+    }
 }

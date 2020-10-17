@@ -60,10 +60,10 @@ public class MenuScriptType2 : MonoBehaviour
                                 if (hit.name.Contains("patient"))
                                 {
                                     bool hasProblem = false;
-                                    List<IProblems> newList = hit.GetComponent<Patient>().patient.ProblemsList;
-                                    for (int i = 0; i < hit.GetComponent<Patient>().patient.ProblemsList.Count; i++)
+                                    List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                                     {
-                                        if (hit.GetComponent<Patient>().patient.ProblemsList[i].Name() == "breathing")
+                                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "breathing")
                                         {
                                             hasProblem = true;
                                         }
@@ -90,10 +90,10 @@ public class MenuScriptType2 : MonoBehaviour
                                 if (hit.name.Contains("patient"))
                                 {
                                     bool hasProblem = false;
-                                    List<IProblems> newList = hit.GetComponent<Patient>().patient.ProblemsList;
-                                    for (int i = 0; i < hit.GetComponent<Patient>().patient.ProblemsList.Count; i++)
+                                    List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                                     {
-                                        if (hit.GetComponent<Patient>().patient.ProblemsList[i].Name() == "Heart")
+                                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "heart")
                                         {
                                             hasProblem = true;
                                         }
