@@ -11,7 +11,7 @@ public class MainExit : MonoBehaviour
     }
 
     // Update is called once per frame
-    void MenuExit()
+    public void MenuExit()
     {
         Application.Quit();
     }

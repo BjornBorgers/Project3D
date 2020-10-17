@@ -103,6 +103,11 @@ public class MenuScriptType2 : MonoBehaviour
                                     {
                                         hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = heartClip;
                                         hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
+                                        hit.GetComponent<Patient>().ShowHeart("80");
+                                    }
+                                    else
+                                    {
+                                        hit.GetComponent<Patient>().ShowHeart("0");
                                     }
                                 }
                             }

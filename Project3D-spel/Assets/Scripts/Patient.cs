@@ -18,6 +18,7 @@ public class Patient : MonoBehaviour
 {
     public GameObject text;
     public GameObject radialMenu;
+    public GameObject HeartNum;
 
     public class PatientStat
     {
@@ -146,6 +147,12 @@ public class Patient : MonoBehaviour
                 text.SetActive(false);
             }
         }
+    }
+
+    public void ShowHeart(string num)
+    {
+        HeartNum.GetComponent<Text>().text = num;
+        HeartNum.SetActive(true);
     }
 
     

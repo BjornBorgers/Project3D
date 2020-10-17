@@ -28,13 +28,15 @@ public class MenuScript : MonoBehaviour
     {
         player.GetComponent<CameraMouse>().enabled = !player.GetComponent<CameraMouse>().enabled;
         player.GetComponent<PlayerMovement>().enabled = !player.GetComponent<PlayerMovement>().enabled;
+        text.SetActive(false);
+        crossHair.SetActive(false);
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        text.SetActive(false);
-        crossHair.SetActive(false);
+
         normalisedMousePosition = new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2);
         currentAngle = Mathf.Atan2(normalisedMousePosition.y, normalisedMousePosition.x) * Mathf.Rad2Deg;
 
@@ -75,6 +77,7 @@ public class MenuScript : MonoBehaviour
                 case 4:
                     player.GetComponent<CameraMouse>().enabled = !player.GetComponent<CameraMouse>().enabled;
                     player.GetComponent<PlayerMovement>().enabled = !player.GetComponent<PlayerMovement>().enabled;
+                    Cursor.visible = false;
                     crossHair.SetActive(true);
                     gameObject.SetActive(false);
                     break;
