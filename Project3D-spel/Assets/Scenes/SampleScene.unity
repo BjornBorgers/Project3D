@@ -3840,6 +3840,10 @@ PrefabInstance:
       propertyPath: HeartNum
       value: 
       objectReference: {fileID: 959327988}
+    - target: {fileID: 3655713814246333974, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
+      propertyPath: heartText
+      value: 
+      objectReference: {fileID: 959327988}
     - target: {fileID: 3655713814246333975, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.size
       value: 5
@@ -3974,7 +3978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3832859212435459357, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3832859212435459357, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4002,7 +4006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4502154361983260583, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
       propertyPath: m_Name
-      value: patient
+      value: patient-A
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
@@ -6321,6 +6325,18 @@ PrefabInstance:
       propertyPath: HeartNum
       value: 
       objectReference: {fileID: 2062192214}
+    - target: {fileID: 3655713814246333974, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
+      propertyPath: heartText
+      value: 
+      objectReference: {fileID: 2062192214}
+    - target: {fileID: 3655713814246333974, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
+      propertyPath: heartProblem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655713814246333974, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
+      propertyPath: level
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3655713814246333975, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.size
       value: 5
@@ -6455,7 +6471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3832859212435459357, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3832859212435459357, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6483,7 +6499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4502154361983260583, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
       propertyPath: m_Name
-      value: patient(1)
+      value: patient-B
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
@@ -6716,7 +6732,7 @@ GameObject:
   - component: {fileID: 925994886}
   - component: {fileID: 925994885}
   m_Layer: 5
-  m_Name: Text-Patient
+  m_Name: Text-PatientA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6858,7 +6874,7 @@ GameObject:
   - component: {fileID: 959119362}
   - component: {fileID: 959119361}
   m_Layer: 5
-  m_Name: Text-Patient (2)
+  m_Name: Text-PatientC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8554,6 +8570,18 @@ PrefabInstance:
       propertyPath: HeartNum
       value: 
       objectReference: {fileID: 914687260}
+    - target: {fileID: 3655713814246333974, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
+      propertyPath: heartText
+      value: 
+      objectReference: {fileID: 914687260}
+    - target: {fileID: 3655713814246333974, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
+      propertyPath: breathingProblem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655713814246333974, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3655713814246333975, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.size
       value: 5
@@ -8688,7 +8716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3832859212435459357, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3832859212435459357, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8716,7 +8744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4502154361983260583, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
       propertyPath: m_Name
-      value: patient(2)
+      value: patient-C
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99dc344fd4d553446a0976ecf0db01af, type: 3}
@@ -8752,9 +8780,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 627728436}
   - {fileID: 903146909}
   - {fileID: 1345337280}
-  - {fileID: 627728436}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9363,7 +9391,7 @@ GameObject:
   - component: {fileID: 1486812174}
   - component: {fileID: 1486812173}
   m_Layer: 5
-  m_Name: Text-Patient (1)
+  m_Name: Text-PatientB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
