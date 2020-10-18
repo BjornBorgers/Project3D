@@ -29,6 +29,7 @@ public class MenuScriptType2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Player.GetComponentInChildren<Animator>().ResetTrigger("Use bandage");
         normalisedMousePosition = new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2);
         currentAngle = Mathf.Atan2(normalisedMousePosition.y, normalisedMousePosition.x) * Mathf.Rad2Deg;
 
@@ -115,6 +116,33 @@ public class MenuScriptType2 : MonoBehaviour
                             }
                             break;
 
+                        case "RadialmenuI":
+                            Collider[] hitCollidersI = Physics.OverlapSphere(Player.transform.position, 5);
+                            Debug.Log("hitI");
+                            foreach (var hit in hitCollidersI)
+                            {
+                                if (hit.name.Contains("patient"))
+                                {
+                                    bool hasProblem = false;
+                                    List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                                    {
+                                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" || hit.GetComponent<Patient>().problemsList[i].Name() == "arm")
+                                        {
+                                            hasProblem = true;
+                                        }
+                                    }
+                                    Debug.Log("hitPat");
+
+                                    if (hasProblem == true)
+                                    {
+                                        Debug.Log("hitProb");
+                                        Player.GetComponentInChildren<Animator>().SetTrigger("Use bandage");
+                                    }
+                                }
+                            }
+                            break;
+
                         default:
                             break;
                     }
@@ -129,5 +157,6 @@ public class MenuScriptType2 : MonoBehaviour
                     break;
             }
         }
+
     }
 }

@@ -63,7 +63,7 @@ public class BrokenLeg : IProblems
 
     public string Name()
     {
-        return "Leg";
+        return "leg";
     }
 
     public bool Give()
@@ -84,7 +84,7 @@ public class BrokenArm : IProblems
 
     public string Name()
     {
-        return "Arm";
+        return "arm";
     }
 
     public bool Give()
