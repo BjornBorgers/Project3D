@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Diagnostics;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public enum TraigeLevel
 {
@@ -19,6 +20,9 @@ public class Patient : MonoBehaviour
     public GameObject text;
     public GameObject radialMenu;
     public GameObject heartText;
+    public GameObject heartVisuale;
+    public VideoClip heartClip;
+
     public TraigeLevel level;
     Stopwatch lifeTimer = new Stopwatch();
     public bool heartProblem;
@@ -142,5 +146,18 @@ public class Patient : MonoBehaviour
     {
         heartText.GetComponent<Text>().text = num;
         heartText.SetActive(true);
+    }
+
+    public void ShowVisuale(bool problem)
+    {
+        if (problem==false)
+        {
+            heartVisuale.GetComponent<VideoPlayer>().clip = heartClip;
+            heartVisuale.SetActive(true);
+        }
+        else
+        {
+            heartVisuale.SetActive(true);
+        }
     }
 }
