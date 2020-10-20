@@ -92,3 +92,24 @@ public class BrokenArm : IProblems
         return true;
     }
 }
+
+public class Onbewust: IProblems
+{
+    public Onbewust()
+    { }
+
+    public void ToHeal()
+    {
+
+    }
+
+    public string Name()
+    {
+        return "arm";
+    }
+
+    public bool Give()
+    {
+        return true;
+    }
+}

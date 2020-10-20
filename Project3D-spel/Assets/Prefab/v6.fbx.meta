@@ -20,22 +20,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: No Name
-    second: {fileID: 670224309865224971, guid: d2796df2e7bba7f43973d9d4d8e9fa3c, type: 3}
+    second: {fileID: 670224309865224971, guid: 168ea6e45678f7e42a81aaad4e2343cf, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shadeless
-    second: {fileID: -4828391884692343342, guid: d2796df2e7bba7f43973d9d4d8e9fa3c, type: 3}
+    second: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: t_phoenix
-    second: {fileID: 3538480095829946816, guid: d2796df2e7bba7f43973d9d4d8e9fa3c, type: 3}
+    second: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: v_hands
-    second: {fileID: 8693476518336126224, guid: d2796df2e7bba7f43973d9d4d8e9fa3c, type: 3}
+    second: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -96,7 +96,7 @@ ModelImporter:
       name: Idle
       takeName: Hands
       internalID: 0
-      firstFrame: 59
+      firstFrame: 70
       lastFrame: 71
       wrapMode: 0
       orientationOffsetY: 0
