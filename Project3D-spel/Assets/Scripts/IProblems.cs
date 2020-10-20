@@ -63,7 +63,7 @@ public class BrokenLeg : IProblems
 
     public string Name()
     {
-        return "Leg";
+        return "leg";
     }
 
     public bool Give()
@@ -84,7 +84,28 @@ public class BrokenArm : IProblems
 
     public string Name()
     {
-        return "Arm";
+        return "arm";
+    }
+
+    public bool Give()
+    {
+        return true;
+    }
+}
+
+public class Onbewust: IProblems
+{
+    public Onbewust()
+    { }
+
+    public void ToHeal()
+    {
+
+    }
+
+    public string Name()
+    {
+        return "arm";
     }
 
     public bool Give()

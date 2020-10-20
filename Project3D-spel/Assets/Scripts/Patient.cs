@@ -29,6 +29,7 @@ public class Patient : MonoBehaviour
     public bool breathingProblem;
     public bool armProblem;
     public bool legProblem;
+    public bool onbewust;
     int timeToLife;
     bool isDead = false;
     bool isSaved = false;
@@ -85,6 +86,11 @@ public class Patient : MonoBehaviour
         {
             BrokenLeg leg = new BrokenLeg();
             problemsList.Add(leg);
+        }
+        if (onbewust==true)
+        {
+            Onbewust bewust = new Onbewust();
+            problemsList.Add(bewust);
         }
     }
 
