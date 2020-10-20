@@ -105,7 +105,7 @@ public class Onbewust: IProblems
 
     public string Name()
     {
-        return "arm";
+        return "bewust";
     }
 
     public bool Give()

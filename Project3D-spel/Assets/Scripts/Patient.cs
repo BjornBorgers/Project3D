@@ -87,7 +87,7 @@ public class Patient : MonoBehaviour
             BrokenLeg leg = new BrokenLeg();
             problemsList.Add(leg);
         }
-        if (onbewust==true)
+        if (onbewust == true)
         {
             Onbewust bewust = new Onbewust();
             problemsList.Add(bewust);

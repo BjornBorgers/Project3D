@@ -36,7 +36,7 @@ public class MenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        text.SetActive(false);
         normalisedMousePosition = new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2);
         currentAngle = Mathf.Atan2(normalisedMousePosition.y, normalisedMousePosition.x) * Mathf.Rad2Deg;
 
@@ -80,6 +80,7 @@ public class MenuScript : MonoBehaviour
                     Cursor.visible = false;
                     crossHair.SetActive(true);
                     gameObject.SetActive(false);
+                    text.SetActive(true);
                     break;
                 case 5:
                     gameObject.SetActive(false);

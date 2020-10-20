@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuScriptType2 : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class MenuScriptType2 : MonoBehaviour
     public AudioClip heartClip;
     public AudioClip badBreathingClip;
     public AudioClip goodBreathingClip;
+
+    public Text onBewustText;
+    private float timeToAppear = 2f;
+    private float timeWhenDisappear;
 
     private MenuItemScript menuItemSc;
     private MenuItemScript previousMenuItemSc;
@@ -128,15 +133,22 @@ public class MenuScriptType2 : MonoBehaviour
                                     {
                                         if (hit.GetComponent<Patient>().problemsList[i].Name() == "bewust")
                                         {
+                                            Debug.Log("HitBewust");
                                             hasProblem = true;
                                         }
                                     }
 
                                     if (hasProblem == true)
                                     {
+                                        onBewustText.text = "Patient is unconscious";
+                                        onBewustText.enabled = true;
+                                        timeWhenDisappear = Time.time + timeToAppear;
                                     }
                                     else
                                     {
+                                        onBewustText.text = "Patient is conscious";
+                                        onBewustText.enabled = true;
+                                        timeWhenDisappear = Time.time + timeToAppear;
                                     }
                                 }
                             }
@@ -175,6 +187,10 @@ public class MenuScriptType2 : MonoBehaviour
                 case 1:
                     firstMenu.SetActive(true);
                     gameObject.SetActive(false);
+                    if (onBewustText.enabled)
+                    {
+                        onBewustText.enabled = false;
+                    }
                     break;
                 case 2:
                     switch (gameObject.name)
@@ -275,6 +291,12 @@ public class MenuScriptType2 : MonoBehaviour
                 default:
                     break;
             }
+        }
+
+
+        if (onBewustText.enabled && (Time.time >= timeWhenDisappear))
+        {
+            onBewustText.enabled = false;
         }
 
     }
