@@ -34,7 +34,6 @@ public class MenuScriptType2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Player.GetComponentInChildren<Animator>().ResetTrigger("Use bandage");
         normalisedMousePosition = new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2);
         currentAngle = Mathf.Atan2(normalisedMousePosition.y, normalisedMousePosition.x) * Mathf.Rad2Deg;
 
@@ -168,6 +167,14 @@ public class MenuScriptType2 : MonoBehaviour
                                         {
                                             hasProblem = true;
                                         }
+                                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg")
+                                        {
+                                            hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                                        }
+                                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm")
+                                        {
+                                            hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                                        }
                                     }
                                     Debug.Log("hitPat");
 
@@ -240,9 +247,9 @@ public class MenuScriptType2 : MonoBehaviour
 
                                     if (hasProblem == true)
                                     {
-
                                         hit.GetComponent<Patient>().ShowHeart("80");
                                         hit.GetComponent<Patient>().ShowVisuale(false);
+                                        Player.GetComponentInChildren<Animator>().SetTrigger("Use CPR");
                                     }
                                 }
                             }
@@ -298,6 +305,5 @@ public class MenuScriptType2 : MonoBehaviour
         {
             onBewustText.enabled = false;
         }
-
     }
 }
