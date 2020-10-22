@@ -166,10 +166,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 996
+  controlID: 542
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 963
+  controlID: 543
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 964
+  controlID: 544
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -442,10 +442,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 297}
-      m_SelectedIDs: caebffff
-      m_LastClickedID: -5174
-      m_ExpandedIDs: 60fbffff10500000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: aed5ffff
+      m_LastClickedID: -10834
+      m_ExpandedIDs: b4d5ffff60fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -505,9 +505,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -131.78569, y: -20.852623, z: 9.046513}
+    m_Target: {x: -106.44608, y: -53.45791, z: 43.481087}
     speed: 2
-    m_Value: {x: -131.78569, y: -20.852623, z: 9.046513}
+    m_Value: {x: -106.44608, y: -53.45791, z: 43.481087}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -554,13 +554,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.39438677, y: -0.07431572, z: 0.032016512, w: 0.9153827}
+    m_Target: {x: 0.26336712, y: 0.07370427, z: -0.020187994, w: 0.9616725}
     speed: 2
-    m_Value: {x: -0.39438677, y: 0.07431571, z: -0.03201651, w: -0.9153826}
+    m_Value: {x: -0.26336712, y: -0.07370428, z: 0.020187994, w: -0.96167254}
   m_Size:
-    m_Target: 44.012035
+    m_Target: 87.441345
     speed: 2
-    m_Value: 44.012035
+    m_Value: 83.67593
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -623,21 +623,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Texture
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Texture
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Documents\Project 3d\Project3D\Project3D-spel
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c6640000
-    m_LastClickedID: 25798
-    m_ExpandedIDs: 00000000a064000000ca9a3b
+    scrollPos: {x: 0, y: 215}
+    m_SelectedIDs: 0a670000
+    m_LastClickedID: 26378
+    m_ExpandedIDs: 00000000a86400000c6700000e6700001067000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -665,7 +665,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a064000000ca9a3b
+    m_ExpandedIDs: 00000000a864000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
