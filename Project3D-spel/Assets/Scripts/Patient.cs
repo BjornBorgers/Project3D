@@ -21,7 +21,10 @@ public class Patient : MonoBehaviour
     public GameObject radialMenu;
     public GameObject heartText;
     public GameObject heartVisuale;
+    public GameObject boneArm;
+    public GameObject boneLeg;
     public VideoClip heartClip;
+    public Animator patientAnimator;
 
     public TraigeLevel level;
     Stopwatch lifeTimer = new Stopwatch();
@@ -30,6 +33,7 @@ public class Patient : MonoBehaviour
     public bool armProblem;
     public bool legProblem;
     public bool onbewust;
+
     int timeToLife;
     bool isDead = false;
     bool isSaved = false;
@@ -81,16 +85,19 @@ public class Patient : MonoBehaviour
         {
             BrokenArm arm = new BrokenArm();
             problemsList.Add(arm);
+            boneArm.SetActive(true);
         }
         if (legProblem == true)
         {
             BrokenLeg leg = new BrokenLeg();
             problemsList.Add(leg);
+            boneLeg.SetActive(true);
         }
         if (onbewust == true)
         {
             Onbewust bewust = new Onbewust();
             problemsList.Add(bewust);
+            patientAnimator.SetTrigger("IsOnBewust");
         }
     }
 

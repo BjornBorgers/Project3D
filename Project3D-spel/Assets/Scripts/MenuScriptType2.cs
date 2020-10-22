@@ -19,7 +19,7 @@ public class MenuScriptType2 : MonoBehaviour
     public AudioClip badBreathingClip;
     public AudioClip goodBreathingClip;
 
-    public Text onBewustText;
+    public Text analyseText;
     private float timeToAppear = 2f;
     private float timeWhenDisappear;
 
@@ -132,22 +132,69 @@ public class MenuScriptType2 : MonoBehaviour
                                     {
                                         if (hit.GetComponent<Patient>().problemsList[i].Name() == "bewust")
                                         {
-                                            Debug.Log("HitBewust");
                                             hasProblem = true;
                                         }
                                     }
 
                                     if (hasProblem == true)
                                     {
-                                        onBewustText.text = "Patient is unconscious";
-                                        onBewustText.enabled = true;
+                                        analyseText.text = "Patient is unconscious";
+                                        analyseText.enabled = true;
                                         timeWhenDisappear = Time.time + timeToAppear;
                                     }
                                     else
                                     {
-                                        onBewustText.text = "Patient is conscious";
-                                        onBewustText.enabled = true;
+                                        analyseText.text = "Patient is conscious";
+                                        analyseText.enabled = true;
                                         timeWhenDisappear = Time.time + timeToAppear;
+                                    }
+                                }
+                            }
+                            break;
+
+                        case "RadialmenuE":
+                            Collider[] hitCollidersE = Physics.OverlapSphere(Player.transform.position, 5);
+                            foreach (var hit in hitCollidersE)
+                            {
+                                if (hit.name.Contains("patient"))
+                                {
+                                    bool hasLegProblem = false;
+                                    bool hasArmProblem = false;
+                                    List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                                    {
+                                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg")
+                                        {
+                                            hasLegProblem = true;
+                                        }
+                                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm")
+                                        {
+                                            hasArmProblem = true;
+                                        }
+
+                                    }
+
+                                    if (hasArmProblem==true&&hasLegProblem==true)
+                                    {
+                                        Debug.Log("Here");
+                                        analyseText.text = "Patient has a broken leg and arm";
+                                        analyseText.enabled = true;
+                                        timeWhenDisappear = Time.time + timeToAppear;
+                                    }
+                                    else
+                                    {
+                                        if (hasLegProblem == true)
+                                        {
+                                            analyseText.text = "Patient has a broken leg";
+                                            analyseText.enabled = true;
+                                            timeWhenDisappear = Time.time + timeToAppear;
+                                        }
+                                        if (hasArmProblem)
+                                        {
+                                            analyseText.text = "Patient has a broken arm";
+                                            analyseText.enabled = true;
+                                            timeWhenDisappear = Time.time + timeToAppear;
+                                        }
                                     }
                                 }
                             }
@@ -170,17 +217,17 @@ public class MenuScriptType2 : MonoBehaviour
                                         if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg")
                                         {
                                             hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                                            hit.GetComponent<Patient>().boneLeg.SetActive(false);
                                         }
                                         if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm")
                                         {
                                             hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                                            hit.GetComponent<Patient>().boneArm.SetActive(false);
                                         }
                                     }
-                                    Debug.Log("hitPat");
 
                                     if (hasProblem == true)
                                     {
-                                        Debug.Log("hitProb");
                                         Player.GetComponentInChildren<Animator>().SetTrigger("Use bandage");
                                     }
                                 }
@@ -194,9 +241,9 @@ public class MenuScriptType2 : MonoBehaviour
                 case 1:
                     firstMenu.SetActive(true);
                     gameObject.SetActive(false);
-                    if (onBewustText.enabled)
+                    if (analyseText.enabled)
                     {
-                        onBewustText.enabled = false;
+                        analyseText.enabled = false;
                     }
                     break;
                 case 2:
@@ -301,9 +348,9 @@ public class MenuScriptType2 : MonoBehaviour
         }
 
 
-        if (onBewustText.enabled && (Time.time >= timeWhenDisappear))
+        if (analyseText.enabled && (Time.time >= timeWhenDisappear))
         {
-            onBewustText.enabled = false;
+            analyseText.enabled = false;
         }
     }
 }
