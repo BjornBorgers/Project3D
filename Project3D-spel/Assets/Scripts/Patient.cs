@@ -34,6 +34,12 @@ public class Patient : MonoBehaviour
     public bool legProblem;
     public bool onbewust;
 
+    public GameObject InfoPatientAll;
+    public Image InfoBewust;
+    public Image InfoLung;
+    public Image InfoLeg;
+    public Image InfoArm;
+
     int timeToLife;
     bool isDead = false;
     bool isSaved = false;
@@ -111,6 +117,7 @@ public class Patient : MonoBehaviour
             {
                 UnityEngine.Debug.Log("Hit");
                 text.SetActive(true);
+                InfoPatientAll.SetActive(true);
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -120,6 +127,7 @@ public class Patient : MonoBehaviour
             else
             {
                 text.SetActive(false);
+                InfoPatientAll.SetActive(false);
             }
         }
     }

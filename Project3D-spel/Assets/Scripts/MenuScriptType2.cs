@@ -78,11 +78,15 @@ public class MenuScriptType2 : MonoBehaviour
                                     {
                                         hit.GetComponent<Patient>().GetComponent<AudioSource>().clip= badBreathingClip;
                                         hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
+                                        hit.GetComponent<Patient>().InfoLung.enabled=true;
+                                        hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color= Color.red;
                                     }
                                     else
                                     {
                                         hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = goodBreathingClip;
                                         hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
+                                        hit.GetComponent<Patient>().InfoLung.enabled = true;
+                                        hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.green;
                                     }
                                 }
                             }
@@ -141,12 +145,16 @@ public class MenuScriptType2 : MonoBehaviour
                                         analyseText.text = "Patient is unconscious";
                                         analyseText.enabled = true;
                                         timeWhenDisappear = Time.time + timeToAppear;
+                                        hit.GetComponent<Patient>().InfoBewust.enabled = true;
+                                        hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.red;
                                     }
                                     else
                                     {
                                         analyseText.text = "Patient is conscious";
                                         analyseText.enabled = true;
                                         timeWhenDisappear = Time.time + timeToAppear;
+                                        hit.GetComponent<Patient>().InfoBewust.enabled = true;
+                                        hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.green;
                                     }
                                 }
                             }
@@ -180,20 +188,30 @@ public class MenuScriptType2 : MonoBehaviour
                                         analyseText.text = "Patient has a broken leg and arm";
                                         analyseText.enabled = true;
                                         timeWhenDisappear = Time.time + timeToAppear;
+                                        hit.GetComponent<Patient>().InfoArm.enabled = true;
+                                        hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.red;
+                                        hit.GetComponent<Patient>().InfoLeg.enabled = true;
+                                        hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.red;
                                     }
                                     else
                                     {
+                                        hit.GetComponent<Patient>().InfoArm.enabled = true;
+                                        hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
+                                        hit.GetComponent<Patient>().InfoLeg.enabled = true;
+                                        hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
                                         if (hasLegProblem == true)
                                         {
                                             analyseText.text = "Patient has a broken leg";
                                             analyseText.enabled = true;
                                             timeWhenDisappear = Time.time + timeToAppear;
+                                            hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.red;
                                         }
-                                        if (hasArmProblem)
+                                        if (hasArmProblem == true)
                                         {
                                             analyseText.text = "Patient has a broken arm";
                                             analyseText.enabled = true;
                                             timeWhenDisappear = Time.time + timeToAppear;
+                                            hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.red;
                                         }
                                     }
                                 }
@@ -218,11 +236,13 @@ public class MenuScriptType2 : MonoBehaviour
                                         {
                                             hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
                                             hit.GetComponent<Patient>().boneLeg.SetActive(false);
+                                            hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
                                         }
                                         if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm")
                                         {
                                             hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
                                             hit.GetComponent<Patient>().boneArm.SetActive(false);
+                                            hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
                                         }
                                     }
 
