@@ -2297,6 +2297,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 566baa78ed5f27648a25e4db305e936d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patientA: {fileID: 919132149373864013}
+  patientB: {fileID: 2129456399}
+  patientC: {fileID: 2121583897}
 --- !u!4 &103946805
 Transform:
   m_ObjectHideFlags: 0
@@ -6555,7 +6558,7 @@ MonoBehaviour:
   boneLeg: {fileID: 8707273952730838284}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   patientAnimator: {fileID: 5866666021693130893}
-  level: 4
+  level: 3
   heartProblem: 0
   breathingProblem: 0
   armProblem: 1
@@ -6566,6 +6569,7 @@ MonoBehaviour:
   InfoLung: {fileID: 1964027345}
   InfoLeg: {fileID: 1619640967}
   InfoArm: {fileID: 1432651928}
+  isDone: 0
 --- !u!82 &354366752
 AudioSource:
   m_ObjectHideFlags: 0
@@ -36242,7 +36246,7 @@ MonoBehaviour:
   boneLeg: {fileID: 1842775619}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   patientAnimator: {fileID: 2121583902}
-  level: 4
+  level: 5
   heartProblem: 0
   breathingProblem: 1
   armProblem: 0
@@ -36253,6 +36257,7 @@ MonoBehaviour:
   InfoLung: {fileID: 1002423714}
   InfoLeg: {fileID: 1527726334}
   InfoArm: {fileID: 444784979}
+  isDone: 0
 --- !u!82 &2121583901
 AudioSource:
   m_ObjectHideFlags: 0
@@ -36859,7 +36864,7 @@ MonoBehaviour:
   boneLeg: {fileID: 1172846705}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   patientAnimator: {fileID: 2129456404}
-  level: 4
+  level: 0
   heartProblem: 1
   breathingProblem: 0
   armProblem: 0
@@ -36870,6 +36875,7 @@ MonoBehaviour:
   InfoLung: {fileID: 1629165164}
   InfoLeg: {fileID: 900355529}
   InfoArm: {fileID: 1248539083}
+  isDone: 0
 --- !u!82 &2129456403
 AudioSource:
   m_ObjectHideFlags: 0

@@ -43,6 +43,7 @@ public class Patient : MonoBehaviour
     int timeToLife;
     bool isDead = false;
     bool isSaved = false;
+    public bool isDone = false;
     public List<IProblems> problemsList = new List<IProblems>();
 
 
@@ -129,6 +130,14 @@ public class Patient : MonoBehaviour
                 text.SetActive(false);
                 InfoPatientAll.SetActive(false);
             }
+
+            if (problemsList.Count==0)
+            {
+                isDone = true;
+                isSaved = true;
+            }
+
+            CheckTime();
         }
     }
 
@@ -152,12 +161,14 @@ public class Patient : MonoBehaviour
         if (isDead == true || isSaved == true)
         {
             lifeTimer.Stop();
+            isDone = true;
         }
         else
         {
             if (lifeTimer.ElapsedMilliseconds >= timeToLife)
             {
                 isDead = true;
+                isDone = true;
                 lifeTimer.Stop();
             }
         }
