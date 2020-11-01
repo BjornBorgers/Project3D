@@ -39,6 +39,7 @@ public class Patient : MonoBehaviour
     public Image InfoLung;
     public Image InfoLeg;
     public Image InfoArm;
+    public Image InfoAirway;
 
     int timeToLife;
     bool isDead = false;

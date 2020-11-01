@@ -63,8 +63,16 @@ public class MenuScript : MonoBehaviour
                     ToB.SetActive(true);
                     break;
                 case 1:
-                    gameObject.SetActive(false);
-                    ToA.SetActive(true);
+                    //gameObject.SetActive(false);
+                    //ToA.SetActive(true);
+                    Collider[] hitColliders = Physics.OverlapSphere(player.transform.position, 5);
+                    foreach (var hit in hitColliders)
+                    {
+                        if (hit.name.Contains("patient"))
+                        {
+                            hit.GetComponent<Patient>().InfoAirway.enabled = true;
+                        }
+                    }
                     break;
                 case 2:
                     gameObject.SetActive(false);

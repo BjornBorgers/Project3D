@@ -282,14 +282,13 @@ public class MenuScriptType2 : MonoBehaviour
                                         if (hit.GetComponent<Patient>().problemsList[i].Name() == "breathing")
                                         {
                                             hasProblem = true;
+                                            hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
                                         }
                                     }
 
                                     if (hasProblem == true)
                                     {
-                                    }
-                                    else
-                                    { 
+                                        hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.green;
                                     }
                                 }
                             }
