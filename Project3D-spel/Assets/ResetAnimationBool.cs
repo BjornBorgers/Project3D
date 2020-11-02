@@ -20,7 +20,7 @@ public class ResetAnimationBool : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("Use bandage");
-        animator.ResetTrigger("Use CPR");
+        animator.ResetTrigger("Use Beademing");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
