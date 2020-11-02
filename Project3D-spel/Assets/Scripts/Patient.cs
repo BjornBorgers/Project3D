@@ -24,6 +24,7 @@ public class Patient : MonoBehaviour
     public GameObject boneArm;
     public GameObject boneLeg;
     public VideoClip heartClip;
+    public VideoClip blackClip;
     public Animator patientAnimator;
 
     public TraigeLevel level;
@@ -171,6 +172,13 @@ public class Patient : MonoBehaviour
                 isDead = true;
                 isDone = true;
                 lifeTimer.Stop();
+                ShowHeart("0");
+                heartVisuale.GetComponent<VideoPlayer>().clip = blackClip;
+                InfoBewust.GetComponent<Image>().color = Color.red;
+                InfoLung.GetComponent<Image>().color = Color.red;
+                InfoLeg.GetComponent<Image>().color = Color.red;
+                InfoArm.GetComponent<Image>().color = Color.red;
+                InfoAirway.GetComponent<Image>().color = Color.red;
             }
         }
     }

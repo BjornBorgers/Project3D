@@ -22,7 +22,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1789610033063287101, guid: bbe04ebc689c80547a4584211114e393, type: 3}
+  m_Motion: {fileID: -3100369314251171874, guid: 3ae071680d14a5f45affeffe9be97313, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: Use bandage
@@ -60,7 +60,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CPR
+  m_Name: Beademing
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -75,7 +75,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -2369017115418596752, guid: bbe04ebc689c80547a4584211114e393, type: 3}
+  m_Motion: {fileID: -5343449181176572662, guid: 3ae071680d14a5f45affeffe9be97313, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -129,13 +129,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Use CPR
+    m_Controller: {fileID: 0}
+  - m_Name: Use Beademing
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -180,7 +180,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Use CPR
+    m_ConditionEvent: Use Beademing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8136974960327789375}
@@ -243,7 +243,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hands
+  m_Name: Bandage
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -258,7 +258,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 3137742545018761463, guid: bbe04ebc689c80547a4584211114e393, type: 3}
+  m_Motion: {fileID: 931035149743109788, guid: 3ae071680d14a5f45affeffe9be97313, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
