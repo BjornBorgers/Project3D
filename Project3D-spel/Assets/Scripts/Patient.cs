@@ -164,6 +164,7 @@ public class Patient : MonoBehaviour
         {
             lifeTimer.Stop();
             isDone = true;
+            text.GetComponent<Text>().text = "Patient died";
         }
         else
         {
@@ -172,6 +173,7 @@ public class Patient : MonoBehaviour
                 isDead = true;
                 isDone = true;
                 lifeTimer.Stop();
+                text.GetComponent<Text>().text = "Patient died";
                 ShowHeart("0");
                 heartVisuale.GetComponent<VideoPlayer>().clip = blackClip;
                 InfoBewust.GetComponent<Image>().color = Color.red;
