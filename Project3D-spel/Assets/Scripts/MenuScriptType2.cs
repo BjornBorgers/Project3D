@@ -142,7 +142,7 @@ public class MenuScriptType2 : MonoBehaviour
 
                                     if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
                                     {
-                                        analyseText.text = "Patient is unconscious";
+                                        analyseText.text = "Patient is unconscious and is unresponsive";
                                         analyseText.enabled = true;
                                         timeWhenDisappear = Time.time + timeToAppear;
                                         hit.GetComponent<Patient>().InfoBewust.enabled = true;
