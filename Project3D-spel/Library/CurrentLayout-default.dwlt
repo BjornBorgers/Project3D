@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2048
     height: 1068.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 17
+  controlID: 54
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 18
+  controlID: 83
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 19
+  controlID: 84
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -431,21 +431,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Models
+    - Assets/Mats/Car material
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Models
+  - Assets/Mats/Car material
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Bjorn\Documents\Project 3D vfx\Project3D\Project3D-spel
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 52b10000
-    m_LastClickedID: 45394
-    m_ExpandedIDs: 0000000044b1000000ca9a3b
+    scrollPos: {x: 0, y: 37}
+    m_SelectedIDs: 746f0000
+    m_LastClickedID: 28532
+    m_ExpandedIDs: 00000000b66c0000366d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -473,7 +473,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000b66c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -594,10 +594,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 32}
+      scrollPos: {x: 0, y: 3744}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6a71fefff480feff9c86feff24c100004cc10000
+      m_ExpandedIDs: 72c2ffffe8daffffe6e7ffff42e8ffffa2e8ffffcce8ffffdce8ffffe2e8ffffa8eaffff22f0ffff3cf0ffffc0f1fffff2f1ffff02f2ffff60fbffff74490000b04b0000b04d0000984e0000de52000004570000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -657,9 +657,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -122.49254, y: -1.4422487, z: -11.109615}
+    m_Target: {x: -122.502464, y: 0.6034737, z: -19.56846}
     speed: 2
-    m_Value: {x: -122.49254, y: -1.4422487, z: -11.109615}
+    m_Value: {x: -122.502464, y: 0.6034737, z: -19.56846}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -706,13 +706,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0035185576, y: 0.99251413, z: -0.11847845, w: -0.029485539}
+    m_Target: {x: 0.0012937423, y: 0.9956984, z: -0.09167249, w: 0.014056048}
     speed: 2
-    m_Value: {x: -0.003340831, y: 0.9925557, z: -0.11848341, w: -0.027996693}
+    m_Value: {x: 0.0014312364, y: 0.9956671, z: -0.091669604, w: 0.015549437}
   m_Size:
-    m_Target: 19.065395
+    m_Target: 8.279845
     speed: 2
-    m_Value: 18.244398
+    m_Value: 7.9232965
   m_Ortho:
     m_Target: 0
     speed: 2
