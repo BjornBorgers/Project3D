@@ -21,6 +21,7 @@ public class ResetAnimationBool : StateMachineBehaviour
     {
         animator.ResetTrigger("Use bandage");
         animator.ResetTrigger("Use Beademing");
+        animator.ResetTrigger("Walk");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
