@@ -11890,11 +11890,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 623fa87d51116ae459540869e518b0da, type: 3}
   m_PrefabInstance: {fileID: 661554378}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &661554382 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 623fa87d51116ae459540869e518b0da, type: 3}
-  m_PrefabInstance: {fileID: 661554378}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &661554383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
@@ -11920,7 +11915,7 @@ MonoBehaviour:
   boneLeg: {fileID: 661554380}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
-  patientAnimator: {fileID: 661554382}
+  patientAnimator: {fileID: 0}
   level: 1
   heartProblem: 0
   breathingProblem: 0
@@ -17109,11 +17104,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 623fa87d51116ae459540869e518b0da, type: 3}
   m_PrefabInstance: {fileID: 931418147}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &931418152 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 623fa87d51116ae459540869e518b0da, type: 3}
-  m_PrefabInstance: {fileID: 931418147}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &931418153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17134,7 +17124,7 @@ MonoBehaviour:
   boneLeg: {fileID: 931418149}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
-  patientAnimator: {fileID: 931418152}
+  patientAnimator: {fileID: 0}
   level: 1
   heartProblem: 1
   breathingProblem: 0
@@ -30273,11 +30263,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 623fa87d51116ae459540869e518b0da, type: 3}
   m_PrefabInstance: {fileID: 1652433424}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1652433429 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 623fa87d51116ae459540869e518b0da, type: 3}
-  m_PrefabInstance: {fileID: 1652433424}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1652433430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30298,7 +30283,7 @@ MonoBehaviour:
   boneLeg: {fileID: 1652433426}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
-  patientAnimator: {fileID: 1652433429}
+  patientAnimator: {fileID: 0}
   level: 1
   heartProblem: 0
   breathingProblem: 1
@@ -35698,11 +35683,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 623fa87d51116ae459540869e518b0da, type: 3}
   m_PrefabInstance: {fileID: 1998326479}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1998326484 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 623fa87d51116ae459540869e518b0da, type: 3}
-  m_PrefabInstance: {fileID: 1998326479}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1998326485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35723,7 +35703,7 @@ MonoBehaviour:
   boneLeg: {fileID: 1998326481}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
-  patientAnimator: {fileID: 1998326484}
+  patientAnimator: {fileID: 0}
   level: 5
   heartProblem: 0
   breathingProblem: 0
