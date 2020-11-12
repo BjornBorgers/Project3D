@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 215.6193, g: 226.90349, b: 204.93503, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1867,8 +1867,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 566baa78ed5f27648a25e4db305e936d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientB: {fileID: 0}
-  patientC: {fileID: 0}
+  patientB: {fileID: 931418151}
+  patientC: {fileID: 1652433428}
 --- !u!4 &103946805
 Transform:
   m_ObjectHideFlags: 0
@@ -7615,7 +7615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hudScreen: {fileID: 1147037925}
-  player: {fileID: 0}
+  player: {fileID: 922833112}
 --- !u!224 &434397186
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11858,6 +11858,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 623fa87d51116ae459540869e518b0da, type: 3}
   m_PrefabInstance: {fileID: 661554378}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &661554382
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661554379}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 49a62458251ff524e97c9f4d031af73c, type: 3}
+  m_Controller: {fileID: 9100000, guid: c96a79697bc7f764482ab912181d59b9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &661554383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
@@ -11883,7 +11902,7 @@ MonoBehaviour:
   boneLeg: {fileID: 661554380}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
-  patientAnimator: {fileID: 0}
+  patientAnimator: {fileID: 661554382}
   level: 1
   heartProblem: 0
   breathingProblem: 0
@@ -17072,6 +17091,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 623fa87d51116ae459540869e518b0da, type: 3}
   m_PrefabInstance: {fileID: 931418147}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &931418152
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931418151}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 49a62458251ff524e97c9f4d031af73c, type: 3}
+  m_Controller: {fileID: 9100000, guid: c96a79697bc7f764482ab912181d59b9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &931418153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17092,7 +17130,7 @@ MonoBehaviour:
   boneLeg: {fileID: 931418149}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
-  patientAnimator: {fileID: 0}
+  patientAnimator: {fileID: 931418152}
   level: 1
   heartProblem: 1
   breathingProblem: 0
@@ -24732,6 +24770,30 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1550514412580984892, guid: d4ee15c3aeae9d047a7aff1decea5ce6, type: 3}
+--- !u!1 &1370261267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5933294899916750143, guid: 58fb0e73f79c2554d934a5b08b99f24b, type: 3}
+  m_PrefabInstance: {fileID: 362570305}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1370261268
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370261267}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 72a70737333566b47a16df5cb728838f, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1370417530
 GameObject:
   m_ObjectHideFlags: 0
@@ -30231,6 +30293,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 623fa87d51116ae459540869e518b0da, type: 3}
   m_PrefabInstance: {fileID: 1652433424}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1652433429
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652433428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 49a62458251ff524e97c9f4d031af73c, type: 3}
+  m_Controller: {fileID: 9100000, guid: c96a79697bc7f764482ab912181d59b9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1652433430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30251,7 +30332,7 @@ MonoBehaviour:
   boneLeg: {fileID: 1652433426}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
-  patientAnimator: {fileID: 0}
+  patientAnimator: {fileID: 1652433429}
   level: 1
   heartProblem: 0
   breathingProblem: 1
@@ -35651,6 +35732,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 623fa87d51116ae459540869e518b0da, type: 3}
   m_PrefabInstance: {fileID: 1998326479}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1998326484
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998326483}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 49a62458251ff524e97c9f4d031af73c, type: 3}
+  m_Controller: {fileID: 9100000, guid: c96a79697bc7f764482ab912181d59b9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1998326485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35671,7 +35771,7 @@ MonoBehaviour:
   boneLeg: {fileID: 1998326481}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
-  patientAnimator: {fileID: 0}
+  patientAnimator: {fileID: 1998326484}
   level: 5
   heartProblem: 0
   breathingProblem: 0
