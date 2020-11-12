@@ -16,6 +16,7 @@ public class MenuScript : MonoBehaviour
     public GameObject text;
     public GameObject textMiddle;
     public GameObject crossHair;
+    public GameObject verpleegster;
 
 
     public AudioClip heartClip;
@@ -138,13 +139,16 @@ public class MenuScript : MonoBehaviour
 
     public void CloseMenu()
     {
-        player.GetComponent<CameraMouse>().enabled = true;
-        player.GetComponent<PlayerMovement>().enabled = true;
-        Cursor.visible = false;
-        crossHair.SetActive(true);
-        gameObject.SetActive(false);
-        text.SetActive(true);
-        textMiddle.SetActive(false);
+        if (subMenuOpen == false)
+        {
+            player.GetComponent<CameraMouse>().enabled = true;
+            player.GetComponent<PlayerMovement>().enabled = true;
+            Cursor.visible = false;
+            crossHair.SetActive(true);
+            gameObject.SetActive(false);
+            text.SetActive(true);
+            textMiddle.SetActive(false);
+        }
     }
     //ToClose
     //Analyse
@@ -438,14 +442,33 @@ public class MenuScript : MonoBehaviour
                     if (hit.GetComponent<Patient>().problemsList[i].Name() == "bewust")
                     {
                         hasProblem = true;
+                        hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
                     }
                 }
 
                 if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
                 {
-                }
-                else
-                {
+                    switch (hit.name)
+                    {
+                        case "patient-A":
+                            verpleegster.transform.position = new Vector3(-126, 0.3f, 7f);
+                            verpleegster.transform.rotation = new Quaternion(0, 90, 0, 0);
+                            break;
+
+                        case "patient-B":
+                            verpleegster.transform.position = new Vector3(-132, 0.3f, 29f);
+                            verpleegster.transform.rotation = new Quaternion(0, 180, 0, 0);
+                            break;
+
+                        case "patient-C":
+                            verpleegster.transform.position = new Vector3(-116, 0.3f, -8.5f);
+                            verpleegster.transform.rotation = new Quaternion(0, 180, 0, 0);
+                            break;
+
+                        default:
+                            break;
+                    }
+                    hit.GetComponent<Patient>().InfoBewust.color = Color.green;
                 }
             }
         }
