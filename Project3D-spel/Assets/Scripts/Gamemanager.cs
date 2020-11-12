@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Gamemanager : MonoBehaviour
 {
-    public GameObject patientA;
+    GameObject patientA;
     public GameObject patientB;
     public GameObject patientC;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
+
+        patientA = GameObject.Find("/Patients/listPatientA/patient-A");
     }
 
     // Update is called once per frame

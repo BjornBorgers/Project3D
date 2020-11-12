@@ -160,11 +160,15 @@ public class Patient : MonoBehaviour
 
     public void CheckTime()
     {
-        if (isDead == true || isSaved == true)
+        if (isDead == true)
         {
             lifeTimer.Stop();
             isDone = true;
             text.GetComponent<Text>().text = "Patient died";
+        }
+        if (isDead == false && isDone == true)
+        {
+            text.GetComponent<Text>().text = "Patient is saved";
         }
         else
         {
