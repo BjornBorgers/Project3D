@@ -470,6 +470,7 @@ public class MenuScript : MonoBehaviour
                     }
                     hit.GetComponent<Patient>().InfoBewust.color = Color.green;
                     verpleegster.GetComponent<Animator>().SetTrigger("StartZit");
+                    verpleegster.GetComponent<MoveNurse>().enabled = false;
                 }
             }
         }
