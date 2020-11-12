@@ -1,15 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
-    public Vector2 normalisedMousePosition;
-    public float currentAngle;
-    public int selection;
-    private int previousSelection;
-
-    public GameObject[] menuItems;
     public GameObject ToA;
     public GameObject ToB;
     public GameObject ToC;
@@ -19,92 +14,617 @@ public class MenuScript : MonoBehaviour
     public GameObject ToT;
     public GameObject player;
     public GameObject text;
+    public GameObject textMiddle;
     public GameObject crossHair;
 
-    private MenuItemScript menuItemSc;
-    private MenuItemScript previousMenuItemSc;
+
+    public AudioClip heartClip;
+    public AudioClip badBreathingClip;
+    public AudioClip goodBreathingClip;
+
+    public Image TriadeBackGroundA;
+    public Image TriadeBackGroundB;
+    public Image TriadeBackGroundC;
+    public Material MaterialBlue;
+    public Material MaterialGreen;
+    public Material MaterialYellow;
+    public Material MaterialOrange;
+    public Material MaterialRed;
+    public Material MaterialBlack;
+
+    public Text analyseText;
+    private float timeToAppear = 2f;
+    private float timeWhenDisappear;
+
+    bool subMenuOpen = false;
     // Start is called before the first frame update
     void Start()
     {
-        player.GetComponent<CameraMouse>().enabled = !player.GetComponent<CameraMouse>().enabled;
-        player.GetComponent<PlayerMovement>().enabled = !player.GetComponent<PlayerMovement>().enabled;
-        text.SetActive(false);
-        crossHair.SetActive(false);
-        Cursor.visible = true;
+      
     }
 
     // Update is called once per frame
     void Update()
     {
         text.SetActive(false);
-        normalisedMousePosition = new Vector2(Input.mousePosition.x - Screen.width / 2, Input.mousePosition.y - Screen.height / 2);
-        currentAngle = Mathf.Atan2(normalisedMousePosition.y, normalisedMousePosition.x) * Mathf.Rad2Deg;
+        Cursor.visible = true;
+        player.GetComponent<CameraMouse>().enabled = false;
+        player.GetComponent<PlayerMovement>().enabled = false;
+        crossHair.SetActive(false);
 
-        currentAngle = (currentAngle + 360) % 360;
-
-        selection = (int)currentAngle / 45;
-
-        if (selection != previousSelection)
+        if (analyseText.enabled && (Time.time >= timeWhenDisappear))
         {
-            previousMenuItemSc = menuItems[previousSelection].GetComponent<MenuItemScript>();
-            previousMenuItemSc.Deselect();
-            previousSelection = selection;
-
-            menuItemSc = menuItems[selection].GetComponent<MenuItemScript>();
-            menuItemSc.Select();
+            analyseText.enabled = false;
         }
+    }
 
-        if (Input.GetMouseButtonDown(0))
+    //ToOpen
+    public void OpenA()
+    {
+        if (subMenuOpen==false)
         {
-            switch (selection)
+            ToA.SetActive(true);
+            subMenuOpen = true;
+        }
+    }
+
+    public void OpenB()
+    {
+        if (subMenuOpen == false)
+        {
+            ToB.SetActive(true);
+            subMenuOpen = true;
+        }
+    }
+
+    public void OpenC()
+    {
+        if (subMenuOpen == false)
+        {
+            ToC.SetActive(true);
+            subMenuOpen = true;
+        }
+    }
+
+    public void OpenD()
+    {
+        if (subMenuOpen == false)
+        {
+            ToD.SetActive(true);
+            subMenuOpen = true;
+        }
+    }
+
+    public void OpenE()
+    {
+        if (subMenuOpen == false)
+        {
+            ToE.SetActive(true);
+            subMenuOpen = true;
+        }
+    }
+
+    public void OpenI()
+    {
+        if (subMenuOpen == false)
+        {
+            ToI.SetActive(true);
+            subMenuOpen = true;
+        }
+    }
+
+    public void OpenT()
+    {
+        if (subMenuOpen == false)
+        {
+            ToT.SetActive(true);
+            subMenuOpen = true;
+        }
+    }
+
+    //ToOpen
+    //ToClose
+    public void CloseSubMenu()
+    {
+        subMenuOpen = false;
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(false);
+        ToD.SetActive(false);
+        ToE.SetActive(false);
+        ToI.SetActive(false);
+        ToT.SetActive(false);
+    }
+
+    public void CloseMenu()
+    {
+        player.GetComponent<CameraMouse>().enabled = true;
+        player.GetComponent<PlayerMovement>().enabled = true;
+        Cursor.visible = false;
+        crossHair.SetActive(true);
+        gameObject.SetActive(false);
+        text.SetActive(true);
+        textMiddle.SetActive(false);
+    }
+    //ToClose
+    //Analyse
+    public void AnalyseA()
+    {
+        Collider[] hitCollidersA = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitCollidersA)
+        {
+            if (hit.name.Contains("patient"))
             {
-                case 0:
-                    gameObject.SetActive(false);
-                    ToB.SetActive(true);
-                    break;
-                case 1:
-                    //gameObject.SetActive(false);
-                    //ToA.SetActive(true);
-                    Collider[] hitColliders = Physics.OverlapSphere(player.transform.position, 5);
-                    foreach (var hit in hitColliders)
+                if (hit.GetComponent<Patient>().isDone == false)
+                {
+                    analyseText.text = "Airway is free";
+                    analyseText.enabled = true;
+                    timeWhenDisappear = Time.time + timeToAppear;
+                    hit.GetComponent<Patient>().InfoAirway.enabled = true;
+                    hit.GetComponent<Patient>().InfoAirway.GetComponent<Image>().color = Color.green;
+                }
+            }
+        }
+    }
+
+    public void AnalyseB()
+    {
+        Collider[] hitCollidersB = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitCollidersB)
+        {
+            if (hit.name.Contains("patient"))
+            {
+                bool hasProblem = false;
+                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                {
+                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "breathing")
                     {
-                        if (hit.name.Contains("patient"))
-                        {
-                            hit.GetComponent<Patient>().InfoAirway.enabled = true;
-                        }
+                        hasProblem = true;
                     }
+                }
+
+                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                {
+                    hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = badBreathingClip;
+                    hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
+                    hit.GetComponent<Patient>().InfoLung.enabled = true;
+                    hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.red;
+                }
+                else if (hasProblem == false && hit.GetComponent<Patient>().isDone == false)
+                {
+                    hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = goodBreathingClip;
+                    hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
+                    hit.GetComponent<Patient>().InfoLung.enabled = true;
+                    hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.green;
+                }
+            }
+        }
+    }
+
+    public void AnalyseC()
+    {
+        Collider[] hitCollidersC = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitCollidersC)
+        {
+            if (hit.name.Contains("patient"))
+            {
+                bool hasProblem = false;
+                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                {
+                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "heart")
+                    {
+                        hasProblem = true;
+                    }
+                }
+
+                if (hasProblem == false && hit.GetComponent<Patient>().isDone == false)
+                {
+                    hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = heartClip;
+                    hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
+                    hit.GetComponent<Patient>().ShowHeart("80");
+                    hit.GetComponent<Patient>().ShowVisuale(hasProblem);
+                }
+                else if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                {
+                    hit.GetComponent<Patient>().ShowHeart("0");
+                    hit.GetComponent<Patient>().ShowVisuale(hasProblem);
+                }
+            }
+        }
+    }
+
+    public void AnalyseD()
+    {
+        Collider[] hitCollidersD = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitCollidersD)
+        {
+            if (hit.name.Contains("patient"))
+            {
+                bool hasProblem = false;
+                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                {
+                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "bewust")
+                    {
+                        hasProblem = true;
+                    }
+                }
+
+                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                {
+                    analyseText.text = "Patient is unconscious and is unresponsive";
+                    analyseText.enabled = true;
+                    timeWhenDisappear = Time.time + timeToAppear;
+                    hit.GetComponent<Patient>().InfoBewust.enabled = true;
+                    hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.red;
+                }
+                else if (hasProblem == false && hit.GetComponent<Patient>().isDone == false)
+                {
+                    analyseText.text = "Patient is conscious";
+                    analyseText.enabled = true;
+                    timeWhenDisappear = Time.time + timeToAppear;
+                    hit.GetComponent<Patient>().InfoBewust.enabled = true;
+                    hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.green;
+                }
+            }
+        }
+    }
+
+    public void AnalyseE()
+    {
+        Collider[] hitCollidersE = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitCollidersE)
+        {
+            if (hit.name.Contains("patient"))
+            {
+                bool hasLegProblem = false;
+                bool hasArmProblem = false;
+                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                {
+                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg")
+                    {
+                        hasLegProblem = true;
+                    }
+                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm")
+                    {
+                        hasArmProblem = true;
+                    }
+
+                }
+
+                if (hasArmProblem == true && hasLegProblem == true && hit.GetComponent<Patient>().isDone == false)
+                {
+                    Debug.Log("Here");
+                    analyseText.text = "Patient has a broken leg and arm";
+                    analyseText.enabled = true;
+                    timeWhenDisappear = Time.time + timeToAppear;
+                    hit.GetComponent<Patient>().InfoArm.enabled = true;
+                    hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.red;
+                    hit.GetComponent<Patient>().InfoLeg.enabled = true;
+                    hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.red;
+                }
+                else if (hit.GetComponent<Patient>().isDone == false)
+                {
+                    hit.GetComponent<Patient>().InfoArm.enabled = true;
+                    hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
+                    hit.GetComponent<Patient>().InfoLeg.enabled = true;
+                    hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
+                    if (hasLegProblem == true)
+                    {
+                        analyseText.text = "Patient has a broken leg";
+                        analyseText.enabled = true;
+                        timeWhenDisappear = Time.time + timeToAppear;
+                        hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.red;
+                    }
+                    if (hasArmProblem == true)
+                    {
+                        analyseText.text = "Patient has a broken arm";
+                        analyseText.enabled = true;
+                        timeWhenDisappear = Time.time + timeToAppear;
+                        hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.red;
+                    }
+                }
+            }
+        }
+    }
+    //Analyse
+    //UseItem
+    public void UseBandage()
+    {
+        Collider[] hitCollidersI = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitCollidersI)
+        {
+            if (hit.name.Contains("patient"))
+            {
+                bool hasProblem = false;
+                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                {
+                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" || hit.GetComponent<Patient>().problemsList[i].Name() == "arm" && hit.GetComponent<Patient>().isDone == false)
+                    {
+                        hasProblem = true;
+                    }
+                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" && hit.GetComponent<Patient>().isDone == false)
+                    {
+                        hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                        hit.GetComponent<Patient>().boneLeg.SetActive(false);
+                        hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
+                    }
+                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm" && hit.GetComponent<Patient>().isDone == false)
+                    {
+                        hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                        hit.GetComponent<Patient>().boneArm.SetActive(false);
+                        hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
+                    }
+                }
+
+                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                {
+                    player.GetComponentInChildren<Animator>().SetTrigger("Use bandage");
+                }
+            }
+        }
+    }
+    //UseItem
+    //Treatment
+    public void TreatB()
+    {
+        Collider[] hitCollidersB = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitCollidersB)
+        {
+            if (hit.name.Contains("patient"))
+            {
+                bool hasProblem = false;
+                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                {
+                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "breathing")
+                    {
+                        hasProblem = true;
+                        hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                    }
+                }
+
+                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                {
+                    hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.green;
+                }
+            }
+        }
+    }
+
+    public void TreatC()
+    {
+        Collider[] hitCollidersC = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitCollidersC)
+        {
+            if (hit.name.Contains("patient"))
+            {
+                bool hasProblem = false;
+                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                {
+                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "heart")
+                    {
+                        hasProblem = true;
+                        hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                    }
+                }
+
+                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                {
+                    hit.GetComponent<Patient>().ShowHeart("80");
+                    hit.GetComponent<Patient>().ShowVisuale(false);
+                    player.GetComponentInChildren<Animator>().SetTrigger("Use Beademing");
+                }
+            }
+        }
+    }
+
+    public void TreatD()
+    {
+        Collider[] hitCollidersD = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitCollidersD)
+        {
+            if (hit.name.Contains("patient"))
+            {
+                bool hasProblem = false;
+                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                {
+                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "bewust")
+                    {
+                        hasProblem = true;
+                    }
+                }
+
+                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                {
+                }
+                else
+                {
+                }
+            }
+        }
+    }
+
+    public void TreatE()
+    {
+
+    }
+    //Treatment
+    //TriageColors
+    public void TriageBL()
+    {
+        Collider[] hitColliders5 = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitColliders5)
+        {
+            switch (hit.name)
+            {
+                case "patient-A":
+                    TriadeBackGroundA.color = Color.blue;
+                    //TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlue;
                     break;
-                case 2:
-                    gameObject.SetActive(false);
-                    ToI.SetActive(true);
+
+                case "patient-B":
+                    TriadeBackGroundB.color = Color.blue;
+                    //TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlue;
                     break;
-                case 3:
-                    gameObject.SetActive(false);
-                    ToT.SetActive(true);
+
+                case "patient-C":
+                    TriadeBackGroundC.color = Color.blue;
+                    //TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlue;
                     break;
-                case 4:
-                    player.GetComponent<CameraMouse>().enabled = !player.GetComponent<CameraMouse>().enabled;
-                    player.GetComponent<PlayerMovement>().enabled = !player.GetComponent<PlayerMovement>().enabled;
-                    Cursor.visible = false;
-                    crossHair.SetActive(true);
-                    gameObject.SetActive(false);
-                    text.SetActive(true);
-                    break;
-                case 5:
-                    gameObject.SetActive(false);
-                    ToE.SetActive(true);
-                    break;
-                case 6:
-                    gameObject.SetActive(false);
-                    ToD.SetActive(true);
-                    break;
-                case 7:
-                    gameObject.SetActive(false);
-                    ToC.SetActive(true);
-                    break;
+
                 default:
                     break;
             }
         }
     }
+
+    public void TriageGR()
+    {
+        Collider[] hitColliders6 = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitColliders6)
+        {
+            switch (hit.name)
+            {
+                case "patient-A":
+                    TriadeBackGroundA.color = Color.green;
+                    //TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialGreen;
+                    break;
+
+                case "patient-B":
+                    TriadeBackGroundB.color = Color.green;
+                    //TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialGreen;
+                    break;
+
+                case "patient-C":
+                    TriadeBackGroundC.color = Color.green;
+                    //TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialGreen;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
+
+    public void TriageYE()
+    {
+        Collider[] hitColliders1 = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitColliders1)
+        {
+            switch (hit.name)
+            {
+                case "patient-A":
+                    TriadeBackGroundA.color = Color.yellow;
+                    //TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialYellow;
+                    break;
+
+                case "patient-B":
+                    TriadeBackGroundB.color = Color.yellow;
+                    //TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialYellow;
+                    break;
+
+                case "patient-C":
+                    TriadeBackGroundC.color = Color.yellow;
+                    //TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialYellow;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
+
+    public void TriageOR()
+    {
+        Collider[] hitColliders0 = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitColliders0)
+        {
+            Debug.Log("Hit-Color");
+            switch (hit.name)
+            {
+                case "patient-A":
+                    TriadeBackGroundA.color = new Color(255, 100, 0);
+                    //TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialOrange;
+                    break;
+
+                case "patient-B":
+                    TriadeBackGroundB.color = new Color(255, 100, 0);
+                    //TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialOrange;
+                    break;
+
+                case "patient-C":
+                    TriadeBackGroundC.color = new Color(255, 100, 0);
+                    //TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialOrange;
+                    break;
+
+                default:
+                    Debug.Log("Hit-Def");
+                    break;
+            }
+        }
+    }
+
+    public void TriageRE()
+    {
+        Collider[] hitColliders2 = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitColliders2)
+        {
+            switch (hit.name)
+            {
+                case "patient-A":
+                    TriadeBackGroundA.color = Color.red;
+                    //TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialRed;
+                    break;
+
+                case "patient-B":
+                    TriadeBackGroundB.color = Color.red;
+                    //TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialRed;
+                    break;
+
+                case "patient-C":
+                    TriadeBackGroundC.color = Color.red;
+                    //TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialRed;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
+
+    public void TriageBLA()
+    {
+        Collider[] hitColliders3 = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitColliders3)
+        {
+            switch (hit.name)
+            {
+                case "patient-A":
+                    TriadeBackGroundA.color = Color.black;
+                    //TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlack;
+                    break;
+
+                case "patient-B":
+                    TriadeBackGroundB.color = Color.black;
+                    //TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlack;
+                    break;
+
+                case "patient-C":
+                    TriadeBackGroundC.color = Color.black;
+                    //TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlack;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
+    //TriageColors
 }
