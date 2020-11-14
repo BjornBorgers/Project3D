@@ -23,6 +23,9 @@ public class Patient : MonoBehaviour
     public GameObject heartVisuale;
     public GameObject boneArm;
     public GameObject boneLeg;
+    public GameObject armSpaak;
+    public GameObject legSpaak;
+    public GameObject bindingSpaak;
     public VideoClip heartClip;
     public VideoClip blackClip;
     public Animator patientAnimator;
@@ -47,7 +50,7 @@ public class Patient : MonoBehaviour
     public GameObject TriageBackGroundC;
 
     int timeToLife;
-    bool isDead = false;
+    public bool isDead = false;
     bool isSaved = false;
     public bool isDone = false;
     public List<IProblems> problemsList = new List<IProblems>();
