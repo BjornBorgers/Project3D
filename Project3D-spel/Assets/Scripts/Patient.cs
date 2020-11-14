@@ -42,6 +42,10 @@ public class Patient : MonoBehaviour
     public Image InfoArm;
     public Image InfoAirway;
 
+    public GameObject TriageBackGroundA;
+    public GameObject TriageBackGroundB;
+    public GameObject TriageBackGroundC;
+
     int timeToLife;
     bool isDead = false;
     bool isSaved = false;
@@ -125,6 +129,23 @@ public class Patient : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     radialMenu.SetActive(true);
+
+                    switch (gameObject.name)
+                    {
+                        case "patient-A":
+                            TriageBackGroundA.SetActive(true);
+                            break;
+
+                        case "patient-B":
+                            TriageBackGroundB.SetActive(true);
+                            break;
+
+                        case "patient-C":
+                            TriageBackGroundC.SetActive(true);
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
             else

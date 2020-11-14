@@ -26,6 +26,9 @@ public class MenuScript : MonoBehaviour
     public Image TriadeBackGroundA;
     public Image TriadeBackGroundB;
     public Image TriadeBackGroundC;
+    public GameObject TriadeWarningA;
+    public GameObject TriadeWarningB;
+    public GameObject TriadeWarningC;
     public Material MaterialBlue;
     public Material MaterialGreen;
     public Material MaterialYellow;
@@ -491,17 +494,17 @@ public class MenuScript : MonoBehaviour
             {
                 case "patient-A":
                     TriadeBackGroundA.color = Color.blue;
-                    //TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlue;
+                    TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlue;
                     break;
 
                 case "patient-B":
                     TriadeBackGroundB.color = Color.blue;
-                    //TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlue;
+                    TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlue;
                     break;
 
                 case "patient-C":
                     TriadeBackGroundC.color = Color.blue;
-                    //TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlue;
+                    TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlue;
                     break;
 
                 default:
@@ -519,17 +522,17 @@ public class MenuScript : MonoBehaviour
             {
                 case "patient-A":
                     TriadeBackGroundA.color = Color.green;
-                    //TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialGreen;
+                    TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialGreen;
                     break;
 
                 case "patient-B":
                     TriadeBackGroundB.color = Color.green;
-                    //TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialGreen;
+                    TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialGreen;
                     break;
 
                 case "patient-C":
                     TriadeBackGroundC.color = Color.green;
-                    //TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialGreen;
+                    TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialGreen;
                     break;
 
                 default:
@@ -546,18 +549,18 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
-                    TriadeBackGroundA.color = Color.yellow;
-                    //TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialYellow;
+                    TriadeBackGroundA.color = new Color(255, 100, 0);
+                    TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialYellow;
                     break;
 
                 case "patient-B":
-                    TriadeBackGroundB.color = Color.yellow;
-                    //TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialYellow;
+                    TriadeBackGroundA.color = new Color(255, 100, 0);
+                    TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialYellow;
                     break;
 
                 case "patient-C":
-                    TriadeBackGroundC.color = Color.yellow;
-                    //TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialYellow;
+                    TriadeBackGroundA.color = new Color(255, 100, 0);
+                    TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialYellow;
                     break;
 
                 default:
@@ -575,18 +578,18 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
-                    TriadeBackGroundA.color = new Color(255, 100, 0);
-                    //TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialOrange;
+                    TriadeBackGroundA.color = Color.yellow;
+                    TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialOrange;
                     break;
 
                 case "patient-B":
-                    TriadeBackGroundB.color = new Color(255, 100, 0);
-                    //TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialOrange;
+                    TriadeBackGroundA.color = Color.yellow;
+                    TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialOrange;
                     break;
 
                 case "patient-C":
-                    TriadeBackGroundC.color = new Color(255, 100, 0);
-                    //TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialOrange;
+                    TriadeBackGroundA.color = Color.yellow;
+                    TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialOrange;
                     break;
 
                 default:
@@ -605,17 +608,17 @@ public class MenuScript : MonoBehaviour
             {
                 case "patient-A":
                     TriadeBackGroundA.color = Color.red;
-                    //TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialRed;
+                    TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialRed;
                     break;
 
                 case "patient-B":
                     TriadeBackGroundB.color = Color.red;
-                    //TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialRed;
+                    TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialRed;
                     break;
 
                 case "patient-C":
                     TriadeBackGroundC.color = Color.red;
-                    //TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialRed;
+                    TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialRed;
                     break;
 
                 default:
@@ -633,17 +636,17 @@ public class MenuScript : MonoBehaviour
             {
                 case "patient-A":
                     TriadeBackGroundA.color = Color.black;
-                    //TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlack;
+                    TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlack;
                     break;
 
                 case "patient-B":
                     TriadeBackGroundB.color = Color.black;
-                    //TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlack;
+                    TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlack;
                     break;
 
                 case "patient-C":
                     TriadeBackGroundC.color = Color.black;
-                    //TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlack;
+                    TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlack;
                     break;
 
                 default:
