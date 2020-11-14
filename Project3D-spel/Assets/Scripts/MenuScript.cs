@@ -358,19 +358,17 @@ public class MenuScript : MonoBehaviour
                     {
                         hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
                         hit.GetComponent<Patient>().boneLeg.SetActive(false);
+                        hit.GetComponent<Patient>().legSpaak.SetActive(true);
+                        hit.GetComponent<Patient>().bindingSpaak.SetActive(true);
                         hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
                     }
                     if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm" && hit.GetComponent<Patient>().isDone == false)
                     {
                         hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
                         hit.GetComponent<Patient>().boneArm.SetActive(false);
+                        hit.GetComponent<Patient>().armSpaak.SetActive(true);
                         hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
                     }
-                }
-
-                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
-                {
-                    player.GetComponentInChildren<Animator>().SetTrigger("Use bandage");
                 }
             }
         }

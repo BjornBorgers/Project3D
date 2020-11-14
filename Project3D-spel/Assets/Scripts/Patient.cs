@@ -23,6 +23,9 @@ public class Patient : MonoBehaviour
     public GameObject heartVisuale;
     public GameObject boneArm;
     public GameObject boneLeg;
+    public GameObject armSpaak;
+    public GameObject legSpaak;
+    public GameObject bindingSpaak;
     public VideoClip heartClip;
     public VideoClip blackClip;
     public Animator patientAnimator;
