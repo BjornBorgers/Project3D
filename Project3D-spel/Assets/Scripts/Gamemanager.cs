@@ -5,15 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class Gamemanager : MonoBehaviour
 {
-    GameObject patientA;
+    public GameObject patientA;
     public GameObject patientB;
     public GameObject patientC;
+
+    public List<GameObject> patientListA = new List<GameObject>();
+    public List<GameObject> patientListB = new List<GameObject>();
+    public List<GameObject> patientListC = new List<GameObject>();
+    public GameObject infoKeeper;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
+        infoKeeper.GetComponent<InfoForScoreScene>().StartTimer();
+        patientA = patientListA[Random.Range(0, patientListA.Count-1)];
+        patientB = patientListB[Random.Range(0, patientListA.Count-1)];
+        patientC = patientListC[Random.Range(0, patientListA.Count-1)];
 
-        patientA = GameObject.Find("/Patients/listPatientA/patient-A");
+        patientA.SetActive(true);
+        patientB.SetActive(true);
+        patientC.SetActive(true);
     }
 
     // Update is called once per frame
@@ -21,7 +32,8 @@ public class Gamemanager : MonoBehaviour
     {
         if (patientA.GetComponent<Patient>().isDone==true && patientB.GetComponent<Patient>().isDone && patientC.GetComponent<Patient>().isDone)
         {
-            SceneManager.LoadScene("ExitScreen");
+            infoKeeper.GetComponent<InfoForScoreScene>().StopTimer();
+            SceneManager.LoadScene("Scorescreen");
         }
     }
 }

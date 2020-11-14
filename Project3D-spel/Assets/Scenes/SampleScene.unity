@@ -1556,8 +1556,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 566baa78ed5f27648a25e4db305e936d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientB: {fileID: 931418151}
-  patientC: {fileID: 1652433428}
+  patientA: {fileID: 0}
+  patientB: {fileID: 0}
+  patientC: {fileID: 0}
+  patientListA:
+  - {fileID: 1998326483}
+  - {fileID: 661554379}
+  patientListB:
+  - {fileID: 931418151}
+  patientListC:
+  - {fileID: 1652433428}
+  infoKeeper: {fileID: 185552958}
 --- !u!4 &103946805
 Transform:
   m_ObjectHideFlags: 0
@@ -2789,6 +2798,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8329728595161113177, guid: e882fa6d7f8a58b46b766093f615fcca, type: 3}
   m_PrefabInstance: {fileID: 813902807}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &185552958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 185552960}
+  - component: {fileID: 185552959}
+  m_Layer: 0
+  m_Name: InfoKeeper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &185552959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185552958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f594aacdb7151f42b53d7e6d23ff4c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamemanager: {fileID: 103946803}
+  doneA: 0
+  doneB: 0
+  doneC: 0
+--- !u!4 &185552960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185552958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &188437445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8329728595161113177, guid: e882fa6d7f8a58b46b766093f615fcca, type: 3}
@@ -9153,7 +9209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &517253053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12057,6 +12113,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 623fa87d51116ae459540869e518b0da, type: 3}
+      propertyPath: m_TagString
+      value: PA
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_Controller
       value: 
@@ -12123,7 +12183,7 @@ MonoBehaviour:
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 661554382}
-  level: 1
+  level: 5
   heartProblem: 0
   breathingProblem: 0
   armProblem: 1
@@ -12138,6 +12198,7 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  isDead: 0
   isDone: 0
 --- !u!82 &661554385
 AudioSource:
@@ -17800,35 +17861,35 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1234652923}
+    m_TransformParent: {fileID: 2085468069}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.96
+      value: 7.4068666
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.11
+      value: 15.300346
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.73
+      value: 0.017647462
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.3535534
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.61237246
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.61237246
+      value: 0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.3535534
+      value: 0.7071069
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_RootOrder
@@ -17848,15 +17909,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_Name
@@ -17869,6 +17930,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_Name
       value: patient-B
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 623fa87d51116ae459540869e518b0da, type: 3}
+      propertyPath: m_TagString
+      value: PB
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_Controller
@@ -17936,7 +18001,7 @@ MonoBehaviour:
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 931418152}
-  level: 1
+  level: 5
   heartProblem: 1
   breathingProblem: 0
   armProblem: 0
@@ -17951,6 +18016,7 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  isDead: 0
   isDone: 0
 --- !u!82 &931418154
 AudioSource:
@@ -22766,7 +22832,7 @@ Transform:
   - {fileID: 1998326480}
   - {fileID: 661554383}
   m_Father: {fileID: 1234652923}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1175973902 stripped
 Transform:
@@ -23825,7 +23891,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1234652923}
-  - component: {fileID: 1234652922}
   m_Layer: 0
   m_Name: Patients
   m_TagString: Untagged
@@ -23833,21 +23898,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1234652922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234652921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab3710bd4f8bad4d9a9deaf07317940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patientListA:
-  - {fileID: 1998326483}
-  - {fileID: 661554379}
 --- !u!4 &1234652923
 Transform:
   m_ObjectHideFlags: 0
@@ -23859,9 +23909,9 @@ Transform:
   m_LocalPosition: {x: -107.4, y: 0, z: 6.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 931418148}
-  - {fileID: 1652433425}
   - {fileID: 1174911709}
+  - {fileID: 2085468069}
+  - {fileID: 1533196478}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -29176,6 +29226,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1533196477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1533196478}
+  m_Layer: 0
+  m_Name: listPatientC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1533196478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533196477}
+  m_LocalRotation: {x: -0.18301263, y: 0.6830127, z: 0.6830127, w: 0.18301263}
+  m_LocalPosition: {x: -16.05, y: 0.08, z: 6.499998}
+  m_LocalScale: {x: 1.7000003, y: 1.7000002, z: 1.7}
+  m_Children:
+  - {fileID: 1652433425}
+  m_Father: {fileID: 1234652923}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1543813919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31684,39 +31765,39 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1234652923}
+    m_TransformParent: {fileID: 1533196478}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.08
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.18301266
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6830127
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.6830127
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.18301266
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -31732,15 +31813,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_Name
@@ -31753,6 +31834,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_Name
       value: patient-C
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 623fa87d51116ae459540869e518b0da, type: 3}
+      propertyPath: m_TagString
+      value: PC
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_Controller
@@ -31820,7 +31905,7 @@ MonoBehaviour:
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 1652433429}
-  level: 1
+  level: 4
   heartProblem: 0
   breathingProblem: 1
   armProblem: 0
@@ -31835,6 +31920,7 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  isDead: 0
   isDone: 0
 --- !u!82 &1652433431
 AudioSource:
@@ -37144,6 +37230,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 623fa87d51116ae459540869e518b0da, type: 3}
+      propertyPath: m_TagString
+      value: PA
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 623fa87d51116ae459540869e518b0da, type: 3}
       propertyPath: m_Controller
       value: 
@@ -37225,6 +37315,7 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  isDead: 0
   isDone: 0
 --- !u!82 &1998326486
 AudioSource:
@@ -38831,6 +38922,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2085468068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085468069}
+  m_Layer: 0
+  m_Name: listPatientB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2085468069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085468068}
+  m_LocalRotation: {x: -0.18301263, y: 0.6830127, z: 0.6830127, w: 0.18301263}
+  m_LocalPosition: {x: -16.05, y: 0.08, z: 6.499998}
+  m_LocalScale: {x: 1.7000003, y: 1.7000002, z: 1.7}
+  m_Children:
+  - {fileID: 931418148}
+  m_Father: {fileID: 1234652923}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2086937239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2846264043766427836, guid: 5a8e796167053e84fbd895bc4fce8c7b, type: 3}
