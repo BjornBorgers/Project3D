@@ -424,6 +424,8 @@ public class MenuScript : MonoBehaviour
                     hit.GetComponent<Patient>().ShowHeart("80");
                     hit.GetComponent<Patient>().ShowVisuale(false);
                     player.GetComponentInChildren<Animator>().SetTrigger("Use Beademing");
+                    hit.GetComponent<Patient>().GetComponent<Animator>().SetTrigger("StartHeart");
+
                 }
             }
         }

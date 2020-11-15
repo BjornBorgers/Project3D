@@ -91,6 +91,7 @@ public class Patient : MonoBehaviour
         {
             HeartStopped heart = new HeartStopped();
             problemsList.Add(heart);
+            patientAnimator.SetTrigger("IsOnBewust");
         }
         if (breathingProblem == true)
         {
