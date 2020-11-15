@@ -182,7 +182,11 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 18
+>>>>>>> master
+=======
+  controlID: 489
 >>>>>>> master
 --- !u!114 &8
 MonoBehaviour:
@@ -216,7 +220,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 19
+>>>>>>> master
+=======
+  controlID: 490
 >>>>>>> master
 --- !u!114 &9
 MonoBehaviour:
@@ -250,7 +258,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 20
+>>>>>>> master
+=======
+  controlID: 491
 >>>>>>> master
 --- !u!114 &10
 MonoBehaviour:
@@ -305,7 +317,7 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 17}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -375,7 +387,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 257045534191678443, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -464,7 +476,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -9000905672528348964, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -476,6 +488,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
 <<<<<<< HEAD
+<<<<<<< HEAD
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
@@ -486,20 +499,26 @@ MonoBehaviour:
       m_LastClickedID: -152764
       m_ExpandedIDs: 4a8bfdff20f9fdff28dd0000
 >>>>>>> master
+=======
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 583c0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 60fbffff
+>>>>>>> master
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: HousFinal
-        m_OriginalName: HousFinal
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -152764
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -525,7 +544,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -131512000283675692, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -611,7 +630,7 @@ MonoBehaviour:
 =======
     m_Target: {x: -0.008643519, y: 0.97399515, z: -0.22324093, w: -0.037711557}
     speed: 2
-    m_Value: {x: -0.009037119, y: 0.9736016, z: -0.22468837, w: -0.039158996}
+    m_Value: {x: -0.00864352, y: 0.9739952, z: -0.22324094, w: -0.03771156}
   m_Size:
     m_Target: 2.9785552
     speed: 2
@@ -657,7 +676,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Animator
-    m_Image: {fileID: 663490763026382308, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -6973158847631862895, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -752,7 +771,7 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -7501376956915960154, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -2032128904892744680, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -775,18 +794,26 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Tutorial
 =======
     - Assets/Models/patient
+>>>>>>> master
+=======
+    - Assets/Scripts
 >>>>>>> master
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Assets/Tutorial
 =======
   - Assets/Models/patient
+>>>>>>> master
+=======
+  - Assets/Scripts
 >>>>>>> master
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Noah\Documents\3D Developer\project\Project3D\Project3D-spel
@@ -800,9 +827,15 @@ MonoBehaviour:
     m_ExpandedIDs: 000000004475000000ca9a3b
 =======
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 46e60000
     m_LastClickedID: 58950
     m_ExpandedIDs: 000000002ce60000
+>>>>>>> master
+=======
+    m_SelectedIDs: 02790000
+    m_LastClickedID: 30978
+    m_ExpandedIDs: 000000001e780000
 >>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -832,9 +865,13 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000004475000000ca9a3b
 =======
     m_ExpandedIDs: 
+>>>>>>> master
+=======
+    m_ExpandedIDs: 000000001e780000
 >>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -862,7 +899,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000168d0000346e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -887,7 +924,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 60}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -907,7 +944,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -3303252850963283158, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
