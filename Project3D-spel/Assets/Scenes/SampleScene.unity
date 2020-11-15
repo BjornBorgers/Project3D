@@ -17784,7 +17784,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 15.475363}
   m_Children: []
   m_Father: {fileID: 1514655372}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!64 &731292825
 MeshCollider:
@@ -25188,7 +25188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   descriptionText: {fileID: 957383028}
-  message: Use Bandage
+  message: Use Splint
 --- !u!114 &942199125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40155,10 +40155,10 @@ Transform:
   - {fileID: 1250548862}
   - {fileID: 1171200665}
   - {fileID: 1721808600}
+  - {fileID: 731292824}
   - {fileID: 987378211}
   - {fileID: 2086937239}
   - {fileID: 1401216561}
-  - {fileID: 731292824}
   - {fileID: 1325177811}
   - {fileID: 1955554531}
   - {fileID: 1111311230}
