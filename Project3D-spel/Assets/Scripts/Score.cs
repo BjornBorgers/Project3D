@@ -50,7 +50,14 @@ public class Score : MonoBehaviour
             second++;
         } while (time - 1000 >= 0);
 
-        timeText.GetComponent<Text>().text = minute + ":" + second;
+        if (second<10)
+        {
+            timeText.GetComponent<Text>().text = minute + " : 0" + second;
+        }
+        else
+        {
+            timeText.GetComponent<Text>().text = minute + " : " + second;
+        }
 
         switch (count)
         {

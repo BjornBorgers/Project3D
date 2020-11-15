@@ -63,19 +63,19 @@ public class Patient : MonoBehaviour
         {
             case TraigeLevel.Blue:
                 isSaved = true;
-                timeToLife = 720000;
+                timeToLife = 420000;
                 break;
             case TraigeLevel.Green:
-                timeToLife = 720000;
+                timeToLife = 360000;
                 break;
             case TraigeLevel.Yellow:
-                timeToLife = 600000;
+                timeToLife = 240000;
                 break;
             case TraigeLevel.Orange:
-                timeToLife = 480000;
+                timeToLife = 180000;
                 break;
             case TraigeLevel.Red:
-                timeToLife = 300000;
+                timeToLife = 120000;
                 break;
             case TraigeLevel.Black:
                 isDead = true;
