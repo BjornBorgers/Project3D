@@ -6995,6 +6995,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4407712307344536924, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3508837b80a9c2b4193fb3bfcdb818e4, type: 2}
     - target: {fileID: 4526606551032283950, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_Name
       value: spaak arm
@@ -13865,6 +13869,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4407712307344536924, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3508837b80a9c2b4193fb3bfcdb818e4, type: 2}
     - target: {fileID: 4526606551032283950, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_Name
       value: spaak arm
@@ -15306,6 +15314,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4407712307344536924, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3508837b80a9c2b4193fb3bfcdb818e4, type: 2}
     - target: {fileID: 4526606551032283950, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_Name
       value: spaak arm
@@ -27070,6 +27082,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4407712307344536924, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3508837b80a9c2b4193fb3bfcdb818e4, type: 2}
     - target: {fileID: 4526606551032283950, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_Name
       value: spaak arm
@@ -31849,7 +31865,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122925981}
   m_LocalRotation: {x: -0.063415505, y: -0.14600202, z: -0.3933103, w: 0.9055213}
-  m_LocalPosition: {x: -122.116, y: 1.615, z: -13.577}
+  m_LocalPosition: {x: -122.234, y: 1.542, z: -13.605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -32382,6 +32398,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4407712307344536924, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3508837b80a9c2b4193fb3bfcdb818e4, type: 2}
     - target: {fileID: 4526606551032283950, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_Name
       value: spaak arm
@@ -45052,6 +45072,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2507776593600473747, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44d9f2fdbb643a949824245cffe64c98, type: 2}
     - target: {fileID: 3025649413646667526, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -45064,6 +45088,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6980335332860204569, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44d9f2fdbb643a949824245cffe64c98, type: 2}
     - target: {fileID: 7460539142934869268, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -45098,7 +45126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -45130,7 +45158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8830686455038291617, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9061784332785820052, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_Name
@@ -47095,6 +47123,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4407712307344536924, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3508837b80a9c2b4193fb3bfcdb818e4, type: 2}
     - target: {fileID: 4526606551032283950, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_Name
       value: spaak arm
