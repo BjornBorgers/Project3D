@@ -39,8 +39,6 @@ public class MenuScript : MonoBehaviour
     public Text analyseText;
     private float timeToAppear = 2f;
     private float timeWhenDisappear;
-
-    bool subMenuOpen = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,73 +63,7 @@ public class MenuScript : MonoBehaviour
     //ToOpen
     public void OpenA()
     {
-        if (subMenuOpen==false)
-        {
-            ToA.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    public void OpenB()
-    {
-        if (subMenuOpen == false)
-        {
-            ToB.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    public void OpenC()
-    {
-        if (subMenuOpen == false)
-        {
-            ToC.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    public void OpenD()
-    {
-        if (subMenuOpen == false)
-        {
-            ToD.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    public void OpenE()
-    {
-        if (subMenuOpen == false)
-        {
-            ToE.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    public void OpenI()
-    {
-        if (subMenuOpen == false)
-        {
-            ToI.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    public void OpenT()
-    {
-        if (subMenuOpen == false)
-        {
-            ToT.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    //ToOpen
-    //ToClose
-    public void CloseSubMenu()
-    {
-        subMenuOpen = false;
-        ToA.SetActive(false);
+        ToA.SetActive(true);
         ToB.SetActive(false);
         ToC.SetActive(false);
         ToD.SetActive(false);
@@ -140,18 +72,90 @@ public class MenuScript : MonoBehaviour
         ToT.SetActive(false);
     }
 
+    public void OpenB()
+    {
+        ToA.SetActive(false);
+        ToB.SetActive(true);
+        ToC.SetActive(false);
+        ToD.SetActive(false);
+        ToE.SetActive(false);
+        ToI.SetActive(false);
+        ToT.SetActive(false);
+    }
+
+    public void OpenC()
+    {
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(true);
+        ToD.SetActive(false);
+        ToE.SetActive(false);
+        ToI.SetActive(false);
+        ToT.SetActive(false);
+    }
+
+    public void OpenD()
+    {
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(false);
+        ToD.SetActive(true);
+        ToE.SetActive(false);
+        ToI.SetActive(false);
+        ToT.SetActive(false);
+    }
+
+    public void OpenE()
+    {
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(false);
+        ToD.SetActive(false);
+        ToE.SetActive(true);
+        ToI.SetActive(false);
+        ToT.SetActive(false);
+    }
+
+    public void OpenI()
+    {
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(false);
+        ToD.SetActive(false);
+        ToE.SetActive(false);
+        ToI.SetActive(true);
+        ToT.SetActive(false);
+    }
+
+    public void OpenT()
+    {
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(false);
+        ToD.SetActive(false);
+        ToE.SetActive(false);
+        ToI.SetActive(false);
+        ToT.SetActive(true);
+    }
+
+    //ToOpen
+    //ToClose
     public void CloseMenu()
     {
-        if (subMenuOpen == false)
-        {
-            player.GetComponent<CameraMouse>().enabled = true;
-            player.GetComponent<PlayerMovement>().enabled = true;
-            Cursor.visible = false;
-            crossHair.SetActive(true);
-            gameObject.SetActive(false);
-            text.SetActive(true);
-            textMiddle.SetActive(false);
-        }
+        player.GetComponent<CameraMouse>().enabled = true;
+        player.GetComponent<PlayerMovement>().enabled = true;
+        Cursor.visible = false;
+        crossHair.SetActive(true);
+        gameObject.SetActive(false);
+        text.SetActive(true);
+        textMiddle.SetActive(false);
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(false);
+        ToD.SetActive(false);
+        ToE.SetActive(false);
+        ToI.SetActive(false);
+        ToT.SetActive(false);
     }
     //ToClose
     //Analyse
