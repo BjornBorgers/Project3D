@@ -51,7 +51,7 @@ public class Patient : MonoBehaviour
 
     int timeToLife;
     public bool isDead = false;
-    bool isSaved = false;
+    public bool isSaved = false;
     public bool isDone = false;
     public List<IProblems> problemsList = new List<IProblems>();
 
@@ -162,9 +162,14 @@ public class Patient : MonoBehaviour
             {
                 isDone = true;
                 isSaved = true;
+                lifeTimer.Stop();
+                text.GetComponent<Text>().text = "Patient is saved";
             }
 
-            CheckTime();
+            if (isSaved == false)
+            {
+                CheckTime();
+            }
         }
     }
 
@@ -193,6 +198,7 @@ public class Patient : MonoBehaviour
         }
         if (isDead == false && isDone == true)
         {
+            isSaved = true;
             text.GetComponent<Text>().text = "Patient is saved";
         }
         else
@@ -203,7 +209,7 @@ public class Patient : MonoBehaviour
                 isDone = true;
                 lifeTimer.Stop();
                 text.GetComponent<Text>().text = "Patient died";
-                ShowHeart("0");
+                heartText.GetComponent<Text>().text = "0";
                 heartVisuale.GetComponent<VideoPlayer>().clip = blackClip;
                 InfoBewust.GetComponent<Image>().color = Color.red;
                 InfoLung.GetComponent<Image>().color = Color.red;

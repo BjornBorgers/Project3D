@@ -350,14 +350,9 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                bool hasProblem = false;
                 List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
                 for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                 {
-                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" || hit.GetComponent<Patient>().problemsList[i].Name() == "arm" && hit.GetComponent<Patient>().isDone == false)
-                    {
-                        hasProblem = true;
-                    }
                     if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" && hit.GetComponent<Patient>().isDone == false)
                     {
                         hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
