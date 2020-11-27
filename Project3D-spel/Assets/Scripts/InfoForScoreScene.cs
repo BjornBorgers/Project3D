@@ -1,19 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Diagnostics;
+using TMPro;
+using System;
 
 public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
 {
     public GameObject gamemanager;
+    public GameObject timertext;
 
-    public bool doneA;
-    public bool doneB;
-    public bool doneC;
+    public GameObject patientA;
+    public GameObject patientB;
+    public GameObject patientC;
 
-    GameObject patientA;
-    GameObject patientB;
-    GameObject patientC;
+    public bool ASaved;
+    public bool BSaved;
+    public bool CSaved;
+
+    TimeSpan elapsed; // however you get the amount of time elapsed
 
     public Stopwatch playTimer = new Stopwatch();
     // Start is called before the first frame update
@@ -27,10 +33,16 @@ public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
     // Update is called once per frame
     void Update()
     {
-        doneA = patientA.GetComponent<Patient>().isDead;
-        doneB = patientA.GetComponent<Patient>().isDead;
-        doneC = patientA.GetComponent<Patient>().isDead;
-        DontDestroyOnLoad(this.gameObject);
+        if (SceneManager.GetActiveScene().name=="SampleScene")
+        {
+            ASaved = patientA.GetComponent<Patient>().isSaved;
+            BSaved = patientB.GetComponent<Patient>().isSaved;
+            CSaved = patientC.GetComponent<Patient>().isSaved;
+            DontDestroyOnLoad(this.gameObject);
+            elapsed = playTimer.Elapsed;
+            string tsOut = elapsed.ToString(@"m\:ss");
+            timertext.GetComponent<TextMeshProUGUI>().text = tsOut;
+        }
     }
 
     public void StartTimer()

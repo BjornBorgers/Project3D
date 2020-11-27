@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Score : MonoBehaviour
 {
@@ -14,8 +15,7 @@ public class Score : MonoBehaviour
     int count=0;
     int score = 0;
     int time = 0;
-    int minute = 0;
-    int second = 0;
+    TimeSpan elapsed;
 
     List<bool> listDead = new List<bool>();
     // Start is called before the first frame update
@@ -23,41 +23,24 @@ public class Score : MonoBehaviour
     {
         info = GameObject.Find("InfoKeeper");
 
-        listDead.Add(info.GetComponent<InfoForScoreScene>().doneA);
-        listDead.Add(info.GetComponent<InfoForScoreScene>().doneB);
-        listDead.Add(info.GetComponent<InfoForScoreScene>().doneC);
-
-        foreach (var item in listDead)
+        if (info.GetComponent<InfoForScoreScene>().ASaved == true)
         {
-            if (item==false)
-            {
-                count++;
-            }
+            count++;
+        }
+        if (info.GetComponent<InfoForScoreScene>().BSaved == true)
+        {
+            count++;
+        }
+        if (info.GetComponent<InfoForScoreScene>().CSaved == true)
+        {
+            count++;
         }
         patientSaveText.GetComponent<Text>().text = count.ToString();
         patientDiedText.GetComponent<Text>().text = (3 - count).ToString();
         time = (int)info.GetComponent<InfoForScoreScene>().playTimer.ElapsedMilliseconds;
-
-        do
-        {
-            time = time - 60000;
-            minute++;
-        } while (time - 60000 >= 0);
-
-        do
-        {
-            time = time - 1000;
-            second++;
-        } while (time - 1000 >= 0);
-
-        if (second<10)
-        {
-            timeText.GetComponent<Text>().text = minute + " : 0" + second;
-        }
-        else
-        {
-            timeText.GetComponent<Text>().text = minute + " : " + second;
-        }
+        elapsed = info.GetComponent<InfoForScoreScene>().playTimer.Elapsed;
+        string tsOut = elapsed.ToString(@"m\:ss");
+        timeText.GetComponent<Text>().text = tsOut;
 
         switch (count)
         {
@@ -81,15 +64,15 @@ public class Score : MonoBehaviour
                 break;
         }
 
-        if (time<= 300000 )
+        if (time<= 360000)
         {
             score += 150;
         }
-        if (time <= 180000)
+        if (time <= 240000)
         {
             score += 200;
         }
-        if (time <= 120000)
+        if (time <= 180000)
         {
             score += 200;
         }
