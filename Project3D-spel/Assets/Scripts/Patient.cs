@@ -129,7 +129,6 @@ public class Patient : MonoBehaviour
                 UnityEngine.Debug.Log("Hit");
                 text.SetActive(true);
                 InfoPatientAll.SetActive(true);
-
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     radialMenu.SetActive(true);

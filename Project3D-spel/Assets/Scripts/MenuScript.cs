@@ -166,7 +166,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                if (hit.GetComponent<Patient>().isDone == false)
+                if (hit.GetComponent<Patient>().isDead == false)
                 {
                     analyseText.text = "Airway is free";
                     analyseText.enabled = true;
@@ -195,14 +195,14 @@ public class MenuScript : MonoBehaviour
                     }
                 }
 
-                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
                 {
                     hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = badBreathingClip;
                     hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
                     hit.GetComponent<Patient>().InfoLung.enabled = true;
                     hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.red;
                 }
-                else if (hasProblem == false && hit.GetComponent<Patient>().isDone == false)
+                else if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
                 {
                     hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = goodBreathingClip;
                     hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
@@ -230,14 +230,14 @@ public class MenuScript : MonoBehaviour
                     }
                 }
 
-                if (hasProblem == false && hit.GetComponent<Patient>().isDone == false)
+                if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
                 {
                     hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = heartClip;
                     hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
                     hit.GetComponent<Patient>().ShowHeart("80");
                     hit.GetComponent<Patient>().ShowVisuale(hasProblem);
                 }
-                else if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                else if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
                 {
                     hit.GetComponent<Patient>().ShowHeart("0");
                     hit.GetComponent<Patient>().ShowVisuale(hasProblem);
@@ -263,7 +263,7 @@ public class MenuScript : MonoBehaviour
                     }
                 }
 
-                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
                 {
                     analyseText.text = "Patient is unconscious and is unresponsive";
                     analyseText.enabled = true;
@@ -271,7 +271,7 @@ public class MenuScript : MonoBehaviour
                     hit.GetComponent<Patient>().InfoBewust.enabled = true;
                     hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.red;
                 }
-                else if (hasProblem == false && hit.GetComponent<Patient>().isDone == false)
+                else if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
                 {
                     analyseText.text = "Patient is conscious";
                     analyseText.enabled = true;
@@ -306,7 +306,7 @@ public class MenuScript : MonoBehaviour
 
                 }
 
-                if (hasArmProblem == true && hasLegProblem == true && hit.GetComponent<Patient>().isDone == false)
+                if (hasArmProblem == true && hasLegProblem == true && hit.GetComponent<Patient>().isDead == false)
                 {
                     Debug.Log("Here");
                     analyseText.text = "Patient has a broken leg and arm";
@@ -317,7 +317,7 @@ public class MenuScript : MonoBehaviour
                     hit.GetComponent<Patient>().InfoLeg.enabled = true;
                     hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.red;
                 }
-                else if (hit.GetComponent<Patient>().isDone == false)
+                else if (hit.GetComponent<Patient>().isDead == false)
                 {
                     hit.GetComponent<Patient>().InfoArm.enabled = true;
                     hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
