@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Diagnostics;
+using TMPro;
+using System;
 
 public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
 {
     public GameObject gamemanager;
+    public GameObject timertext;
 
     public bool doneA;
     public bool doneB;
@@ -14,6 +17,8 @@ public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
     GameObject patientA;
     GameObject patientB;
     GameObject patientC;
+
+    TimeSpan elapsed; // however you get the amount of time elapsed
 
     public Stopwatch playTimer = new Stopwatch();
     // Start is called before the first frame update
@@ -31,6 +36,9 @@ public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
         doneB = patientA.GetComponent<Patient>().isDead;
         doneC = patientA.GetComponent<Patient>().isDead;
         DontDestroyOnLoad(this.gameObject);
+        elapsed = playTimer.Elapsed;
+        string tsOut = elapsed.ToString(@"m\:ss");
+        timertext.GetComponent<TextMeshProUGUI>().text = tsOut;
     }
 
     public void StartTimer()
