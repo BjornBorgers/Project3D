@@ -605,7 +605,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 14
+    m_Value: 20
   multiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -631,7 +631,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   hdriSky:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {fileID: 8900000, guid: 2967c23cdca94b64d8a5591d89b67b25, type: 3}
   enableBackplate:
     m_OverrideState: 0
