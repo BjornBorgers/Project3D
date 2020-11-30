@@ -54,4 +54,9 @@ public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
     {
         playTimer.Stop();
     }
+
+    public void UnpauzeTimer()
+    {
+        playTimer.Start();
+    }
 }

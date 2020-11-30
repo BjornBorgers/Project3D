@@ -8,9 +8,11 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject hudScreen;
     public GameObject player;
+    public GameObject infoTimer;
     // Start is called before the first frame update
     void Update()
     {
+        infoTimer.GetComponent<InfoForScoreScene>().StopTimer();
         Cursor.visible = true;
         hudScreen.SetActive(false);
         player.GetComponent<CameraMouse>().enabled = false;
@@ -20,11 +22,12 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     public void Quit()
     {
-        SceneManager.LoadScene("TitleScreen");
+        SceneManager.LoadScene("TitleAnimated");
     }
 
     public void Continue()
     {
+        infoTimer.GetComponent<InfoForScoreScene>().UnpauzeTimer();
         gameObject.SetActive(false);
         hudScreen.SetActive(true);
         Cursor.visible = false;
