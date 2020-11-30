@@ -12,11 +12,14 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        infoTimer.GetComponent<InfoForScoreScene>().StopTimer();
-        Cursor.visible = true;
-        hudScreen.SetActive(false);
-        player.GetComponent<CameraMouse>().enabled = false;
-        player.GetComponent<PlayerMovement>().enabled = false;
+        if (SceneManager.GetActiveScene().name == "SampleScene")
+        {
+            infoTimer.GetComponent<InfoForScoreScene>().StopTimer();
+            Cursor.visible = true;
+            hudScreen.SetActive(false);
+            player.GetComponent<CameraMouse>().enabled = false;
+            player.GetComponent<PlayerMovement>().enabled = false;
+        }
     }
 
     // Update is called once per frame
