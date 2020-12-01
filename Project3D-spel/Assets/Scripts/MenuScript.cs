@@ -553,12 +553,12 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-B":
-                    TriadeBackGroundA.color = new Color(255, 100, 0);
+                    TriadeBackGroundB.color = new Color(255, 100, 0);
                     TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialYellow;
                     break;
 
                 case "patient-C":
-                    TriadeBackGroundA.color = new Color(255, 100, 0);
+                    TriadeBackGroundC.color = new Color(255, 100, 0);
                     TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialYellow;
                     break;
 
@@ -582,12 +582,12 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-B":
-                    TriadeBackGroundA.color = Color.yellow;
+                    TriadeBackGroundB.color = Color.yellow;
                     TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialOrange;
                     break;
 
                 case "patient-C":
-                    TriadeBackGroundA.color = Color.yellow;
+                    TriadeBackGroundC.color = Color.yellow;
                     TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialOrange;
                     break;
 

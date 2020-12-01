@@ -55,11 +55,13 @@ public class Patient : MonoBehaviour
 
     int timeToLife;
     private float timeWhenDisappear;
-    private float timeToAppear = 2f;
+    private float timeToAppear = 1f;
+    private float timeToBlink;
     public bool isDead = false;
     public bool isSaved = false;
     public bool isDone = false;
     bool warning = false;
+    bool waiting = false;
     public List<IProblems> problemsList = new List<IProblems>();
 
 
@@ -179,19 +181,21 @@ public class Patient : MonoBehaviour
 
             if (warning == true && (Time.time >= timeWhenDisappear) && isDead == false)
             {
-                switch (this.name)
+                warning = false;
+                waiting = true;
+                switch (gameObject.name)
                 {
-                    case "Patient-A":
+                    case "patient-A":
                         TriageBackGroundA.GetComponent<Image>().color = currentColorA;
                         TriageBackGroundA.GetComponentInChildren<Text>().color = Color.white;
                         break;
 
-                    case "Patient-B":
+                    case "patient-B":
                         TriageBackGroundB.GetComponent<Image>().color = currentColorB;
                         TriageBackGroundB.GetComponentInChildren<Text>().color = Color.white;
                         break;
 
-                    case "Patient-C":
+                    case "patient-C":
                         TriageBackGroundC.GetComponent<Image>().color = currentColorC;
                         TriageBackGroundC.GetComponentInChildren<Text>().color = Color.white;
                         break;
@@ -206,6 +210,17 @@ public class Patient : MonoBehaviour
                 currentColorA = TriageBackGroundA.GetComponent<Image>().color;
                 currentColorB = TriageBackGroundB.GetComponent<Image>().color;
                 currentColorC = TriageBackGroundC.GetComponent<Image>().color;
+
+            }
+
+            if (waiting == true)
+            {
+                timeToBlink = Time.time + timeToAppear;
+            }
+
+            if (waiting == true && (Time.time >= timeToBlink))
+            {
+                waiting = false;
             }
         }
     }
@@ -253,25 +268,45 @@ public class Patient : MonoBehaviour
                 InfoLeg.GetComponent<Image>().color = Color.red;
                 InfoArm.GetComponent<Image>().color = Color.red;
                 InfoAirway.GetComponent<Image>().color = Color.red;
+                switch (gameObject.name)
+                {
+                    case "patient-A":
+                        TriageBackGroundA.GetComponent<Image>().color = Color.black;
+                        break;
+
+                    case "patient-B":
+                        TriageBackGroundB.GetComponent<Image>().color = Color.black;
+                        break;
+
+                    case "patient-C":
+                        TriageBackGroundC.GetComponent<Image>().color = Color.black;
+                        break;
+
+                    default:
+                        break;
+                }
             }
 
-            if (lifeTimer.ElapsedMilliseconds >= timeToLife-60000 && isDead == false && warning == false)
+            if (lifeTimer.ElapsedMilliseconds >= timeToLife-60000 && isDead == false && warning == false && waiting == false)
             {
                 warning = true;
                 timeWhenDisappear = Time.time + timeToAppear;
 
-                switch (this.name)
+                switch (gameObject.name)
                 {
-                    case "Patient-A":
-                        TriageBackGroundA.GetComponent<Image>().color = Color.black;
+                    case "patient-A":
+                        TriageBackGroundA.GetComponent<Image>().color = Color.white;
+                        TriageBackGroundA.GetComponentInChildren<Text>().color = Color.red;
                         break;
 
-                    case "Patient-B":
-                        TriageBackGroundB.GetComponent<Image>().color = Color.black;
+                    case "patient-B":
+                        TriageBackGroundB.GetComponent<Image>().color = Color.white;
+                        TriageBackGroundB.GetComponentInChildren<Text>().color = Color.red;
                         break;
 
-                    case "Patient-C":
-                        TriageBackGroundC.GetComponent<Image>().color = Color.black;
+                    case "patient-C":
+                        TriageBackGroundC.GetComponent<Image>().color = Color.white;
+                        TriageBackGroundC.GetComponentInChildren<Text>().color = Color.red;
                         break;
 
                     default:
