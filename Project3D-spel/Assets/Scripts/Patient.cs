@@ -32,6 +32,7 @@ public class Patient : MonoBehaviour
 
     public TraigeLevel level;
     Stopwatch lifeTimer = new Stopwatch();
+    Stopwatch timerBlinking = new Stopwatch();
     public bool heartProblem;
     public bool breathingProblem;
     public bool armProblem;
@@ -55,7 +56,7 @@ public class Patient : MonoBehaviour
 
     int timeToLife;
     private float timeWhenDisappear;
-    private float timeToAppear = 1f;
+    private float timeToAppear = 1000f;
     private float timeToBlink;
     public bool isDead = false;
     public bool isSaved = false;
@@ -179,10 +180,11 @@ public class Patient : MonoBehaviour
                 CheckTime();
             }
 
-            if (warning == true && (Time.time >= timeWhenDisappear) && isDead == false)
+            if (warning == true && (timerBlinking.ElapsedMilliseconds >= timeToAppear) && isDead == false)
             {
                 warning = false;
                 waiting = true;
+                timerBlinking.Restart();
                 switch (gameObject.name)
                 {
                     case "patient-A":
@@ -210,17 +212,12 @@ public class Patient : MonoBehaviour
                 currentColorA = TriageBackGroundA.GetComponent<Image>().color;
                 currentColorB = TriageBackGroundB.GetComponent<Image>().color;
                 currentColorC = TriageBackGroundC.GetComponent<Image>().color;
-
             }
 
-            if (waiting == true)
-            {
-                timeToBlink = Time.time + timeToAppear;
-            }
-
-            if (waiting == true && (Time.time >= timeToBlink))
+            if (waiting == true && (timerBlinking.ElapsedMilliseconds >= timeToAppear-200))
             {
                 waiting = false;
+                UnityEngine.Debug.Log("endBlink");
             }
         }
     }
@@ -272,14 +269,17 @@ public class Patient : MonoBehaviour
                 {
                     case "patient-A":
                         TriageBackGroundA.GetComponent<Image>().color = Color.black;
+                        TriageBackGroundA.GetComponentInChildren<Text>().color = Color.red;
                         break;
 
                     case "patient-B":
                         TriageBackGroundB.GetComponent<Image>().color = Color.black;
+                        TriageBackGroundB.GetComponentInChildren<Text>().color = Color.red;
                         break;
 
                     case "patient-C":
                         TriageBackGroundC.GetComponent<Image>().color = Color.black;
+                        TriageBackGroundC.GetComponentInChildren<Text>().color = Color.red;
                         break;
 
                     default:
@@ -289,8 +289,9 @@ public class Patient : MonoBehaviour
 
             if (lifeTimer.ElapsedMilliseconds >= timeToLife-60000 && isDead == false && warning == false && waiting == false)
             {
+                UnityEngine.Debug.Log("startBlink");
                 warning = true;
-                timeWhenDisappear = Time.time + timeToAppear;
+                timerBlinking.Restart();
 
                 switch (gameObject.name)
                 {
