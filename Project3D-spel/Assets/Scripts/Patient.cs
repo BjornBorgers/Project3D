@@ -49,10 +49,17 @@ public class Patient : MonoBehaviour
     public GameObject TriageBackGroundB;
     public GameObject TriageBackGroundC;
 
+    Color currentColorA;
+    Color currentColorB;
+    Color currentColorC;
+
     int timeToLife;
+    private float timeWhenDisappear;
+    private float timeToAppear = 2f;
     public bool isDead = false;
     public bool isSaved = false;
     public bool isDone = false;
+    bool warning = false;
     public List<IProblems> problemsList = new List<IProblems>();
 
 
@@ -169,6 +176,37 @@ public class Patient : MonoBehaviour
             {
                 CheckTime();
             }
+
+            if (warning == true && (Time.time >= timeWhenDisappear) && isDead == false)
+            {
+                switch (this.name)
+                {
+                    case "Patient-A":
+                        TriageBackGroundA.GetComponent<Image>().color = currentColorA;
+                        TriageBackGroundA.GetComponentInChildren<Text>().color = Color.white;
+                        break;
+
+                    case "Patient-B":
+                        TriageBackGroundB.GetComponent<Image>().color = currentColorB;
+                        TriageBackGroundB.GetComponentInChildren<Text>().color = Color.white;
+                        break;
+
+                    case "Patient-C":
+                        TriageBackGroundC.GetComponent<Image>().color = currentColorC;
+                        TriageBackGroundC.GetComponentInChildren<Text>().color = Color.white;
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+
+            if (warning == false && isDead == false)
+            {
+                currentColorA = TriageBackGroundA.GetComponent<Image>().color;
+                currentColorB = TriageBackGroundB.GetComponent<Image>().color;
+                currentColorC = TriageBackGroundC.GetComponent<Image>().color;
+            }
         }
     }
 
@@ -215,6 +253,30 @@ public class Patient : MonoBehaviour
                 InfoLeg.GetComponent<Image>().color = Color.red;
                 InfoArm.GetComponent<Image>().color = Color.red;
                 InfoAirway.GetComponent<Image>().color = Color.red;
+            }
+
+            if (lifeTimer.ElapsedMilliseconds >= timeToLife-60000 && isDead == false && warning == false)
+            {
+                warning = true;
+                timeWhenDisappear = Time.time + timeToAppear;
+
+                switch (this.name)
+                {
+                    case "Patient-A":
+                        TriageBackGroundA.GetComponent<Image>().color = Color.black;
+                        break;
+
+                    case "Patient-B":
+                        TriageBackGroundB.GetComponent<Image>().color = Color.black;
+                        break;
+
+                    case "Patient-C":
+                        TriageBackGroundC.GetComponent<Image>().color = Color.black;
+                        break;
+
+                    default:
+                        break;
+                }
             }
         }
     }
