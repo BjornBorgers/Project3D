@@ -269,16 +269,19 @@ public class Patient : MonoBehaviour
                 {
                     case "patient-A":
                         TriageBackGroundA.GetComponent<Image>().color = Color.black;
+                        radialMenu.GetComponent<MenuScript>().TriadeWarningA.GetComponent<MeshRenderer>().material = radialMenu.GetComponent<MenuScript>().MaterialBlack;
                         TriageBackGroundA.GetComponentInChildren<Text>().color = Color.red;
                         break;
 
                     case "patient-B":
                         TriageBackGroundB.GetComponent<Image>().color = Color.black;
+                        radialMenu.GetComponent<MenuScript>().TriadeWarningB.GetComponent<MeshRenderer>().material = radialMenu.GetComponent<MenuScript>().MaterialBlack;
                         TriageBackGroundB.GetComponentInChildren<Text>().color = Color.red;
                         break;
 
                     case "patient-C":
                         TriageBackGroundC.GetComponent<Image>().color = Color.black;
+                        radialMenu.GetComponent<MenuScript>().TriadeWarningC.GetComponent<MeshRenderer>().material = radialMenu.GetComponent<MenuScript>().MaterialBlack;
                         TriageBackGroundC.GetComponentInChildren<Text>().color = Color.red;
                         break;
 
