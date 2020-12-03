@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class StartGameButton : MonoBehaviour
 {
+    public GameObject firstMenu;
+    public GameObject secondMenu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,11 @@ public class StartGameButton : MonoBehaviour
     }
     public void StartTutorial()
     {
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("TutorialLevel");
+    }
+    public void SwitchMenu()
+    {
+        firstMenu.SetActive(false);
+        secondMenu.SetActive(true);
     }
 }

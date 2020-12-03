@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleAnimated.unity
     guid: 825cd362b6d9f4841a187e481e195f4e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tutorial.unity
     guid: 994754b326e5a644295698ca6caf2b7f
   - enabled: 1
@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/TutorialLevel.unity
+    guid: 20e75538d9f99594296855b9cd2b5b78
   m_configObjects: {}
