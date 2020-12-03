@@ -39,8 +39,6 @@ public class MenuScript : MonoBehaviour
     public Text analyseText;
     private float timeToAppear = 2f;
     private float timeWhenDisappear;
-
-    bool subMenuOpen = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,73 +63,7 @@ public class MenuScript : MonoBehaviour
     //ToOpen
     public void OpenA()
     {
-        if (subMenuOpen==false)
-        {
-            ToA.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    public void OpenB()
-    {
-        if (subMenuOpen == false)
-        {
-            ToB.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    public void OpenC()
-    {
-        if (subMenuOpen == false)
-        {
-            ToC.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    public void OpenD()
-    {
-        if (subMenuOpen == false)
-        {
-            ToD.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    public void OpenE()
-    {
-        if (subMenuOpen == false)
-        {
-            ToE.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    public void OpenI()
-    {
-        if (subMenuOpen == false)
-        {
-            ToI.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    public void OpenT()
-    {
-        if (subMenuOpen == false)
-        {
-            ToT.SetActive(true);
-            subMenuOpen = true;
-        }
-    }
-
-    //ToOpen
-    //ToClose
-    public void CloseSubMenu()
-    {
-        subMenuOpen = false;
-        ToA.SetActive(false);
+        ToA.SetActive(true);
         ToB.SetActive(false);
         ToC.SetActive(false);
         ToD.SetActive(false);
@@ -140,18 +72,90 @@ public class MenuScript : MonoBehaviour
         ToT.SetActive(false);
     }
 
+    public void OpenB()
+    {
+        ToA.SetActive(false);
+        ToB.SetActive(true);
+        ToC.SetActive(false);
+        ToD.SetActive(false);
+        ToE.SetActive(false);
+        ToI.SetActive(false);
+        ToT.SetActive(false);
+    }
+
+    public void OpenC()
+    {
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(true);
+        ToD.SetActive(false);
+        ToE.SetActive(false);
+        ToI.SetActive(false);
+        ToT.SetActive(false);
+    }
+
+    public void OpenD()
+    {
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(false);
+        ToD.SetActive(true);
+        ToE.SetActive(false);
+        ToI.SetActive(false);
+        ToT.SetActive(false);
+    }
+
+    public void OpenE()
+    {
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(false);
+        ToD.SetActive(false);
+        ToE.SetActive(true);
+        ToI.SetActive(false);
+        ToT.SetActive(false);
+    }
+
+    public void OpenI()
+    {
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(false);
+        ToD.SetActive(false);
+        ToE.SetActive(false);
+        ToI.SetActive(true);
+        ToT.SetActive(false);
+    }
+
+    public void OpenT()
+    {
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(false);
+        ToD.SetActive(false);
+        ToE.SetActive(false);
+        ToI.SetActive(false);
+        ToT.SetActive(true);
+    }
+
+    //ToOpen
+    //ToClose
     public void CloseMenu()
     {
-        if (subMenuOpen == false)
-        {
-            player.GetComponent<CameraMouse>().enabled = true;
-            player.GetComponent<PlayerMovement>().enabled = true;
-            Cursor.visible = false;
-            crossHair.SetActive(true);
-            gameObject.SetActive(false);
-            text.SetActive(true);
-            textMiddle.SetActive(false);
-        }
+        player.GetComponent<CameraMouse>().enabled = true;
+        player.GetComponent<PlayerMovement>().enabled = true;
+        Cursor.visible = false;
+        crossHair.SetActive(true);
+        gameObject.SetActive(false);
+        text.SetActive(true);
+        textMiddle.SetActive(false);
+        ToA.SetActive(false);
+        ToB.SetActive(false);
+        ToC.SetActive(false);
+        ToD.SetActive(false);
+        ToE.SetActive(false);
+        ToI.SetActive(false);
+        ToT.SetActive(false);
     }
     //ToClose
     //Analyse
@@ -162,7 +166,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                if (hit.GetComponent<Patient>().isDone == false)
+                if (hit.GetComponent<Patient>().isDead == false)
                 {
                     analyseText.text = "Airway is free";
                     analyseText.enabled = true;
@@ -191,14 +195,14 @@ public class MenuScript : MonoBehaviour
                     }
                 }
 
-                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
                 {
                     hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = badBreathingClip;
                     hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
                     hit.GetComponent<Patient>().InfoLung.enabled = true;
                     hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.red;
                 }
-                else if (hasProblem == false && hit.GetComponent<Patient>().isDone == false)
+                else if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
                 {
                     hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = goodBreathingClip;
                     hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
@@ -226,14 +230,14 @@ public class MenuScript : MonoBehaviour
                     }
                 }
 
-                if (hasProblem == false && hit.GetComponent<Patient>().isDone == false)
+                if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
                 {
                     hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = heartClip;
                     hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
                     hit.GetComponent<Patient>().ShowHeart("80");
                     hit.GetComponent<Patient>().ShowVisuale(hasProblem);
                 }
-                else if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                else if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
                 {
                     hit.GetComponent<Patient>().ShowHeart("0");
                     hit.GetComponent<Patient>().ShowVisuale(hasProblem);
@@ -259,7 +263,7 @@ public class MenuScript : MonoBehaviour
                     }
                 }
 
-                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
                 {
                     analyseText.text = "Patient is unconscious and is unresponsive";
                     analyseText.enabled = true;
@@ -267,7 +271,7 @@ public class MenuScript : MonoBehaviour
                     hit.GetComponent<Patient>().InfoBewust.enabled = true;
                     hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.red;
                 }
-                else if (hasProblem == false && hit.GetComponent<Patient>().isDone == false)
+                else if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
                 {
                     analyseText.text = "Patient is conscious";
                     analyseText.enabled = true;
@@ -302,7 +306,7 @@ public class MenuScript : MonoBehaviour
 
                 }
 
-                if (hasArmProblem == true && hasLegProblem == true && hit.GetComponent<Patient>().isDone == false)
+                if (hasArmProblem == true && hasLegProblem == true && hit.GetComponent<Patient>().isDead == false)
                 {
                     Debug.Log("Here");
                     analyseText.text = "Patient has a broken leg and arm";
@@ -313,7 +317,7 @@ public class MenuScript : MonoBehaviour
                     hit.GetComponent<Patient>().InfoLeg.enabled = true;
                     hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.red;
                 }
-                else if (hit.GetComponent<Patient>().isDone == false)
+                else if (hit.GetComponent<Patient>().isDead == false)
                 {
                     hit.GetComponent<Patient>().InfoArm.enabled = true;
                     hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
@@ -346,14 +350,9 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                bool hasProblem = false;
                 List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
                 for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                 {
-                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" || hit.GetComponent<Patient>().problemsList[i].Name() == "arm" && hit.GetComponent<Patient>().isDone == false)
-                    {
-                        hasProblem = true;
-                    }
                     if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" && hit.GetComponent<Patient>().isDone == false)
                     {
                         hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
@@ -554,12 +553,12 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-B":
-                    TriadeBackGroundA.color = new Color(255, 100, 0);
+                    TriadeBackGroundB.color = new Color(255, 100, 0);
                     TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialYellow;
                     break;
 
                 case "patient-C":
-                    TriadeBackGroundA.color = new Color(255, 100, 0);
+                    TriadeBackGroundC.color = new Color(255, 100, 0);
                     TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialYellow;
                     break;
 
@@ -583,12 +582,12 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-B":
-                    TriadeBackGroundA.color = Color.yellow;
+                    TriadeBackGroundB.color = Color.yellow;
                     TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialOrange;
                     break;
 
                 case "patient-C":
-                    TriadeBackGroundA.color = Color.yellow;
+                    TriadeBackGroundC.color = Color.yellow;
                     TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialOrange;
                     break;
 
