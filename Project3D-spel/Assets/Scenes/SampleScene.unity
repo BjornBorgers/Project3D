@@ -8117,6 +8117,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &302180558
 Animator:
   serializedVersion: 3
@@ -9666,6 +9667,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &344977588
 Animator:
   serializedVersion: 3
@@ -12958,6 +12960,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &429745798
 Animator:
   serializedVersion: 3
@@ -15536,6 +15539,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &543894839
 Animator:
   serializedVersion: 3
@@ -17907,6 +17911,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &563533899
 Animator:
   serializedVersion: 3
@@ -18567,6 +18572,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &579546940
 Animator:
   serializedVersion: 3
@@ -20528,6 +20534,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &645286028
 Animator:
   serializedVersion: 3
@@ -22606,6 +22613,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &735069217
 Animator:
   serializedVersion: 3
@@ -29436,6 +29444,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &898390146
 Animator:
   serializedVersion: 3
@@ -30415,6 +30424,7 @@ Transform:
   - {fileID: 1550306670}
   - {fileID: 2129075673}
   - {fileID: 8752965050149014646}
+  - {fileID: 1670451239}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30472,12 +30482,12 @@ AudioSource:
   m_GameObject: {fileID: 922833112}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3402019276958884979, guid: d88cc66c0394101469dbfbd76d0665f8, type: 2}
   m_audioClip: {fileID: 8300000, guid: ece841bbe2d024c4aae0e65a2ab6dcee, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.454
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -31480,6 +31490,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &941497684
 Animator:
   serializedVersion: 3
@@ -37413,6 +37424,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &1139265623
 Animator:
   serializedVersion: 3
@@ -44825,6 +44837,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &1340240293
 Animator:
   serializedVersion: 3
@@ -49563,6 +49576,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &1483923317
 Animator:
   serializedVersion: 3
@@ -52160,6 +52174,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &1547681838
 Animator:
   serializedVersion: 3
@@ -54542,6 +54557,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &1599743358
 Animator:
   serializedVersion: 3
@@ -57115,6 +57131,133 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e882fa6d7f8a58b46b766093f615fcca, type: 3}
+--- !u!1 &1670451238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670451239}
+  - component: {fileID: 1670451240}
+  m_Layer: 0
+  m_Name: Alarm-Patients
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1670451239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670451238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 922833113}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1670451240
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670451238}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 3402019276958884979, guid: d88cc66c0394101469dbfbd76d0665f8, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 676264e79cb416649854dcc2a351b17c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1672081390
 GameObject:
   m_ObjectHideFlags: 0
@@ -57386,6 +57529,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &1672752528
 Animator:
   serializedVersion: 3
@@ -58774,6 +58918,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &1721458576
 Animator:
   serializedVersion: 3
@@ -59295,6 +59440,7 @@ MonoBehaviour:
   isDead: 0
   isSaved: 0
   isDone: 0
+  beepingSource: {fileID: 1670451240}
 --- !u!95 &1737688938
 Animator:
   serializedVersion: 3
