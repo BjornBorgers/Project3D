@@ -61,6 +61,7 @@ public class Patient : MonoBehaviour
     public bool isDead = false;
     public bool isSaved = false;
     public bool isDone = false;
+    public AudioSource beepingSource;
     bool warning = false;
     bool waiting = false;
     public List<IProblems> problemsList = new List<IProblems>();
@@ -295,6 +296,7 @@ public class Patient : MonoBehaviour
                 UnityEngine.Debug.Log("startBlink");
                 warning = true;
                 timerBlinking.Restart();
+                beepingSource.Play();
 
                 switch (gameObject.name)
                 {
