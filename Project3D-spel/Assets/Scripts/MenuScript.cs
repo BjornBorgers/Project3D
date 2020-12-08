@@ -37,6 +37,7 @@ public class MenuScript : MonoBehaviour
     public Material MaterialBlack;
 
     public Text analyseText;
+    public AudioSource selectSound;
     private float timeToAppear = 2f;
     private float timeWhenDisappear;
     // Start is called before the first frame update
@@ -173,6 +174,7 @@ public class MenuScript : MonoBehaviour
                     timeWhenDisappear = Time.time + timeToAppear;
                     hit.GetComponent<Patient>().InfoAirway.enabled = true;
                     hit.GetComponent<Patient>().InfoAirway.GetComponent<Image>().color = Color.green;
+                    selectSound.Play();
                 }
             }
         }
@@ -185,6 +187,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
+                selectSound.Play();
                 bool hasProblem = false;
                 List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
                 for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
@@ -220,6 +223,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
+                selectSound.Play();
                 bool hasProblem = false;
                 List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
                 for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
@@ -253,6 +257,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
+                selectSound.Play();
                 bool hasProblem = false;
                 List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
                 for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
@@ -290,6 +295,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
+                selectSound.Play();
                 bool hasLegProblem = false;
                 bool hasArmProblem = false;
                 List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
@@ -350,6 +356,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
+                selectSound.Play();
                 List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
                 for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                 {
@@ -381,6 +388,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
+                selectSound.Play();
                 bool hasProblem = false;
                 List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
                 for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
@@ -407,6 +415,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
+                selectSound.Play();
                 bool hasProblem = false;
                 List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
                 for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
@@ -437,6 +446,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
+                selectSound.Play();
                 bool hasProblem = false;
                 List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
                 for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
@@ -489,6 +499,7 @@ public class MenuScript : MonoBehaviour
         Collider[] hitColliders5 = Physics.OverlapSphere(player.transform.position, 5);
         foreach (var hit in hitColliders5)
         {
+            selectSound.Play();
             switch (hit.name)
             {
                 case "patient-A":
@@ -517,6 +528,7 @@ public class MenuScript : MonoBehaviour
         Collider[] hitColliders6 = Physics.OverlapSphere(player.transform.position, 5);
         foreach (var hit in hitColliders6)
         {
+            selectSound.Play();
             switch (hit.name)
             {
                 case "patient-A":
@@ -545,6 +557,7 @@ public class MenuScript : MonoBehaviour
         Collider[] hitColliders1 = Physics.OverlapSphere(player.transform.position, 5);
         foreach (var hit in hitColliders1)
         {
+            selectSound.Play();
             switch (hit.name)
             {
                 case "patient-A":
@@ -573,6 +586,7 @@ public class MenuScript : MonoBehaviour
         Collider[] hitColliders0 = Physics.OverlapSphere(player.transform.position, 5);
         foreach (var hit in hitColliders0)
         {
+            selectSound.Play();
             Debug.Log("Hit-Color");
             switch (hit.name)
             {
@@ -603,6 +617,7 @@ public class MenuScript : MonoBehaviour
         Collider[] hitColliders2 = Physics.OverlapSphere(player.transform.position, 5);
         foreach (var hit in hitColliders2)
         {
+            selectSound.Play();
             switch (hit.name)
             {
                 case "patient-A":
@@ -631,6 +646,7 @@ public class MenuScript : MonoBehaviour
         Collider[] hitColliders3 = Physics.OverlapSphere(player.transform.position, 5);
         foreach (var hit in hitColliders3)
         {
+            selectSound.Play();
             switch (hit.name)
             {
                 case "patient-A":
