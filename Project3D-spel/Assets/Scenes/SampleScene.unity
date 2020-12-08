@@ -3563,7 +3563,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a642f2aa123e29c4a8a03fd02312e459, type: 3}
+    m_Font: {fileID: 12800000, guid: affaea74d6441d148bb20b4bf1255dfd, type: 3}
     m_FontSize: 120
     m_FontStyle: 0
     m_BestFit: 0
@@ -12729,11 +12729,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a642f2aa123e29c4a8a03fd02312e459, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: affaea74d6441d148bb20b4bf1255dfd, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -33931,6 +33931,7 @@ GameObject:
   - component: {fileID: 855207387}
   - component: {fileID: 855207386}
   - component: {fileID: 855207385}
+  - component: {fileID: 855207388}
   m_Layer: 5
   m_Name: Button-Quit
   m_TagString: Untagged
@@ -34051,6 +34052,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855207383}
   m_CullTransparentMesh: 0
+--- !u!95 &855207388
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855207383}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 39d97e671fddc7e4ea8cac0ddf3c8389, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &860849511
 GameObject:
   m_ObjectHideFlags: 0
@@ -36775,8 +36795,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3402019276958884979, guid: d88cc66c0394101469dbfbd76d0665f8, type: 2}
   m_audioClip: {fileID: 8300000, guid: 52e93f5d21e4e79419184006cde0e912, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -44280,8 +44300,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a642f2aa123e29c4a8a03fd02312e459, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: affaea74d6441d148bb20b4bf1255dfd, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -53824,6 +53844,7 @@ GameObject:
   - component: {fileID: 1340307534}
   - component: {fileID: 1340307533}
   - component: {fileID: 1340307532}
+  - component: {fileID: 1340307535}
   m_Layer: 5
   m_Name: Button-Continue
   m_TagString: Untagged
@@ -53944,6 +53965,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340307530}
   m_CullTransparentMesh: 0
+--- !u!95 &1340307535
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340307530}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be10243264fab4a43bb592d86a997121, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1340615341
 GameObject:
   m_ObjectHideFlags: 0
