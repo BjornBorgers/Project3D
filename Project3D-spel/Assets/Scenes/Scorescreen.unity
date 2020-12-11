@@ -917,6 +917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hudScreen: {fileID: 0}
   player: {fileID: 0}
+  infoTimer: {fileID: 0}
 --- !u!114 &1298816989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,6 +930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688223936ab694e4ab689e249f57957c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstMenu: {fileID: 0}
+  secondMenu: {fileID: 0}
 --- !u!1 &1390899164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,7 +1345,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1833661938}
   - component: {fileID: 1833661937}
-  - component: {fileID: 1833661936}
   - component: {fileID: 1833661939}
   m_Layer: 0
   m_Name: Main Camera
@@ -1351,14 +1353,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1833661936
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833661935}
-  m_Enabled: 1
 --- !u!20 &1833661937
 Camera:
   m_ObjectHideFlags: 0
