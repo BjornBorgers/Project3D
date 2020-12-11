@@ -54,6 +54,9 @@ public class Patient : MonoBehaviour
     Color currentColorB;
     Color currentColorC;
 
+    public Transform cameraLook;
+    public GameObject player;
+
     int timeToLife;
     private float timeWhenDisappear;
     private float timeToAppear = 1000f;
@@ -143,6 +146,7 @@ public class Patient : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     radialMenu.SetActive(true);
+                    radialMenu.GetComponent<MenuScript>().lockCam = true;
 
                     switch (gameObject.name)
                     {
@@ -160,6 +164,11 @@ public class Patient : MonoBehaviour
                         default:
                             break;
                     }
+                    player.transform.LookAt(cameraLook, Vector3.up);
+                }
+                if (radialMenu.GetComponent<MenuScript>().lockCam == true)
+                {
+                    player.transform.LookAt(cameraLook);
                 }
             }
             else

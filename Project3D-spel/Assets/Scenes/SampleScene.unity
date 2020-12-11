@@ -6875,6 +6875,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253943547}
   m_Mesh: {fileID: -3309222630744912188, guid: af5bacb0305c0424ea4161aced75f11a, type: 3}
+--- !u!1 &260820317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260820318}
+  m_Layer: 0
+  m_Name: PointCamera-A
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &260820318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260820317}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: 0.75, z: 15.919998}
+  m_LocalScale: {x: 1.7, y: 1.7000002, z: 1.7000002}
+  m_Children: []
+  m_Father: {fileID: 1174911709}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &263207985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8742,7 +8772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8956,6 +8986,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 260820318}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -10945,7 +10977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11154,6 +11186,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 659188028}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -15063,7 +15097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15277,6 +15311,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 659188028}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -17249,6 +17285,7 @@ MonoBehaviour:
   MaterialBlack: {fileID: 2100000, guid: 8079e89cc4c038f418350d7c37e5e211, type: 2}
   analyseText: {fileID: 874007121}
   selectSound: {fileID: 907873971}
+  lockCam: 0
 --- !u!224 &517253054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18304,7 +18341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -18513,6 +18550,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 260820318}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -21433,7 +21472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21647,6 +21686,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 260820318}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -22742,7 +22783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22956,6 +22997,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 984901556}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -25668,7 +25711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -25882,6 +25925,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 984901556}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -26267,6 +26312,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6320972039947127679, guid: be993abe72beea74ab8e54b3a5724ea8, type: 3}
   m_PrefabInstance: {fileID: 658865892}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &659188027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659188028}
+  m_Layer: 0
+  m_Name: PointCamera-B
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &659188028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659188027}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 6.392, y: 15.188, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2085468069}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
 --- !u!1001 &659842659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28203,7 +28278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -28417,6 +28492,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 984901556}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -36131,6 +36208,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 984901556}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -38740,7 +38819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38954,6 +39033,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 260820318}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -40062,6 +40143,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3333401521080947106, guid: dba422e563059cd4291e905b1970c56f, type: 3}
   m_PrefabInstance: {fileID: 984370381}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &984901555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984901556}
+  m_Layer: 0
+  m_Name: PointCamera-C
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &984901556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984901555}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0, y: 0.983, z: 0.5}
+  m_LocalScale: {x: 1.6999999, y: 1.6999999, z: 1.6999999}
+  m_Children: []
+  m_Father: {fileID: 1533196478}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -180, y: 0, z: 180}
 --- !u!1001 &987063834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45327,7 +45438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -45536,6 +45647,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 260820318}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -48837,6 +48950,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 260820318}
   - {fileID: 1139265616}
   - {fileID: 543894832}
   - {fileID: 302180550}
@@ -53710,7 +53824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -53924,6 +54038,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 659188028}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -59458,6 +59574,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 984901556}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -61830,6 +61948,7 @@ Transform:
   m_LocalPosition: {x: -16.05, y: 0.08, z: 6.499998}
   m_LocalScale: {x: 1.7000003, y: 1.7000002, z: 1.7}
   m_Children:
+  - {fileID: 984901556}
   - {fileID: 898390138}
   - {fileID: 1483923309}
   - {fileID: 1721458569}
@@ -62766,7 +62885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -62980,6 +63099,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 659188028}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -66190,7 +66311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -66404,6 +66525,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 260820318}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -69918,7 +70041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -70132,6 +70255,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 659188028}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -71968,7 +72093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -72177,6 +72302,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 984901556}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -73133,7 +73260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -73347,6 +73474,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 659188028}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -88031,6 +88160,7 @@ Transform:
   m_LocalPosition: {x: -16.05, y: 0.08, z: 6.499998}
   m_LocalScale: {x: 1.7000003, y: 1.7000002, z: 1.7}
   m_Children:
+  - {fileID: 659188028}
   - {fileID: 1547681830}
   - {fileID: 344977581}
   - {fileID: 1340240285}
