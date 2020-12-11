@@ -40,6 +40,7 @@ public class MenuScript : MonoBehaviour
     public AudioSource selectSound;
     private float timeToAppear = 2f;
     private float timeWhenDisappear;
+    public bool lockCam=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -157,6 +158,7 @@ public class MenuScript : MonoBehaviour
         ToE.SetActive(false);
         ToI.SetActive(false);
         ToT.SetActive(false);
+        lockCam = false;
     }
     //ToClose
     //Analyse

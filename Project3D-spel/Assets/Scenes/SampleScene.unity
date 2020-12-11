@@ -3535,7 +3535,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 434397186}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5828,6 +5828,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220819066}
   m_CullTransparentMesh: 0
+--- !u!1 &221449185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 221449186}
+  - component: {fileID: 221449188}
+  - component: {fileID: 221449187}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &221449186
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221449185}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1689495818}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &221449187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221449185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: affaea74d6441d148bb20b4bf1255dfd, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Audio
+--- !u!222 &221449188
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221449185}
+  m_CullTransparentMesh: 0
 --- !u!1001 &222545543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6875,6 +6954,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253943547}
   m_Mesh: {fileID: -3309222630744912188, guid: af5bacb0305c0424ea4161aced75f11a, type: 3}
+--- !u!1 &260820317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260820318}
+  m_Layer: 0
+  m_Name: PointCamera-A
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &260820318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260820317}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: 0.75, z: 15.919998}
+  m_LocalScale: {x: 1.7, y: 1.7000002, z: 1.7000002}
+  m_Children: []
+  m_Father: {fileID: 1174911709}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &263207985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8742,7 +8851,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8956,6 +9065,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 260820318}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -10945,7 +11056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11154,6 +11265,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 659188028}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -15063,7 +15176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15277,6 +15390,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 659188028}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -15481,6 +15596,7 @@ RectTransform:
   m_Children:
   - {fileID: 855207384}
   - {fileID: 1340307531}
+  - {fileID: 1689495818}
   - {fileID: 157853798}
   m_Father: {fileID: 1437557861}
   m_RootOrder: 8
@@ -17249,6 +17365,7 @@ MonoBehaviour:
   MaterialBlack: {fileID: 2100000, guid: 8079e89cc4c038f418350d7c37e5e211, type: 2}
   analyseText: {fileID: 874007121}
   selectSound: {fileID: 907873971}
+  lockCam: 0
 --- !u!224 &517253054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18304,7 +18421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -18513,6 +18630,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 260820318}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -21433,7 +21552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21647,6 +21766,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 260820318}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -22742,7 +22863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22956,6 +23077,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 984901556}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -25668,7 +25791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -25882,6 +26005,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 984901556}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -26267,6 +26392,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6320972039947127679, guid: be993abe72beea74ab8e54b3a5724ea8, type: 3}
   m_PrefabInstance: {fileID: 658865892}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &659188027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659188028}
+  m_Layer: 0
+  m_Name: PointCamera-B
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &659188028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659188027}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 6.392, y: 15.188, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2085468069}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
 --- !u!1001 &659842659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28203,7 +28358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -28417,6 +28572,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 984901556}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -36131,6 +36288,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 984901556}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -38740,7 +38899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38954,6 +39113,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 260820318}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -40062,6 +40223,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3333401521080947106, guid: dba422e563059cd4291e905b1970c56f, type: 3}
   m_PrefabInstance: {fileID: 984370381}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &984901555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984901556}
+  m_Layer: 0
+  m_Name: PointCamera-C
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &984901556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984901555}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0, y: 0.983, z: 0.5}
+  m_LocalScale: {x: 1.6999999, y: 1.6999999, z: 1.6999999}
+  m_Children: []
+  m_Father: {fileID: 1533196478}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -180, y: 0, z: 180}
 --- !u!1001 &987063834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45327,7 +45518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -45536,6 +45727,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 260820318}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -48837,6 +49030,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 260820318}
   - {fileID: 1139265616}
   - {fileID: 543894832}
   - {fileID: 302180550}
@@ -53710,7 +53904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -53924,6 +54118,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 659188028}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -59458,6 +59654,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 984901556}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -61830,6 +62028,7 @@ Transform:
   m_LocalPosition: {x: -16.05, y: 0.08, z: 6.499998}
   m_LocalScale: {x: 1.7000003, y: 1.7000002, z: 1.7}
   m_Children:
+  - {fileID: 984901556}
   - {fileID: 898390138}
   - {fileID: 1483923309}
   - {fileID: 1721458569}
@@ -62766,7 +62965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -62980,6 +63179,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 659188028}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -63149,7 +63350,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1550306670}
   - component: {fileID: 1550306672}
-  - component: {fileID: 1550306671}
   - component: {fileID: 1550306674}
   m_Layer: 0
   m_Name: Camera
@@ -63172,14 +63372,6 @@ Transform:
   m_Father: {fileID: 922833113}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1550306671
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550306669}
-  m_Enabled: 1
 --- !u!20 &1550306672
 Camera:
   m_ObjectHideFlags: 0
@@ -66190,7 +66382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -66404,6 +66596,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 260820318}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -69918,7 +70112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -70132,6 +70326,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 659188028}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -70766,6 +70962,158 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6320972039947127679, guid: be993abe72beea74ab8e54b3a5724ea8, type: 3}
   m_PrefabInstance: {fileID: 1681077904}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1689495817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689495818}
+  - component: {fileID: 1689495822}
+  - component: {fileID: 1689495821}
+  - component: {fileID: 1689495820}
+  - component: {fileID: 1689495819}
+  m_Layer: 5
+  m_Name: Button-Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1689495818
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689495817}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_Children:
+  - {fileID: 221449186}
+  m_Father: {fileID: 434397186}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -100}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1689495819
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689495817}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be10243264fab4a43bb592d86a997121, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1689495820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689495817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.6117647, g: 0.6117647, b: 0.6117647, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1689495821}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2068789829}
+        m_TargetAssemblyTypeName: LisenerInfo, Assembly-CSharp
+        m_MethodName: Mute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1689495821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689495817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1689495822
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689495817}
+  m_CullTransparentMesh: 0
 --- !u!1 &1693096657
 GameObject:
   m_ObjectHideFlags: 0
@@ -71968,7 +72316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -72177,6 +72525,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 984901556}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -73133,7 +73483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8198581190498284571, guid: ced380e9eccd9a44495964acfc7dc800, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -73347,6 +73697,8 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
+  cameraLook: {fileID: 659188028}
+  player: {fileID: 922833112}
   isDead: 0
   isSaved: 0
   isDone: 0
@@ -87803,6 +88155,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e882fa6d7f8a58b46b766093f615fcca, type: 3}
+--- !u!1 &2068789828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2068789830}
+  - component: {fileID: 2068789829}
+  m_Layer: 0
+  m_Name: list
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2068789829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068789828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e55266c3ab9f241a1d5be7c052d919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2068789830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068789828}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -116.13809, y: 3.385434, z: -8.207393}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2069205426
 GameObject:
   m_ObjectHideFlags: 0
@@ -88031,6 +88426,7 @@ Transform:
   m_LocalPosition: {x: -16.05, y: 0.08, z: 6.499998}
   m_LocalScale: {x: 1.7000003, y: 1.7000002, z: 1.7}
   m_Children:
+  - {fileID: 659188028}
   - {fileID: 1547681830}
   - {fileID: 344977581}
   - {fileID: 1340240285}
