@@ -19,6 +19,16 @@ public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
     public bool BSaved;
     public bool CSaved;
 
+    public Color truePatientAColor;
+    public Color truePatientBColor;
+    public Color truePatientCColor;
+
+    public Color patientAColor;
+    public Color patientBColor;
+    public Color patientCColor;
+
+    public bool isSetUp;
+
     TimeSpan elapsed; // however you get the amount of time elapsed
 
     public Stopwatch playTimer = new Stopwatch();
@@ -28,6 +38,76 @@ public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
         patientA = gamemanager.GetComponent<Gamemanager>().patientA;
         patientB = gamemanager.GetComponent<Gamemanager>().patientB;
         patientC = gamemanager.GetComponent<Gamemanager>().patientC;
+
+        switch (gamemanager.GetComponent<Gamemanager>().patientA.GetComponent<Patient>().level)
+        {
+            case TraigeLevel.Blue:
+                truePatientAColor = Color.blue;
+                break;
+            case TraigeLevel.Green:
+                truePatientAColor = Color.green;
+                break;
+            case TraigeLevel.Yellow:
+                truePatientAColor = new Color(255, 100, 0);
+                break;
+            case TraigeLevel.Orange:
+                truePatientAColor = Color.yellow;
+                break;
+            case TraigeLevel.Red:
+                truePatientAColor = Color.red;
+                break;
+            case TraigeLevel.Black:
+                truePatientAColor = Color.black;
+                break;
+            default:
+                break;
+        }
+        switch (gamemanager.GetComponent<Gamemanager>().patientB.GetComponent<Patient>().level)
+        {
+            case TraigeLevel.Blue:
+                truePatientBColor = Color.blue;
+                break;
+            case TraigeLevel.Green:
+                truePatientBColor = Color.green;
+                break;
+            case TraigeLevel.Yellow:
+                truePatientBColor = new Color(255, 100, 0);
+                break;
+            case TraigeLevel.Orange:
+                truePatientBColor = Color.yellow;
+                break;
+            case TraigeLevel.Red:
+                truePatientBColor = Color.red;
+                break;
+            case TraigeLevel.Black:
+                truePatientBColor = Color.black;
+                break;
+            default:
+                break;
+        }
+        switch (gamemanager.GetComponent<Gamemanager>().patientC.GetComponent<Patient>().level)
+        {
+            case TraigeLevel.Blue:
+                truePatientCColor = Color.blue;
+                break;
+            case TraigeLevel.Green:
+                truePatientCColor = Color.green;
+                break;
+            case TraigeLevel.Yellow:
+                truePatientCColor = new Color(255, 100, 0);
+                break;
+            case TraigeLevel.Orange:
+                truePatientCColor = Color.yellow;
+                break;
+            case TraigeLevel.Red:
+                truePatientCColor = Color.red;
+                break;
+            case TraigeLevel.Black:
+                truePatientCColor = Color.black;
+                break;
+            default:
+                break;
+        }
     }
 
     // Update is called once per frame

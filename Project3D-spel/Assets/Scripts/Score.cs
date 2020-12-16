@@ -77,6 +77,24 @@ public class Score : MonoBehaviour
             score += 200;
         }
 
+        if (info.GetComponent<InfoForScoreScene>().patientAColor == info.GetComponent<InfoForScoreScene>().truePatientAColor)
+        {
+            score += 100;
+        }
+        if (info.GetComponent<InfoForScoreScene>().patientBColor == info.GetComponent<InfoForScoreScene>().truePatientBColor)
+        {
+            score += 100;
+        }
+        if (info.GetComponent<InfoForScoreScene>().patientCColor == info.GetComponent<InfoForScoreScene>().truePatientCColor)
+        {
+            score += 100;
+        }
+
+        if (info.GetComponent<InfoForScoreScene>().isSetUp == true)
+        {
+            score += 200;
+        }
+
         scoreText.GetComponent<Text>().text = score.ToString();
     }
 
