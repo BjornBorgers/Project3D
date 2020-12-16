@@ -4870,6 +4870,12 @@ MonoBehaviour:
   ASaved: 0
   BSaved: 0
   CSaved: 0
+  truePatientAColor: {r: 0, g: 0, b: 0, a: 0}
+  truePatientBColor: {r: 0, g: 0, b: 0, a: 0}
+  truePatientCColor: {r: 0, g: 0, b: 0, a: 0}
+  patientAColor: {r: 0, g: 0, b: 0, a: 0}
+  patientBColor: {r: 0, g: 0, b: 0, a: 0}
+  patientCColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &185552960
 Transform:
   m_ObjectHideFlags: 0
@@ -18244,6 +18250,7 @@ MonoBehaviour:
   analyseText: {fileID: 874007121}
   selectSound: {fileID: 907873971}
   lockCam: 0
+  Info: {fileID: 185552958}
 --- !u!224 &517253054
 RectTransform:
   m_ObjectHideFlags: 0
