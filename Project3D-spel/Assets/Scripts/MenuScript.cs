@@ -41,6 +41,10 @@ public class MenuScript : MonoBehaviour
     private float timeToAppear = 2f;
     private float timeWhenDisappear;
     public bool lockCam=false;
+    public GameObject Info;
+    bool firstTimeA = false;
+    bool firstTimeB = false;
+    bool firstTimeC = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -507,16 +511,31 @@ public class MenuScript : MonoBehaviour
                 case "patient-A":
                     TriadeBackGroundA.color = Color.blue;
                     TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlue;
+                    if (firstTimeA == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientAColor = Color.blue;
+                        firstTimeA = true;
+                    }
                     break;
 
                 case "patient-B":
                     TriadeBackGroundB.color = Color.blue;
                     TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlue;
+                    if (firstTimeB == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientBColor = Color.blue;
+                        firstTimeB = true;
+                    }
                     break;
 
                 case "patient-C":
                     TriadeBackGroundC.color = Color.blue;
                     TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlue;
+                    if (firstTimeC == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientCColor = Color.blue;
+                        firstTimeC = true;
+                    }
                     break;
 
                 default:
@@ -536,16 +555,31 @@ public class MenuScript : MonoBehaviour
                 case "patient-A":
                     TriadeBackGroundA.color = Color.green;
                     TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialGreen;
+                    if (firstTimeA == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientAColor = Color.green;
+                        firstTimeA = true;
+                    }
                     break;
 
                 case "patient-B":
                     TriadeBackGroundB.color = Color.green;
                     TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialGreen;
+                    if (firstTimeB == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientBColor = Color.green;
+                        firstTimeB = true;
+                    }
                     break;
 
                 case "patient-C":
                     TriadeBackGroundC.color = Color.green;
                     TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialGreen;
+                    if (firstTimeC == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientCColor = Color.green;
+                        firstTimeC = true;
+                    }
                     break;
 
                 default:
@@ -565,16 +599,31 @@ public class MenuScript : MonoBehaviour
                 case "patient-A":
                     TriadeBackGroundA.color = new Color(255, 100, 0);
                     TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialYellow;
+                    if (firstTimeA==false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientAColor= new Color(255, 100, 0);
+                        firstTimeA = true;
+                    }
                     break;
 
                 case "patient-B":
                     TriadeBackGroundB.color = new Color(255, 100, 0);
                     TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialYellow;
+                    if (firstTimeB == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientBColor = new Color(255, 100, 0);
+                        firstTimeB = true;
+                    }
                     break;
 
                 case "patient-C":
                     TriadeBackGroundC.color = new Color(255, 100, 0);
                     TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialYellow;
+                    if (firstTimeC == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientCColor = new Color(255, 100, 0);
+                        firstTimeC = true;
+                    }
                     break;
 
                 default:
@@ -595,16 +644,31 @@ public class MenuScript : MonoBehaviour
                 case "patient-A":
                     TriadeBackGroundA.color = Color.yellow;
                     TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialOrange;
+                    if (firstTimeA == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientAColor = Color.yellow;
+                        firstTimeA = true;
+                    }
                     break;
 
                 case "patient-B":
                     TriadeBackGroundB.color = Color.yellow;
                     TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialOrange;
+                    if (firstTimeB == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientBColor = Color.yellow;
+                        firstTimeB = true;
+                    }
                     break;
 
                 case "patient-C":
                     TriadeBackGroundC.color = Color.yellow;
                     TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialOrange;
+                    if (firstTimeC == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientCColor = Color.yellow;
+                        firstTimeC = true;
+                    }
                     break;
 
                 default:
@@ -625,16 +689,31 @@ public class MenuScript : MonoBehaviour
                 case "patient-A":
                     TriadeBackGroundA.color = Color.red;
                     TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialRed;
+                    if (firstTimeA == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientAColor = Color.red;
+                        firstTimeA = true;
+                    }
                     break;
 
                 case "patient-B":
                     TriadeBackGroundB.color = Color.red;
                     TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialRed;
+                    if (firstTimeB == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientBColor = Color.red;
+                        firstTimeB = true;
+                    }
                     break;
 
                 case "patient-C":
                     TriadeBackGroundC.color = Color.red;
                     TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialRed;
+                    if (firstTimeC == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientCColor = Color.red;
+                        firstTimeC = true;
+                    }
                     break;
 
                 default:
@@ -654,16 +733,31 @@ public class MenuScript : MonoBehaviour
                 case "patient-A":
                     TriadeBackGroundA.color = Color.black;
                     TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlack;
+                    if (firstTimeA == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientAColor = Color.black;
+                        firstTimeA = true;
+                    }
                     break;
 
                 case "patient-B":
                     TriadeBackGroundB.color = Color.black;
                     TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlack;
+                    if (firstTimeB == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientBColor = Color.black;
+                        firstTimeB = true;
+                    }
                     break;
 
                 case "patient-C":
                     TriadeBackGroundC.color = Color.black;
                     TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlack;
+                    if (firstTimeC == false)
+                    {
+                        Info.GetComponent<InfoForScoreScene>().patientCColor = Color.black;
+                        firstTimeC = true;
+                    }
                     break;
 
                 default:
