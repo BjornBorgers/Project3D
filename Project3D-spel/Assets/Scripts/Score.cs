@@ -90,6 +90,11 @@ public class Score : MonoBehaviour
             score += 100;
         }
 
+        if (info.GetComponent<InfoForScoreScene>().isSetUp == true)
+        {
+            score += 200;
+        }
+
         scoreText.GetComponent<Text>().text = score.ToString();
     }
 

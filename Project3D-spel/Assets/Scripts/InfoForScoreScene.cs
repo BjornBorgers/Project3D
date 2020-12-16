@@ -27,6 +27,8 @@ public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
     public Color patientBColor;
     public Color patientCColor;
 
+    public bool isSetUp;
+
     TimeSpan elapsed; // however you get the amount of time elapsed
 
     public Stopwatch playTimer = new Stopwatch();
