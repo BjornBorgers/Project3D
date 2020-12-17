@@ -135,7 +135,7 @@ public class Patient : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 5);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 4);
         foreach (var hit in hitColliders)
         {
             if (hit.name == "Player")

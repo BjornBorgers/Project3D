@@ -18,7 +18,7 @@ public class SetDriehoek : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 2);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 3);
         foreach (var hit in hitColliders)
         {
             if (hit.name == "Player" && setUp == false && holdingDriehoek.activeSelf == false)
