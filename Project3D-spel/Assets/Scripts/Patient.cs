@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Diagnostics;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using Cinemachine;
 
 public enum TraigeLevel
 {
@@ -54,8 +55,8 @@ public class Patient : MonoBehaviour
     Color currentColorB;
     Color currentColorC;
 
-    public Transform cameraLook;
     public GameObject player;
+    public GameObject virtualCameraPatient;
 
     int timeToLife;
     private float timeWhenDisappear;
@@ -135,7 +136,7 @@ public class Patient : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 4);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 5);
         foreach (var hit in hitColliders)
         {
             if (hit.name == "Player")
@@ -164,17 +165,17 @@ public class Patient : MonoBehaviour
                         default:
                             break;
                     }
-                    player.transform.LookAt(cameraLook, Vector3.up);
                 }
                 if (radialMenu.GetComponent<MenuScript>().lockCam == true)
                 {
-                    player.transform.LookAt(cameraLook);
+                    virtualCameraPatient.GetComponent<CinemachineVirtualCamera>().Priority = 11;
                 }
             }
             else
             {
                 text.SetActive(false);
                 InfoPatientAll.SetActive(false);
+                virtualCameraPatient.GetComponent<CinemachineVirtualCamera>().Priority = 9;
             }
 
             if (problemsList.Count==0)
