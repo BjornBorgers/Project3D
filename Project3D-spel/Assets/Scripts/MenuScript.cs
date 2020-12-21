@@ -380,24 +380,27 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                selectSound.Play();
-                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
-                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                if (hit.GetComponent<Patient>().traideDone == true)
                 {
-                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" && hit.GetComponent<Patient>().isDone == false)
+                    selectSound.Play();
+                    List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                     {
-                        hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
-                        hit.GetComponent<Patient>().boneLeg.SetActive(false);
-                        hit.GetComponent<Patient>().legSpaak.SetActive(true);
-                        hit.GetComponent<Patient>().bindingSpaak.SetActive(true);
-                        hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
-                    }
-                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm" && hit.GetComponent<Patient>().isDone == false)
-                    {
-                        hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
-                        hit.GetComponent<Patient>().boneArm.SetActive(false);
-                        hit.GetComponent<Patient>().armSpaak.SetActive(true);
-                        hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" && hit.GetComponent<Patient>().isDone == false)
+                        {
+                            hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                            hit.GetComponent<Patient>().boneLeg.SetActive(false);
+                            hit.GetComponent<Patient>().legSpaak.SetActive(true);
+                            hit.GetComponent<Patient>().bindingSpaak.SetActive(true);
+                            hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
+                        }
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm" && hit.GetComponent<Patient>().isDone == false)
+                        {
+                            hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                            hit.GetComponent<Patient>().boneArm.SetActive(false);
+                            hit.GetComponent<Patient>().armSpaak.SetActive(true);
+                            hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
+                        }
                     }
                 }
             }
@@ -412,21 +415,24 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                selectSound.Play();
-                bool hasProblem = false;
-                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
-                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                if (hit.GetComponent<Patient>().traideDone == true)
                 {
-                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "breathing")
+                    selectSound.Play();
+                    bool hasProblem = false;
+                    List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                     {
-                        hasProblem = true;
-                        hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "breathing")
+                        {
+                            hasProblem = true;
+                            hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                        }
                     }
-                }
 
-                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
-                {
-                    hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.green;
+                    if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                    {
+                        hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.green;
+                    }
                 }
             }
         }
@@ -439,25 +445,28 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                selectSound.Play();
-                bool hasProblem = false;
-                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
-                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                if (hit.GetComponent<Patient>().traideDone == true)
                 {
-                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "heart")
+                    selectSound.Play();
+                    bool hasProblem = false;
+                    List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                     {
-                        hasProblem = true;
-                        hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "heart")
+                        {
+                            hasProblem = true;
+                            hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                        }
                     }
-                }
 
-                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
-                {
-                    hit.GetComponent<Patient>().ShowHeart("80");
-                    hit.GetComponent<Patient>().ShowVisuale(false);
-                    player.GetComponentInChildren<Animator>().SetTrigger("Use Beademing");
-                    hit.GetComponent<Patient>().GetComponent<Animator>().SetTrigger("StartHeart");
+                    if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
+                    {
+                        hit.GetComponent<Patient>().ShowHeart("80");
+                        hit.GetComponent<Patient>().ShowVisuale(false);
+                        player.GetComponentInChildren<Animator>().SetTrigger("Use Beademing");
+                        hit.GetComponent<Patient>().GetComponent<Animator>().SetTrigger("StartHeart");
 
+                    }
                 }
             }
         }
@@ -470,43 +479,46 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                selectSound.Play();
-                bool hasProblem = false;
-                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
-                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                if (hit.GetComponent<Patient>().traideDone == true)
                 {
-                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "bewust")
+                    selectSound.Play();
+                    bool hasProblem = false;
+                    List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                     {
-                        hasProblem = true;
-                        hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "bewust")
+                        {
+                            hasProblem = true;
+                            hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                        }
                     }
-                }
 
-                if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
-                {
-                    switch (hit.name)
+                    if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
                     {
-                        case "patient-A":
-                            verpleegster.transform.position = new Vector3(-126, 0.3f, 7f);
-                            verpleegster.transform.rotation = new Quaternion(0, 90, 0, 0);
-                            break;
+                        switch (hit.name)
+                        {
+                            case "patient-A":
+                                verpleegster.transform.position = new Vector3(-126, 0.3f, 7f);
+                                verpleegster.transform.rotation = new Quaternion(0, 90, 0, 0);
+                                break;
 
-                        case "patient-B":
-                            verpleegster.transform.position = new Vector3(-132, 0.3f, 29f);
-                            verpleegster.transform.rotation = new Quaternion(0, 180, 0, 0);
-                            break;
+                            case "patient-B":
+                                verpleegster.transform.position = new Vector3(-132, 0.3f, 29f);
+                                verpleegster.transform.rotation = new Quaternion(0, 180, 0, 0);
+                                break;
 
-                        case "patient-C":
-                            verpleegster.transform.position = new Vector3(-116, 0.3f, -8.5f);
-                            verpleegster.transform.rotation = new Quaternion(0, 180, 0, 0);
-                            break;
+                            case "patient-C":
+                                verpleegster.transform.position = new Vector3(-116, 0.3f, -8.5f);
+                                verpleegster.transform.rotation = new Quaternion(0, 180, 0, 0);
+                                break;
 
-                        default:
-                            break;
+                            default:
+                                break;
+                        }
+                        hit.GetComponent<Patient>().InfoBewust.color = Color.green;
+                        verpleegster.GetComponent<Animator>().SetTrigger("StartZit");
+                        verpleegster.GetComponent<MoveNurse>().enabled = false;
                     }
-                    hit.GetComponent<Patient>().InfoBewust.color = Color.green;
-                    verpleegster.GetComponent<Animator>().SetTrigger("StartZit");
-                    verpleegster.GetComponent<MoveNurse>().enabled = false;
                 }
             }
         }
