@@ -69,7 +69,12 @@ public class Patient : MonoBehaviour
     bool warning = false;
     bool waiting = false;
     public List<IProblems> problemsList = new List<IProblems>();
-
+    public bool analysedA = false;
+    public bool analysedB = false;
+    public bool analysedC = false;
+    public bool analysedD = false;
+    public bool analysedE = false;
+    public bool traideDone = false;
 
     // Start is called before the first frame update
     void Start()
