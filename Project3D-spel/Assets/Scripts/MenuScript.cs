@@ -182,6 +182,7 @@ public class MenuScript : MonoBehaviour
                     hit.GetComponent<Patient>().InfoAirway.GetComponent<Image>().color = Color.green;
                     selectSound.Play();
                 }
+                hit.GetComponent<Patient>().analysedA = true;
             }
         }
     }
@@ -193,30 +194,34 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                selectSound.Play();
-                bool hasProblem = false;
-                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
-                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                if (hit.GetComponent<Patient>().analysedA == true)
                 {
-                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "breathing")
+                    selectSound.Play();
+                    bool hasProblem = false;
+                    List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                     {
-                        hasProblem = true;
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "breathing")
+                        {
+                            hasProblem = true;
+                        }
                     }
-                }
 
-                if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
-                {
-                    hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = badBreathingClip;
-                    hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
-                    hit.GetComponent<Patient>().InfoLung.enabled = true;
-                    hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.red;
-                }
-                else if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
-                {
-                    hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = goodBreathingClip;
-                    hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
-                    hit.GetComponent<Patient>().InfoLung.enabled = true;
-                    hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.green;
+                    if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
+                    {
+                        hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = badBreathingClip;
+                        hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
+                        hit.GetComponent<Patient>().InfoLung.enabled = true;
+                        hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.red;
+                    }
+                    else if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
+                    {
+                        hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = goodBreathingClip;
+                        hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
+                        hit.GetComponent<Patient>().InfoLung.enabled = true;
+                        hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.green;
+                    }
+                    hit.GetComponent<Patient>().analysedB = true;
                 }
             }
         }
@@ -229,28 +234,32 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                selectSound.Play();
-                bool hasProblem = false;
-                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
-                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                if (hit.GetComponent<Patient>().analysedB == true)
                 {
-                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "heart")
+                    selectSound.Play();
+                    bool hasProblem = false;
+                    List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                     {
-                        hasProblem = true;
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "heart")
+                        {
+                            hasProblem = true;
+                        }
                     }
-                }
 
-                if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
-                {
-                    hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = heartClip;
-                    hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
-                    hit.GetComponent<Patient>().ShowHeart("80");
-                    hit.GetComponent<Patient>().ShowVisuale(hasProblem);
-                }
-                else if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
-                {
-                    hit.GetComponent<Patient>().ShowHeart("0");
-                    hit.GetComponent<Patient>().ShowVisuale(hasProblem);
+                    if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
+                    {
+                        hit.GetComponent<Patient>().GetComponent<AudioSource>().clip = heartClip;
+                        hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
+                        hit.GetComponent<Patient>().ShowHeart("80");
+                        hit.GetComponent<Patient>().ShowVisuale(hasProblem);
+                    }
+                    else if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
+                    {
+                        hit.GetComponent<Patient>().ShowHeart("0");
+                        hit.GetComponent<Patient>().ShowVisuale(hasProblem);
+                    }
+                    hit.GetComponent<Patient>().analysedC = true;
                 }
             }
         }
@@ -263,32 +272,36 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                selectSound.Play();
-                bool hasProblem = false;
-                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
-                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                if (hit.GetComponent<Patient>().analysedC == true)
                 {
-                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "bewust")
+                    selectSound.Play();
+                    bool hasProblem = false;
+                    List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                     {
-                        hasProblem = true;
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "bewust")
+                        {
+                            hasProblem = true;
+                        }
                     }
-                }
 
-                if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
-                {
-                    analyseText.text = "Patient is unconscious and is unresponsive";
-                    analyseText.enabled = true;
-                    timeWhenDisappear = Time.time + timeToAppear;
-                    hit.GetComponent<Patient>().InfoBewust.enabled = true;
-                    hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.red;
-                }
-                else if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
-                {
-                    analyseText.text = "Patient is conscious";
-                    analyseText.enabled = true;
-                    timeWhenDisappear = Time.time + timeToAppear;
-                    hit.GetComponent<Patient>().InfoBewust.enabled = true;
-                    hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.green;
+                    if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
+                    {
+                        analyseText.text = "Patient is unconscious and is unresponsive";
+                        analyseText.enabled = true;
+                        timeWhenDisappear = Time.time + timeToAppear;
+                        hit.GetComponent<Patient>().InfoBewust.enabled = true;
+                        hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.red;
+                    }
+                    else if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
+                    {
+                        analyseText.text = "Patient is conscious";
+                        analyseText.enabled = true;
+                        timeWhenDisappear = Time.time + timeToAppear;
+                        hit.GetComponent<Patient>().InfoBewust.enabled = true;
+                        hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.green;
+                    }
+                    hit.GetComponent<Patient>().analysedD = true;
                 }
             }
         }
@@ -301,54 +314,59 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                selectSound.Play();
-                bool hasLegProblem = false;
-                bool hasArmProblem = false;
-                List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
-                for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                if (hit.GetComponent<Patient>().analysedD == true)
                 {
-                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg")
+                    selectSound.Play();
+                    bool hasLegProblem = false;
+                    bool hasArmProblem = false;
+                    List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
+                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                     {
-                        hasLegProblem = true;
-                    }
-                    if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm")
-                    {
-                        hasArmProblem = true;
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg")
+                        {
+                            hasLegProblem = true;
+                        }
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm")
+                        {
+                            hasArmProblem = true;
+                        }
+
                     }
 
-                }
-
-                if (hasArmProblem == true && hasLegProblem == true && hit.GetComponent<Patient>().isDead == false)
-                {
-                    Debug.Log("Here");
-                    analyseText.text = "Patient has a broken leg and arm";
-                    analyseText.enabled = true;
-                    timeWhenDisappear = Time.time + timeToAppear;
-                    hit.GetComponent<Patient>().InfoArm.enabled = true;
-                    hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.red;
-                    hit.GetComponent<Patient>().InfoLeg.enabled = true;
-                    hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.red;
-                }
-                else if (hit.GetComponent<Patient>().isDead == false)
-                {
-                    hit.GetComponent<Patient>().InfoArm.enabled = true;
-                    hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
-                    hit.GetComponent<Patient>().InfoLeg.enabled = true;
-                    hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
-                    if (hasLegProblem == true)
+                    if (hasArmProblem == true && hasLegProblem == true && hit.GetComponent<Patient>().isDead == false)
                     {
-                        analyseText.text = "Patient has a broken leg";
+                        Debug.Log("Here");
+                        analyseText.text = "Patient has a broken leg and arm";
                         analyseText.enabled = true;
                         timeWhenDisappear = Time.time + timeToAppear;
+                        hit.GetComponent<Patient>().InfoArm.enabled = true;
+                        hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.red;
+                        hit.GetComponent<Patient>().InfoLeg.enabled = true;
                         hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.red;
                     }
-                    if (hasArmProblem == true)
+                    else if (hit.GetComponent<Patient>().isDead == false)
                     {
-                        analyseText.text = "Patient has a broken arm";
-                        analyseText.enabled = true;
-                        timeWhenDisappear = Time.time + timeToAppear;
-                        hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.red;
+                        hit.GetComponent<Patient>().InfoArm.enabled = true;
+                        hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
+                        hit.GetComponent<Patient>().InfoLeg.enabled = true;
+                        hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
+                        if (hasLegProblem == true)
+                        {
+                            analyseText.text = "Patient has a broken leg";
+                            analyseText.enabled = true;
+                            timeWhenDisappear = Time.time + timeToAppear;
+                            hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.red;
+                        }
+                        if (hasArmProblem == true)
+                        {
+                            analyseText.text = "Patient has a broken arm";
+                            analyseText.enabled = true;
+                            timeWhenDisappear = Time.time + timeToAppear;
+                            hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.red;
+                        }
                     }
+
+                    hit.GetComponent<Patient>().analysedE = true;
                 }
             }
         }
@@ -509,32 +527,44 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
-                    TriadeBackGroundA.color = Color.blue;
-                    TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlue;
-                    if (firstTimeA == false)
+                    if (hit.GetComponent<Patient>().analysedE==true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientAColor = Color.blue;
-                        firstTimeA = true;
+                        TriadeBackGroundA.color = Color.blue;
+                        TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlue;
+                        if (firstTimeA == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientAColor = Color.blue;
+                            firstTimeA = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 case "patient-B":
-                    TriadeBackGroundB.color = Color.blue;
-                    TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlue;
-                    if (firstTimeB == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientBColor = Color.blue;
-                        firstTimeB = true;
+                        TriadeBackGroundB.color = Color.blue;
+                        TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlue;
+                        if (firstTimeB == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientBColor = Color.blue;
+                            firstTimeB = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 case "patient-C":
-                    TriadeBackGroundC.color = Color.blue;
-                    TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlue;
-                    if (firstTimeC == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientCColor = Color.blue;
-                        firstTimeC = true;
+                        TriadeBackGroundC.color = Color.blue;
+                        TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlue;
+                        if (firstTimeC == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientCColor = Color.blue;
+                            firstTimeC = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
@@ -553,32 +583,44 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
-                    TriadeBackGroundA.color = Color.green;
-                    TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialGreen;
-                    if (firstTimeA == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientAColor = Color.green;
-                        firstTimeA = true;
+                        TriadeBackGroundA.color = Color.green;
+                        TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialGreen;
+                        if (firstTimeA == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientAColor = Color.green;
+                            firstTimeA = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 case "patient-B":
-                    TriadeBackGroundB.color = Color.green;
-                    TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialGreen;
-                    if (firstTimeB == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientBColor = Color.green;
-                        firstTimeB = true;
+                        TriadeBackGroundB.color = Color.green;
+                        TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialGreen;
+                        if (firstTimeB == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientBColor = Color.green;
+                            firstTimeB = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 case "patient-C":
-                    TriadeBackGroundC.color = Color.green;
-                    TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialGreen;
-                    if (firstTimeC == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientCColor = Color.green;
-                        firstTimeC = true;
+                        TriadeBackGroundC.color = Color.green;
+                        TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialGreen;
+                        if (firstTimeC == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientCColor = Color.green;
+                            firstTimeC = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
@@ -597,32 +639,44 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
-                    TriadeBackGroundA.color = new Color(255, 100, 0);
-                    TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialYellow;
-                    if (firstTimeA==false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientAColor= new Color(255, 100, 0);
-                        firstTimeA = true;
+                        TriadeBackGroundA.color = new Color(255, 100, 0);
+                        TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialYellow;
+                        if (firstTimeA == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientAColor = new Color(255, 100, 0);
+                            firstTimeA = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 case "patient-B":
-                    TriadeBackGroundB.color = new Color(255, 100, 0);
-                    TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialYellow;
-                    if (firstTimeB == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientBColor = new Color(255, 100, 0);
-                        firstTimeB = true;
+                        TriadeBackGroundB.color = new Color(255, 100, 0);
+                        TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialYellow;
+                        if (firstTimeB == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientBColor = new Color(255, 100, 0);
+                            firstTimeB = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 case "patient-C":
-                    TriadeBackGroundC.color = new Color(255, 100, 0);
-                    TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialYellow;
-                    if (firstTimeC == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientCColor = new Color(255, 100, 0);
-                        firstTimeC = true;
+                        TriadeBackGroundC.color = new Color(255, 100, 0);
+                        TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialYellow;
+                        if (firstTimeC == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientCColor = new Color(255, 100, 0);
+                            firstTimeC = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
@@ -642,37 +696,48 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
-                    TriadeBackGroundA.color = Color.yellow;
-                    TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialOrange;
-                    if (firstTimeA == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientAColor = Color.yellow;
-                        firstTimeA = true;
+                        TriadeBackGroundA.color = Color.yellow;
+                        TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialOrange;
+                        if (firstTimeA == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientAColor = Color.yellow;
+                            firstTimeA = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 case "patient-B":
-                    TriadeBackGroundB.color = Color.yellow;
-                    TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialOrange;
-                    if (firstTimeB == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientBColor = Color.yellow;
-                        firstTimeB = true;
+                        TriadeBackGroundB.color = Color.yellow;
+                        TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialOrange;
+                        if (firstTimeB == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientBColor = Color.yellow;
+                            firstTimeB = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 case "patient-C":
-                    TriadeBackGroundC.color = Color.yellow;
-                    TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialOrange;
-                    if (firstTimeC == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientCColor = Color.yellow;
-                        firstTimeC = true;
+                        TriadeBackGroundC.color = Color.yellow;
+                        TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialOrange;
+                        if (firstTimeC == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientCColor = Color.yellow;
+                            firstTimeC = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 default:
-                    Debug.Log("Hit-Def");
                     break;
             }
         }
@@ -687,32 +752,44 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
-                    TriadeBackGroundA.color = Color.red;
-                    TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialRed;
-                    if (firstTimeA == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientAColor = Color.red;
-                        firstTimeA = true;
+                        TriadeBackGroundA.color = Color.red;
+                        TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialRed;
+                        if (firstTimeA == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientAColor = Color.red;
+                            firstTimeA = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 case "patient-B":
-                    TriadeBackGroundB.color = Color.red;
-                    TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialRed;
-                    if (firstTimeB == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientBColor = Color.red;
-                        firstTimeB = true;
+                        TriadeBackGroundB.color = Color.red;
+                        TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialRed;
+                        if (firstTimeB == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientBColor = Color.red;
+                            firstTimeB = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 case "patient-C":
-                    TriadeBackGroundC.color = Color.red;
-                    TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialRed;
-                    if (firstTimeC == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientCColor = Color.red;
-                        firstTimeC = true;
+                        TriadeBackGroundC.color = Color.red;
+                        TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialRed;
+                        if (firstTimeC == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientCColor = Color.red;
+                            firstTimeC = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
@@ -731,32 +808,44 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
-                    TriadeBackGroundA.color = Color.black;
-                    TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlack;
-                    if (firstTimeA == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientAColor = Color.black;
-                        firstTimeA = true;
+                        TriadeBackGroundA.color = Color.black;
+                        TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlack;
+                        if (firstTimeA == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientAColor = Color.black;
+                            firstTimeA = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 case "patient-B":
-                    TriadeBackGroundB.color = Color.black;
-                    TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlack;
-                    if (firstTimeB == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientBColor = Color.black;
-                        firstTimeB = true;
+                        TriadeBackGroundB.color = Color.black;
+                        TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlack;
+                        if (firstTimeB == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientBColor = Color.black;
+                            firstTimeB = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
                 case "patient-C":
-                    TriadeBackGroundC.color = Color.black;
-                    TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlack;
-                    if (firstTimeC == false)
+                    if (hit.GetComponent<Patient>().analysedE == true)
                     {
-                        Info.GetComponent<InfoForScoreScene>().patientCColor = Color.black;
-                        firstTimeC = true;
+                        TriadeBackGroundC.color = Color.black;
+                        TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlack;
+                        if (firstTimeC == false)
+                        {
+                            Info.GetComponent<InfoForScoreScene>().patientCColor = Color.black;
+                            firstTimeC = true;
+                        }
+                        hit.GetComponent<Patient>().traideDone = true;
                     }
                     break;
 
