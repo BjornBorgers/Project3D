@@ -45,10 +45,17 @@ public class MenuScript : MonoBehaviour
     bool firstTimeA = false;
     bool firstTimeB = false;
     bool firstTimeC = false;
+    bool phaseOneDone = false;
+    public GameObject manager;
+    GameObject patientA;
+    GameObject patientB;
+    GameObject patientC;
     // Start is called before the first frame update
     void Start()
     {
-      
+        patientA = manager.GetComponent<Gamemanager>().patientA;
+        patientB = manager.GetComponent<Gamemanager>().patientB;
+        patientC = manager.GetComponent<Gamemanager>().patientC;
     }
 
     // Update is called once per frame
@@ -64,6 +71,12 @@ public class MenuScript : MonoBehaviour
         {
             analyseText.enabled = false;
         }
+
+        if (patientA.GetComponent<Patient>().traideDone == true && patientB.GetComponent<Patient>().traideDone == true && patientC.GetComponent<Patient>().traideDone == true)
+        {
+            phaseOneDone = true;
+        }
+
     }
 
     //ToOpen
@@ -380,7 +393,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                if (hit.GetComponent<Patient>().traideDone == true)
+                if (phaseOneDone == true)
                 {
                     selectSound.Play();
                     List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
@@ -415,7 +428,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                if (hit.GetComponent<Patient>().traideDone == true)
+                if (phaseOneDone == true)
                 {
                     selectSound.Play();
                     bool hasProblem = false;
@@ -445,7 +458,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                if (hit.GetComponent<Patient>().traideDone == true)
+                if (phaseOneDone == true)
                 {
                     selectSound.Play();
                     bool hasProblem = false;
@@ -479,7 +492,7 @@ public class MenuScript : MonoBehaviour
         {
             if (hit.name.Contains("patient"))
             {
-                if (hit.GetComponent<Patient>().traideDone == true)
+                if (phaseOneDone == true)
                 {
                     selectSound.Play();
                     bool hasProblem = false;
