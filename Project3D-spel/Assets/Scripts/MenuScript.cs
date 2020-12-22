@@ -46,6 +46,7 @@ public class MenuScript : MonoBehaviour
     bool firstTimeB = false;
     bool firstTimeC = false;
     bool phaseOneDone = false;
+    public bool updateDone = true;
     public GameObject manager;
     GameObject patientA;
     GameObject patientB;
@@ -72,9 +73,11 @@ public class MenuScript : MonoBehaviour
             analyseText.enabled = false;
         }
 
-        if (patientA.GetComponent<Patient>().traideDone == true && patientB.GetComponent<Patient>().traideDone == true && patientC.GetComponent<Patient>().traideDone == true)
+        if (patientA.GetComponent<Patient>().traideDone == true && patientB.GetComponent<Patient>().traideDone == true && patientC.GetComponent<Patient>().traideDone == true && updateDone == true)
         {
             phaseOneDone = true;
+            Info.GetComponent<InfoForScoreScene>().StartTimer();
+            updateDone = false;
         }
 
     }

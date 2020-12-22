@@ -75,6 +75,7 @@ public class Patient : MonoBehaviour
     public bool analysedD = false;
     public bool analysedE = false;
     public bool traideDone = false;
+    bool timerStarted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -104,8 +105,6 @@ public class Patient : MonoBehaviour
             default:
                 break;
         }
-
-        StartTimer();
 
         if (heartProblem == true)
         {
@@ -141,6 +140,11 @@ public class Patient : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (radialMenu.GetComponent<MenuScript>().updateDone == false && timerStarted == false)
+        {
+            StartTimer();
+            timerStarted = true;
+        }
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 5);
         foreach (var hit in hitColliders)
         {
@@ -182,58 +186,60 @@ public class Patient : MonoBehaviour
                 InfoPatientAll.SetActive(false);
                 virtualCameraPatient.GetComponent<CinemachineVirtualCamera>().Priority = 9;
             }
-
-            if (problemsList.Count==0)
+            if (timerStarted == true)
             {
-                isDone = true;
-                isSaved = true;
-                lifeTimer.Stop();
-                text.GetComponent<Text>().text = "Patient is saved";
-            }
-
-            if (isSaved == false)
-            {
-                CheckTime();
-            }
-
-            if (warning == true && (timerBlinking.ElapsedMilliseconds >= timeToAppear) && isDead == false)
-            {
-                warning = false;
-                waiting = true;
-                timerBlinking.Restart();
-                switch (gameObject.name)
+                if (problemsList.Count == 0)
                 {
-                    case "patient-A":
-                        TriageBackGroundA.GetComponent<Image>().color = currentColorA;
-                        TriageBackGroundA.GetComponentInChildren<Text>().color = Color.white;
-                        break;
-
-                    case "patient-B":
-                        TriageBackGroundB.GetComponent<Image>().color = currentColorB;
-                        TriageBackGroundB.GetComponentInChildren<Text>().color = Color.white;
-                        break;
-
-                    case "patient-C":
-                        TriageBackGroundC.GetComponent<Image>().color = currentColorC;
-                        TriageBackGroundC.GetComponentInChildren<Text>().color = Color.white;
-                        break;
-
-                    default:
-                        break;
+                    isDone = true;
+                    isSaved = true;
+                    lifeTimer.Stop();
+                    text.GetComponent<Text>().text = "Patient is saved";
                 }
-            }
 
-            if (warning == false && isDead == false)
-            {
-                currentColorA = TriageBackGroundA.GetComponent<Image>().color;
-                currentColorB = TriageBackGroundB.GetComponent<Image>().color;
-                currentColorC = TriageBackGroundC.GetComponent<Image>().color;
-            }
+                if (isSaved == false)
+                {
+                    CheckTime();
+                }
 
-            if (waiting == true && (timerBlinking.ElapsedMilliseconds >= timeToAppear-200))
-            {
-                waiting = false;
-                UnityEngine.Debug.Log("endBlink");
+                if (warning == true && (timerBlinking.ElapsedMilliseconds >= timeToAppear) && isDead == false)
+                {
+                    warning = false;
+                    waiting = true;
+                    timerBlinking.Restart();
+                    switch (gameObject.name)
+                    {
+                        case "patient-A":
+                            TriageBackGroundA.GetComponent<Image>().color = currentColorA;
+                            TriageBackGroundA.GetComponentInChildren<Text>().color = Color.white;
+                            break;
+
+                        case "patient-B":
+                            TriageBackGroundB.GetComponent<Image>().color = currentColorB;
+                            TriageBackGroundB.GetComponentInChildren<Text>().color = Color.white;
+                            break;
+
+                        case "patient-C":
+                            TriageBackGroundC.GetComponent<Image>().color = currentColorC;
+                            TriageBackGroundC.GetComponentInChildren<Text>().color = Color.white;
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+
+                if (warning == false && isDead == false)
+                {
+                    currentColorA = TriageBackGroundA.GetComponent<Image>().color;
+                    currentColorB = TriageBackGroundB.GetComponent<Image>().color;
+                    currentColorC = TriageBackGroundC.GetComponent<Image>().color;
+                }
+
+                if (waiting == true && (timerBlinking.ElapsedMilliseconds >= timeToAppear - 200))
+                {
+                    waiting = false;
+                    UnityEngine.Debug.Log("endBlink");
+                }
             }
         }
     }
