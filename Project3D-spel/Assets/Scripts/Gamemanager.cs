@@ -17,7 +17,6 @@ public class Gamemanager : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
-        infoKeeper.GetComponent<InfoForScoreScene>().StartTimer();
         patientA = patientListA[Random.Range(0, patientListA.Count-1)];
         patientB = patientListB[Random.Range(0, patientListA.Count-1)];
         patientC = patientListC[Random.Range(0, patientListA.Count-1)];

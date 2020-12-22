@@ -75,6 +75,7 @@ public class MenuScript : MonoBehaviour
         if (patientA.GetComponent<Patient>().traideDone == true && patientB.GetComponent<Patient>().traideDone == true && patientC.GetComponent<Patient>().traideDone == true)
         {
             phaseOneDone = true;
+            Info.GetComponent<InfoForScoreScene>().StartTimer();
         }
 
     }
