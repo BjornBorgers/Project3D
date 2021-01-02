@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 59986.168, g: 57902.043, b: 52431.29, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2287,10 +2287,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Every patient has only a few minutes to live
-
-    if a patient has only
-    one minute to live their symbole and letter start to blink'
+  m_text: When the symbol above their head starts blinking, it means you have 1 minute
+    to revive him.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54dc756fab309aa409af7aad85938649, type: 2}
   m_sharedMaterial: {fileID: 4789284243788556249, guid: 54dc756fab309aa409af7aad85938649, type: 2}
@@ -2299,8 +2297,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2324,7 +2322,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2356,7 +2354,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &65477234
@@ -7696,7 +7694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -112.5}
   m_SizeDelta: {x: 650, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281105196
@@ -7712,7 +7710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.84313726}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10317,7 +10315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: If you want to leave the tutorial, then go to the ambulance
+  m_text: To leave the tutorial, go towards the ambulance.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54dc756fab309aa409af7aad85938649, type: 2}
   m_sharedMaterial: {fileID: 4789284243788556249, guid: 54dc756fab309aa409af7aad85938649, type: 2}
@@ -10326,8 +10324,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10344,14 +10342,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -10383,7 +10381,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &346791990
@@ -13930,7 +13928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 899031169696342113, guid: 16818fe7bd0d33b4abd2e29b162bd081, type: 3}
       propertyPath: m_Intensity
-      value: 5000000
+      value: 3000000
       objectReference: {fileID: 0}
     - target: {fileID: 899031169696342113, guid: 16818fe7bd0d33b4abd2e29b162bd081, type: 3}
       propertyPath: m_PointlightHDType
@@ -13958,7 +13956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 899031169696342114, guid: 16818fe7bd0d33b4abd2e29b162bd081, type: 3}
       propertyPath: m_Intensity
-      value: 5000000
+      value: 3000000
       objectReference: {fileID: 0}
     - target: {fileID: 899031169696342114, guid: 16818fe7bd0d33b4abd2e29b162bd081, type: 3}
       propertyPath: m_ColorTemperature
@@ -13998,19 +13996,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 899031169696342115, guid: 16818fe7bd0d33b4abd2e29b162bd081, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.73115116
+      value: 0.3033845
       objectReference: {fileID: 0}
     - target: {fileID: 899031169696342115, guid: 16818fe7bd0d33b4abd2e29b162bd081, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.2972855
+      value: 0.3929771
       objectReference: {fileID: 0}
     - target: {fileID: 899031169696342115, guid: 16818fe7bd0d33b4abd2e29b162bd081, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.055331986
+      value: -0.66753364
       objectReference: {fileID: 0}
     - target: {fileID: 899031169696342115, guid: 16818fe7bd0d33b4abd2e29b162bd081, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.61153716
+      value: 0.55491054
       objectReference: {fileID: 0}
     - target: {fileID: 899031169696342115, guid: 16818fe7bd0d33b4abd2e29b162bd081, type: 3}
       propertyPath: m_RootOrder
@@ -14022,7 +14020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 899031169696342115, guid: 16818fe7bd0d33b4abd2e29b162bd081, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -118.953
+      value: 3.509
       objectReference: {fileID: 0}
     - target: {fileID: 899031169696342115, guid: 16818fe7bd0d33b4abd2e29b162bd081, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -14495,6 +14493,9 @@ MonoBehaviour:
   analyseText: {fileID: 874007121}
   selectSound: {fileID: 1203431016}
   lockCam: 0
+  Info: {fileID: 0}
+  updateDone: 1
+  manager: {fileID: 0}
 --- !u!224 &517253054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17943,7 +17944,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -112.5}
   m_SizeDelta: {x: 650, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &636935820
@@ -17959,15 +17960,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.84313726}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -19315,7 +19316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -112.5}
   m_SizeDelta: {x: 650, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696533994
@@ -19331,15 +19332,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.84313726}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -36902,7 +36903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -112.5}
   m_SizeDelta: {x: 650, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1386657355
@@ -36918,15 +36919,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.84313726}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -41214,7 +41215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7afe473be155f34681e5147d7d40306, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -78.39001
+      value: -76.87
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7afe473be155f34681e5147d7d40306, type: 3}
       propertyPath: m_LocalRotation.x
@@ -41359,8 +41360,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: When you're close to a patient press "E" to interact with the patient,
-    you can then anylase the patient
+  m_text: To help a patient, press "E" to open the menu and click on a category to
+    analyse.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54dc756fab309aa409af7aad85938649, type: 2}
   m_sharedMaterial: {fileID: 4789284243788556249, guid: 54dc756fab309aa409af7aad85938649, type: 2}
@@ -41369,8 +41370,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -41394,7 +41395,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -41426,7 +41427,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1607446306
@@ -46465,9 +46466,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Use WASD or arrows to move around
+  m_text: 'Use WASD or arrow keys to move around.
 
-    Use the mouse to move the camera'
+    Use the mouse to move the
+    camera.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54dc756fab309aa409af7aad85938649, type: 2}
   m_sharedMaterial: {fileID: 4789284243788556249, guid: 54dc756fab309aa409af7aad85938649, type: 2}
@@ -46476,8 +46478,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -46501,7 +46503,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -46533,7 +46535,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1781839716
@@ -51992,12 +51994,18 @@ MonoBehaviour:
   TriageBackGroundA: {fileID: 397483827}
   TriageBackGroundB: {fileID: 1921878235}
   TriageBackGroundC: {fileID: 997492826}
-  cameraLook: {fileID: 0}
   player: {fileID: 0}
+  virtualCameraPatient: {fileID: 0}
   isDead: 0
   isSaved: 0
   isDone: 0
   beepingSource: {fileID: 0}
+  analysedA: 0
+  analysedB: 0
+  analysedC: 0
+  analysedD: 0
+  analysedE: 0
+  traideDone: 0
 --- !u!95 &1969370436
 Animator:
   serializedVersion: 3
@@ -55435,13 +55443,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129075672}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.00005464418, y: -0.00005228074, z: 0.0000101975065, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 922833113}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.006, y: -0.006, z: 0.001}
 --- !u!136 &2129075674
 CapsuleCollider:
   m_ObjectHideFlags: 0
