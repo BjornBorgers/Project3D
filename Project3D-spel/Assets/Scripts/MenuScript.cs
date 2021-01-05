@@ -18,7 +18,6 @@ public class MenuScript : MonoBehaviour
     public GameObject crossHair;
     public GameObject verpleegster;
 
-
     public AudioClip heartClip;
     public AudioClip badBreathingClip;
     public AudioClip goodBreathingClip;
