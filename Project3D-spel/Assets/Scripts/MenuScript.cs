@@ -17,6 +17,9 @@ public class MenuScript : MonoBehaviour
     public GameObject textMiddle;
     public GameObject crossHair;
     public GameObject verpleegster;
+    public GameObject foto1;
+    public GameObject foto2;
+    public GameObject foto3;
 
     public AudioClip heartClip;
     public AudioClip badBreathingClip;
@@ -806,6 +809,7 @@ public class MenuScript : MonoBehaviour
                             firstTimeA = true;
                         }
                         hit.GetComponent<Patient>().traideDone = true;
+                        foto1.SetActive(true);
                     }
                     break;
 
@@ -820,6 +824,7 @@ public class MenuScript : MonoBehaviour
                             firstTimeB = true;
                         }
                         hit.GetComponent<Patient>().traideDone = true;
+                        foto2.SetActive(true);
                     }
                     break;
 
@@ -834,6 +839,7 @@ public class MenuScript : MonoBehaviour
                             firstTimeC = true;
                         }
                         hit.GetComponent<Patient>().traideDone = true;
+                        foto3.SetActive(true);
                     }
                     break;
 
