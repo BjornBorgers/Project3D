@@ -96,7 +96,7 @@ public class Score : MonoBehaviour
             score += 200;
         }
 
-        score = score - penaltyPoints;
+        score = score + penaltyPoints;
 
         scoreText.GetComponent<Text>().text = score.ToString();
     }
