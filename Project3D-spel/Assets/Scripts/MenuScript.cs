@@ -62,7 +62,7 @@ public class MenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.SetActive(false);
+        text.GetComponentInChildren<Text>().text = "Press \"E\" to close menu";
         Cursor.visible = true;
         player.GetComponent<CameraMouse>().enabled = false;
         player.GetComponent<PlayerMovement>().enabled = false;
@@ -80,6 +80,10 @@ public class MenuScript : MonoBehaviour
             updateDone = false;
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            CloseMenu();
+        }
     }
 
     //ToOpen
@@ -169,7 +173,7 @@ public class MenuScript : MonoBehaviour
         Cursor.visible = false;
         crossHair.SetActive(true);
         gameObject.SetActive(false);
-        text.SetActive(true);
+        text.GetComponentInChildren<Text>().text = "Press \"E\" to interact";
         textMiddle.SetActive(false);
         ToA.SetActive(false);
         ToB.SetActive(false);
