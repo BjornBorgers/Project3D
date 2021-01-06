@@ -15,6 +15,7 @@ public class Score : MonoBehaviour
     int count=0;
     int score = 0;
     int time = 0;
+    int penaltyPoints = 0;
     TimeSpan elapsed;
 
     List<bool> listDead = new List<bool>();
@@ -22,7 +23,7 @@ public class Score : MonoBehaviour
     void Start()
     {
         info = GameObject.Find("InfoKeeper");
-
+        penaltyPoints = info.GetComponent<InfoForScoreScene>().penaltyPoints;
         if (info.GetComponent<InfoForScoreScene>().ASaved == true)
         {
             count++;
@@ -94,6 +95,8 @@ public class Score : MonoBehaviour
         {
             score += 200;
         }
+
+        score = score - penaltyPoints;
 
         scoreText.GetComponent<Text>().text = score.ToString();
     }

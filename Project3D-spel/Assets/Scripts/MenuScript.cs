@@ -50,6 +50,7 @@ public class MenuScript : MonoBehaviour
     GameObject patientA;
     GameObject patientB;
     GameObject patientC;
+    public int penalty;
     // Start is called before the first frame update
     void Start()
     {
@@ -238,6 +239,10 @@ public class MenuScript : MonoBehaviour
                     }
                     hit.GetComponent<Patient>().analysedB = true;
                 }
+                else
+                {
+                    penalty -= 50;
+                }
             }
         }
     }
@@ -275,6 +280,10 @@ public class MenuScript : MonoBehaviour
                         hit.GetComponent<Patient>().ShowVisuale(hasProblem);
                     }
                     hit.GetComponent<Patient>().analysedC = true;
+                }
+                else
+                {
+                    penalty -= 50;
                 }
             }
         }
@@ -317,6 +326,10 @@ public class MenuScript : MonoBehaviour
                         hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.green;
                     }
                     hit.GetComponent<Patient>().analysedD = true;
+                }
+                else
+                {
+                    penalty -= 50;
                 }
             }
         }
@@ -382,6 +395,10 @@ public class MenuScript : MonoBehaviour
                     }
 
                     hit.GetComponent<Patient>().analysedE = true;
+                }
+                else
+                {
+                    penalty -= 50;
                 }
             }
         }

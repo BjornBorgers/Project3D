@@ -27,7 +27,10 @@ public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
     public Color patientBColor;
     public Color patientCColor;
 
+    public GameObject radialmenu;
+
     public bool isSetUp;
+    public int penaltyPoints;
 
     TimeSpan elapsed; // however you get the amount of time elapsed
 
@@ -38,6 +41,7 @@ public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
         patientA = gamemanager.GetComponent<Gamemanager>().patientA;
         patientB = gamemanager.GetComponent<Gamemanager>().patientB;
         patientC = gamemanager.GetComponent<Gamemanager>().patientC;
+
 
         switch (gamemanager.GetComponent<Gamemanager>().patientA.GetComponent<Patient>().level)
         {
@@ -118,6 +122,7 @@ public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
             ASaved = patientA.GetComponent<Patient>().isSaved;
             BSaved = patientB.GetComponent<Patient>().isSaved;
             CSaved = patientC.GetComponent<Patient>().isSaved;
+            penaltyPoints = radialmenu.GetComponent<MenuScript>().penalty;
             DontDestroyOnLoad(this.gameObject);
             elapsed = playTimer.Elapsed;
             string tsOut = elapsed.ToString(@"m\:ss");
