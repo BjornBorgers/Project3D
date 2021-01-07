@@ -54,6 +54,8 @@ public class MenuScript : MonoBehaviour
     GameObject patientB;
     GameObject patientC;
     public int penalty;
+    public Button itemButton;
+    public GameObject itemImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +81,8 @@ public class MenuScript : MonoBehaviour
         if (patientA.GetComponent<Patient>().traideDone == true && patientB.GetComponent<Patient>().traideDone == true && patientC.GetComponent<Patient>().traideDone == true && updateDone == true)
         {
             phaseOneDone = true;
+            itemButton.interactable = true;
+            itemImage.SetActive(true);
             Info.GetComponent<InfoForScoreScene>().StartTimer();
             updateDone = false;
         }
