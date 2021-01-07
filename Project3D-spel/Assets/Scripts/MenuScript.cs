@@ -86,7 +86,30 @@ public class MenuScript : MonoBehaviour
             Info.GetComponent<InfoForScoreScene>().StartTimer();
             updateDone = false;
         }
-
+        if (patientA.GetComponent<Patient>().traideDone == true)
+        {
+            foto1.SetActive(true);
+        }
+        else
+        {
+            foto1.SetActive(false);
+        }
+        if (patientB.GetComponent<Patient>().traideDone == true)
+        {
+            foto2.SetActive(true);
+        }
+        else
+        {
+            foto2.SetActive(false);
+        }
+        if (patientC.GetComponent<Patient>().traideDone == true)
+        {
+            foto3.SetActive(true);
+        }
+        else
+        {
+            foto3.SetActive(false);
+        }
         if (Input.GetKeyDown(KeyCode.E))
         {
             CloseMenu();
