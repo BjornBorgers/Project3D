@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using TMPro;
 
 public class LisenerInfo : MonoBehaviourSingleton<InfoForScoreScene>
@@ -22,14 +23,14 @@ public class LisenerInfo : MonoBehaviourSingleton<InfoForScoreScene>
 
     public void Mute()
     {
-        if (listener.GetComponent<AudioListener>().enabled==true)
+        if (AudioListener.volume == 1)
         {
-            listener.GetComponent<AudioListener>().enabled = false;
+            AudioListener.volume = 0;
             text.GetComponentInChildren<TextMeshProUGUI>().text = "Audio: OFF";
         }
         else
         {
-            listener.GetComponent<AudioListener>().enabled = true;
+            AudioListener.volume = 1;
             text.GetComponentInChildren<TextMeshProUGUI>().text = "Audio: ON";
         }
     }
