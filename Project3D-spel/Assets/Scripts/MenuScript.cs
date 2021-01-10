@@ -20,6 +20,9 @@ public class MenuScript : MonoBehaviour
     public GameObject foto1;
     public GameObject foto2;
     public GameObject foto3;
+    public GameObject radialFoto1;
+    public GameObject radialFoto2;
+    public GameObject radialFoto3;
 
     public AudioClip heartClip;
     public AudioClip badBreathingClip;
@@ -86,6 +89,7 @@ public class MenuScript : MonoBehaviour
             Info.GetComponent<InfoForScoreScene>().StartTimer();
             updateDone = false;
         }
+
         if (patientA.GetComponent<Patient>().traideDone == true)
         {
             foto1.SetActive(true);
@@ -110,6 +114,7 @@ public class MenuScript : MonoBehaviour
         {
             foto3.SetActive(false);
         }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             CloseMenu();
