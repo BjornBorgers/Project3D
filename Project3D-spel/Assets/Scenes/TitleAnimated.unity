@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 215.6193, g: 226.90349, b: 204.93503, a: 1}
+  m_IndirectSpecularColor: {r: 215.52579, g: 226.69353, b: 204.61166, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -787,7 +787,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 3
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1482,6 +1482,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 500000000
       objectReference: {fileID: 0}
+    - target: {fileID: 3680160643037030302, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
       propertyPath: m_Intensity
       value: 500000000
@@ -1489,6 +1493,14 @@ PrefabInstance:
     - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
       propertyPath: m_UseContactShadow.m_Override
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
@@ -1965,6 +1977,10 @@ PrefabInstance:
       propertyPath: m_Type
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3680160643037030302, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
       propertyPath: m_Intensity
       value: 30
@@ -1976,6 +1992,14 @@ PrefabInstance:
     - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
       propertyPath: m_SpotLightShape
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
@@ -3103,6 +3127,10 @@ PrefabInstance:
       propertyPath: m_Type
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3680160643037030302, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
       propertyPath: m_Intensity
       value: 30
@@ -3114,6 +3142,14 @@ PrefabInstance:
     - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
       propertyPath: m_SpotLightShape
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
@@ -4954,9 +4990,21 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 500000000
       objectReference: {fileID: 0}
+    - target: {fileID: 3680160643037030302, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
       propertyPath: m_Intensity
       value: 500000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680160643037030303, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 390b382da35835a4d9dd557880f908a1, type: 3}
@@ -10567,7 +10615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3307500383310643532, guid: fa86848a170eb2e45b03a814680ffcf9, type: 3}
       propertyPath: m_fontStyle
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3307500383310643532, guid: fa86848a170eb2e45b03a814680ffcf9, type: 3}
       propertyPath: m_wordSpacing
@@ -12307,7 +12355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2732322391423549958, guid: 5f747bf95952de64da4e0e8d5ae92ede, type: 3}
       propertyPath: m_fontStyle
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2732322391423549958, guid: 5f747bf95952de64da4e0e8d5ae92ede, type: 3}
       propertyPath: m_wordSpacing
@@ -13414,7 +13462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1418217007853484458, guid: c9504784cd5920f41ae84b266796a654, type: 3}
       propertyPath: m_fontStyle
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1418217007853484458, guid: c9504784cd5920f41ae84b266796a654, type: 3}
       propertyPath: m_wordSpacing
