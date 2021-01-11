@@ -47,6 +47,12 @@ public class Patient : MonoBehaviour
     public Image InfoArm;
     public Image InfoAirway;
 
+    public GameObject AirwayStatus;
+    public GameObject BreathStatus;
+    public GameObject CirculatingStatus;
+    public GameObject BewustStatus;
+    public GameObject BodyStatus;
+
     public GameObject TriageBackGroundA;
     public GameObject TriageBackGroundB;
     public GameObject TriageBackGroundC;
@@ -157,7 +163,11 @@ public class Patient : MonoBehaviour
                 {
                     radialMenu.SetActive(true);
                     radialMenu.GetComponent<MenuScript>().lockCam = true;
-
+                    AirwayStatus.SetActive(true);
+                    BreathStatus.SetActive(true);
+                    CirculatingStatus.SetActive(true);
+                    BewustStatus.SetActive(true);
+                    BodyStatus.SetActive(true);
                     switch (gameObject.name)
                     {
                         case "patient-A":
