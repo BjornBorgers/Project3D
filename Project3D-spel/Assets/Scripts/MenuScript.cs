@@ -484,6 +484,25 @@ public class MenuScript : MonoBehaviour
                     List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
                     for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                     {
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" &&  hit.GetComponent<Patient>().isDone == false)
+                        {
+                            hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                            hit.GetComponent<Patient>().boneLeg.SetActive(false);
+                            hit.GetComponent<Patient>().legSpaak.SetActive(true);
+                            hit.GetComponent<Patient>().bindingSpaak.SetActive(true);
+                            hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
+                        }
+
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm" && hit.GetComponent<Patient>().isDone == false)
+                        {
+                            hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                            hit.GetComponent<Patient>().boneArm.SetActive(false);
+                            hit.GetComponent<Patient>().armSpaak.SetActive(true);
+                            hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
+                        }
+                    }
+                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                    {
                         if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" && hit.GetComponent<Patient>().isDone == false)
                         {
                             hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
@@ -491,16 +510,16 @@ public class MenuScript : MonoBehaviour
                             hit.GetComponent<Patient>().legSpaak.SetActive(true);
                             hit.GetComponent<Patient>().bindingSpaak.SetActive(true);
                             hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
-                            hit.GetComponent<Patient>().BodyStatus.GetComponent<Image>().color = Color.green;
                         }
+
                         if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm" && hit.GetComponent<Patient>().isDone == false)
                         {
                             hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
                             hit.GetComponent<Patient>().boneArm.SetActive(false);
                             hit.GetComponent<Patient>().armSpaak.SetActive(true);
                             hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
-                            hit.GetComponent<Patient>().BodyStatus.GetComponent<Image>().color = Color.green;
                         }
+                        hit.GetComponent<Patient>().BodyStatus.GetComponent<Image>().color = Color.green;
                     }
                 }
             }
