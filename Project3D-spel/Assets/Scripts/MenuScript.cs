@@ -25,17 +25,6 @@ public class MenuScript : MonoBehaviour
     public GameObject radialFoto2;
     public GameObject radialFoto3;
 
-    public GameObject airwayGood;
-    public GameObject airwayBad;
-    public GameObject breathingGood;
-    public GameObject breathingBad;
-    public GameObject circulationGood;
-    public GameObject circulationBad;
-    public GameObject disabilityGood;
-    public GameObject disabilityBad;
-    public GameObject exposureGood;
-    public GameObject exposureBad;
-
 
     public AudioClip heartClip;
     public AudioClip badBreathingClip;
@@ -234,6 +223,18 @@ public class MenuScript : MonoBehaviour
         ToI.SetActive(false);
         ToT.SetActive(false);
         lockCam = false;
+        Collider[] hitCollidersA = Physics.OverlapSphere(player.transform.position, 5);
+        foreach (var hit in hitCollidersA)
+        {
+            if (hit.name.Contains("patient"))
+            {
+                hit.GetComponent<Patient>().AirwayStatus.SetActive(false);
+                hit.GetComponent<Patient>().BreathStatus.SetActive(false);
+                hit.GetComponent<Patient>().CirculatingStatus.SetActive(false);
+                hit.GetComponent<Patient>().BewustStatus.SetActive(false);
+                hit.GetComponent<Patient>().BodyStatus.SetActive(false);
+            }
+        }
     }
     //ToClose
     //Analyse
@@ -251,16 +252,11 @@ public class MenuScript : MonoBehaviour
                     timeWhenDisappear = Time.time + timeToAppear;
                     hit.GetComponent<Patient>().InfoAirway.enabled = true;
                     hit.GetComponent<Patient>().InfoAirway.GetComponent<Image>().color = Color.green;
-                    airwayGood.SetActive(true);
+                    hit.GetComponent<Patient>().AirwayStatus.GetComponent<Image>().color = Color.green;
 
                     selectSound.Play();
                 }
                 hit.GetComponent<Patient>().analysedA = true;
-            }
-            if (hit.GetComponent<Patient>().analysedA == false)
-            {
-                airwayBad.SetActive(false);
-                airwayGood.SetActive(false);
             }
         }
     }
@@ -291,8 +287,7 @@ public class MenuScript : MonoBehaviour
                         hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
                         hit.GetComponent<Patient>().InfoLung.enabled = true;
                         hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.red;
-                        breathingBad.SetActive(true);
-                        breathingGood.SetActive(false);
+                        hit.GetComponent<Patient>().BreathStatus.GetComponent<Image>().color = Color.red;
                     }
                     else if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
                     {
@@ -300,19 +295,13 @@ public class MenuScript : MonoBehaviour
                         hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
                         hit.GetComponent<Patient>().InfoLung.enabled = true;
                         hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.green;
-                        breathingGood.SetActive(true);
-                        breathingBad.SetActive(false);
+                        hit.GetComponent<Patient>().BreathStatus.GetComponent<Image>().color = Color.green;
                     }
                     hit.GetComponent<Patient>().analysedB = true;
                 }
                 else
                 {
                     penalty -= 50;
-                }
-                if (hit.GetComponent<Patient>().analysedA == false)
-                {
-                    breathingBad.SetActive(false);
-                    breathingGood.SetActive(false);
                 }
             }
         }
@@ -344,27 +333,20 @@ public class MenuScript : MonoBehaviour
                         hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
                         hit.GetComponent<Patient>().ShowHeart("80");
                         hit.GetComponent<Patient>().ShowVisuale(hasProblem);
-                        circulationBad.SetActive(false);
-                        circulationGood.SetActive(true);
+                        hit.GetComponent<Patient>().CirculatingStatus.GetComponent<Image>().color = Color.green;
 
                     }
                     else if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
                     {
                         hit.GetComponent<Patient>().ShowHeart("0");
                         hit.GetComponent<Patient>().ShowVisuale(hasProblem);
-                        circulationBad.SetActive(true);
-                        circulationGood.SetActive(false);
+                        hit.GetComponent<Patient>().CirculatingStatus.GetComponent<Image>().color = Color.red;
                     }
                     hit.GetComponent<Patient>().analysedC = true;
                 }
                 else
                 {
                     penalty -= 50;
-                }
-                if (hit.GetComponent<Patient>().analysedB == false)
-                {
-                    circulationGood.SetActive(false);
-                    circulationBad.SetActive(false);
                 }
 
             }
@@ -398,8 +380,7 @@ public class MenuScript : MonoBehaviour
                         timeWhenDisappear = Time.time + timeToAppear;
                         hit.GetComponent<Patient>().InfoBewust.enabled = true;
                         hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.red;
-                        disabilityBad.SetActive(true);
-                        disabilityGood.SetActive(false);
+                        hit.GetComponent<Patient>().BewustStatus.GetComponent<Image>().color = Color.red;
                     }
                     else if (hasProblem == false && hit.GetComponent<Patient>().isDead == false)
                     {
@@ -408,19 +389,13 @@ public class MenuScript : MonoBehaviour
                         timeWhenDisappear = Time.time + timeToAppear;
                         hit.GetComponent<Patient>().InfoBewust.enabled = true;
                         hit.GetComponent<Patient>().InfoBewust.GetComponent<Image>().color = Color.green;
-                        disabilityGood.SetActive(true);
-                        disabilityBad.SetActive(false);
+                        hit.GetComponent<Patient>().BewustStatus.GetComponent<Image>().color = Color.green;
                     }
                     hit.GetComponent<Patient>().analysedD = true;
                 }
                 else
                 {
                     penalty -= 50;
-                }
-                if (hit.GetComponent<Patient>().analysedC == false)
-                {
-                    disabilityBad.SetActive(false);
-                    disabilityGood.SetActive(true);
                 }
             }
         }
@@ -462,8 +437,7 @@ public class MenuScript : MonoBehaviour
                         hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.red;
                         hit.GetComponent<Patient>().InfoLeg.enabled = true;
                         hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.red;
-                        exposureBad.SetActive(true);
-                        exposureGood.SetActive(false);
+                        hit.GetComponent<Patient>().BodyStatus.GetComponent<Image>().color = Color.red;
                     }
                     else if (hit.GetComponent<Patient>().isDead == false)
                     {
@@ -471,16 +445,14 @@ public class MenuScript : MonoBehaviour
                         hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
                         hit.GetComponent<Patient>().InfoLeg.enabled = true;
                         hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
-                        exposureGood.SetActive(true);
-                        exposureBad.SetActive(false);
+                        hit.GetComponent<Patient>().BodyStatus.GetComponent<Image>().color = Color.green;
                         if (hasLegProblem == true)
                         {
                             analyseText.text = "Patient has a broken leg";
                             analyseText.enabled = true;
                             timeWhenDisappear = Time.time + timeToAppear;
                             hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.red;
-                            exposureBad.SetActive(true);
-                            exposureGood.SetActive(false);
+                            hit.GetComponent<Patient>().BodyStatus.GetComponent<Image>().color = Color.red;
                         }
                         if (hasArmProblem == true)
                         {
@@ -488,8 +460,7 @@ public class MenuScript : MonoBehaviour
                             analyseText.enabled = true;
                             timeWhenDisappear = Time.time + timeToAppear;
                             hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.red;
-                            exposureBad.SetActive(true);
-                            exposureGood.SetActive(false);
+                            hit.GetComponent<Patient>().BodyStatus.GetComponent<Image>().color = Color.red;
                         }
                     }
 
@@ -498,11 +469,6 @@ public class MenuScript : MonoBehaviour
                 else
                 {
                     penalty -= 50;
-                }
-                if (hit.GetComponent<Patient>().analysedE == false)
-                {
-                    exposureGood.SetActive(false);
-                    exposureBad.SetActive(false);
                 }
             }
         }
@@ -522,6 +488,25 @@ public class MenuScript : MonoBehaviour
                     List<IProblems> newList = hit.GetComponent<Patient>().problemsList;
                     for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
                     {
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" &&  hit.GetComponent<Patient>().isDone == false)
+                        {
+                            hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                            hit.GetComponent<Patient>().boneLeg.SetActive(false);
+                            hit.GetComponent<Patient>().legSpaak.SetActive(true);
+                            hit.GetComponent<Patient>().bindingSpaak.SetActive(true);
+                            hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
+                        }
+
+                        if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm" && hit.GetComponent<Patient>().isDone == false)
+                        {
+                            hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
+                            hit.GetComponent<Patient>().boneArm.SetActive(false);
+                            hit.GetComponent<Patient>().armSpaak.SetActive(true);
+                            hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
+                        }
+                    }
+                    for (int i = 0; i < hit.GetComponent<Patient>().problemsList.Count; i++)
+                    {
                         if (hit.GetComponent<Patient>().problemsList[i].Name() == "leg" && hit.GetComponent<Patient>().isDone == false)
                         {
                             hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
@@ -529,18 +514,16 @@ public class MenuScript : MonoBehaviour
                             hit.GetComponent<Patient>().legSpaak.SetActive(true);
                             hit.GetComponent<Patient>().bindingSpaak.SetActive(true);
                             hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
-                            exposureBad.SetActive(false);
-                            exposureGood.SetActive(true);
                         }
+
                         if (hit.GetComponent<Patient>().problemsList[i].Name() == "arm" && hit.GetComponent<Patient>().isDone == false)
                         {
                             hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
                             hit.GetComponent<Patient>().boneArm.SetActive(false);
                             hit.GetComponent<Patient>().armSpaak.SetActive(true);
                             hit.GetComponent<Patient>().InfoArm.GetComponent<Image>().color = Color.green;
-                            exposureBad.SetActive(false);
-                            exposureGood.SetActive(true);
                         }
+                        hit.GetComponent<Patient>().BodyStatus.GetComponent<Image>().color = Color.green;
                     }
                 }
             }
@@ -572,8 +555,7 @@ public class MenuScript : MonoBehaviour
                     if (hasProblem == true && hit.GetComponent<Patient>().isDone == false)
                     {
                         hit.GetComponent<Patient>().InfoLung.GetComponent<Image>().color = Color.green;
-                        breathingBad.SetActive(false);
-                        breathingGood.SetActive(true);
+                        hit.GetComponent<Patient>().BreathStatus.GetComponent<Image>().color = Color.green;
                     }
                 }
             }
@@ -607,8 +589,7 @@ public class MenuScript : MonoBehaviour
                         hit.GetComponent<Patient>().ShowVisuale(false);
                         player.GetComponentInChildren<Animator>().SetTrigger("Use Beademing");
                         hit.GetComponent<Patient>().GetComponent<Animator>().SetTrigger("StartHeart");
-                        circulationGood.SetActive(true);
-                        circulationBad.SetActive(false);
+                        hit.GetComponent<Patient>().CirculatingStatus.GetComponent<Image>().color = Color.green;
                     }
                 }
             }
@@ -659,19 +640,13 @@ public class MenuScript : MonoBehaviour
                                 break;
                         }
                         hit.GetComponent<Patient>().InfoBewust.color = Color.green;
-                        disabilityBad.SetActive(false);
-                        disabilityGood.SetActive(true);
+                        hit.GetComponent<Patient>().BewustStatus.GetComponent<Image>().color = Color.green;
                         verpleegster.GetComponent<Animator>().SetTrigger("StartZit");
                         verpleegster.GetComponent<MoveNurse>().enabled = false;
                     }
                 }
             }
         }
-    }
-
-    public void TreatE()
-    {
-
     }
     //Treatment
     //TriageColors
