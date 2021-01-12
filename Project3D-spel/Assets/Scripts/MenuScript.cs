@@ -61,6 +61,12 @@ public class MenuScript : MonoBehaviour
     public int penalty;
     public Button itemButton;
     public GameObject itemImage;
+
+    public GameObject buttonAnalyseA;
+    public GameObject buttonAnalyseB;
+    public GameObject buttonAnalyseC;
+    public GameObject buttonAnalyseD;
+    public GameObject buttonAnalyseE;
     // Start is called before the first frame update
     void Start()
     {
@@ -133,7 +139,8 @@ public class MenuScript : MonoBehaviour
         ToE.SetActive(false);
         ToI.SetActive(false);
         ToT.SetActive(false);
-    }
+        buttonAnalyseA.GetComponent<LoadingBar>().currentAmount = 0;
+}
 
     public void OpenB()
     {
@@ -144,6 +151,7 @@ public class MenuScript : MonoBehaviour
         ToE.SetActive(false);
         ToI.SetActive(false);
         ToT.SetActive(false);
+        buttonAnalyseB.GetComponent<LoadingBar>().currentAmount = 0;
     }
 
     public void OpenC()
@@ -155,6 +163,7 @@ public class MenuScript : MonoBehaviour
         ToE.SetActive(false);
         ToI.SetActive(false);
         ToT.SetActive(false);
+        buttonAnalyseC.GetComponent<LoadingBar>().currentAmount = 0;
     }
 
     public void OpenD()
@@ -166,6 +175,7 @@ public class MenuScript : MonoBehaviour
         ToE.SetActive(false);
         ToI.SetActive(false);
         ToT.SetActive(false);
+        buttonAnalyseD.GetComponent<LoadingBar>().currentAmount = 0;
     }
 
     public void OpenE()
@@ -177,6 +187,7 @@ public class MenuScript : MonoBehaviour
         ToE.SetActive(true);
         ToI.SetActive(false);
         ToT.SetActive(false);
+        buttonAnalyseE.GetComponent<LoadingBar>().currentAmount = 0;
     }
 
     public void OpenI()
