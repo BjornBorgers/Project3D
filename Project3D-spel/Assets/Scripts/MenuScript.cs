@@ -12,6 +12,7 @@ public class MenuScript : MonoBehaviour
     public GameObject ToE;
     public GameObject ToI;
     public GameObject ToT;
+
     public GameObject player;
     public GameObject text;
     public GameObject textMiddle;
@@ -132,7 +133,7 @@ public class MenuScript : MonoBehaviour
             CloseMenu();
         }
     }
-
+    
     //ToOpen
     public void OpenA()
     {
@@ -210,6 +211,9 @@ public class MenuScript : MonoBehaviour
         ToI.SetActive(false);
         ToT.SetActive(true);
     }
+
+
+
 
     //ToOpen
     //ToClose

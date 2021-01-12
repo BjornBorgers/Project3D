@@ -7,6 +7,7 @@ public class LoadingBar : MonoBehaviour
 {
     public Transform loadBar;
     public Transform loadingPercent;
+    public Button loadingButton;
 
 
     [SerializeField] private float currentAmount;
@@ -24,16 +25,19 @@ public class LoadingBar : MonoBehaviour
     {
         if (currentAmount < 100)
         {
+            loadingButton.enabled = false;
             loadingPercent.gameObject.SetActive(true);
             hideIcon.SetActive(false);
             currentAmount += speed * Time.deltaTime;
             loadingPercent.GetComponent<Text>().text = ((int)currentAmount).ToString() + "%";
+            
         }
         else
         {
             loadingPercent.gameObject.SetActive(false);
             hideIcon.SetActive(true);
             loadingPercent.gameObject.SetActive(false);
+            loadingButton.enabled = true;
 
         }
         loadBar.GetComponent<Image>().fillAmount = currentAmount / 100;
