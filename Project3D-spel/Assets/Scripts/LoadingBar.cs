@@ -15,6 +15,11 @@ public class LoadingBar : MonoBehaviour
 
     public GameObject hideIcon;
 
+    public void Start()
+    {
+        
+    }
+
     void Update()
     {
 
