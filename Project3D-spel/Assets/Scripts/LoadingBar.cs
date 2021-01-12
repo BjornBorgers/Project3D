@@ -10,7 +10,7 @@ public class LoadingBar : MonoBehaviour
     public Button loadingButton;
 
 
-    [SerializeField] private float currentAmount;
+    public float currentAmount;
     [SerializeField] private float speed = 0;
 
     public GameObject hideIcon;
