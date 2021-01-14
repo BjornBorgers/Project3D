@@ -31,6 +31,7 @@ public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
 
     public bool isSetUp;
     public int penaltyPoints;
+    public int maxTime;
 
     TimeSpan elapsed; // however you get the amount of time elapsed
 
@@ -127,6 +128,18 @@ public class InfoForScoreScene : MonoBehaviourSingleton<InfoForScoreScene>
             elapsed = playTimer.Elapsed;
             string tsOut = elapsed.ToString(@"m\:ss");
             timertext.GetComponent<TextMeshProUGUI>().text = tsOut;
+
+            maxTime = patientA.GetComponent<Patient>().timeToLife;
+
+            if (maxTime < patientB.GetComponent<Patient>().timeToLife)
+            {
+                maxTime = patientB.GetComponent<Patient>().timeToLife;
+            }
+
+            if (maxTime < patientC.GetComponent<Patient>().timeToLife)
+            {
+                maxTime = patientC.GetComponent<Patient>().timeToLife;
+            }
         }
     }
 

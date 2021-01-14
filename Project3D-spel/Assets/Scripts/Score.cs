@@ -65,15 +65,15 @@ public class Score : MonoBehaviour
                 break;
         }
 
-        if (time<= 360000)
+        if (time<= (info.GetComponent<InfoForScoreScene>().maxTime-500))
         {
             score += 150;
         }
-        if (time <= 240000)
+        if (time <= (info.GetComponent<InfoForScoreScene>().maxTime - (info.GetComponent<InfoForScoreScene>().maxTime/3)))
         {
             score += 200;
         }
-        if (time <= 180000)
+        if (time <= (info.GetComponent<InfoForScoreScene>().maxTime - (info.GetComponent<InfoForScoreScene>().maxTime/2)))
         {
             score += 200;
         }

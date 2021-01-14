@@ -64,7 +64,7 @@ public class Patient : MonoBehaviour
     public GameObject player;
     public GameObject virtualCameraPatient;
 
-    int timeToLife;
+    public int timeToLife;
     private float timeWhenDisappear;
     private float timeToAppear = 1000f;
     private float timeToBlink;
