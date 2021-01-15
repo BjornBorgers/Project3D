@@ -46,6 +46,7 @@ public class Patient : MonoBehaviour
     public Image InfoLeg;
     public Image InfoArm;
     public Image InfoAirway;
+    public Image InfoHeart;
 
     public GameObject AirwayStatus;
     public GameObject BreathStatus;
