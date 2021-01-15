@@ -18,8 +18,8 @@ public class Gamemanager : MonoBehaviour
     {
         Cursor.visible = false;
         patientA = patientListA[Random.Range(0, patientListA.Count-1)];
-        patientB = patientListB[Random.Range(0, patientListA.Count-1)];
-        patientC = patientListC[Random.Range(0, patientListA.Count-1)];
+        patientB = patientListB[Random.Range(0, patientListB.Count-1)];
+        patientC = patientListC[Random.Range(0, patientListC.Count-1)];
 
         patientA.SetActive(true);
         patientB.SetActive(true);
