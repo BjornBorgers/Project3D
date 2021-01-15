@@ -31,6 +31,11 @@ public class Patient : MonoBehaviour
     public VideoClip blackClip;
     public Animator patientAnimator;
 
+    public GameObject patientImage;
+    public GameObject patientImage2;
+    public GameObject patientImage3;
+
+
     public TraigeLevel level;
     Stopwatch lifeTimer = new Stopwatch();
     Stopwatch timerBlinking = new Stopwatch();
@@ -173,14 +178,17 @@ public class Patient : MonoBehaviour
                     {
                         case "patient-A":
                             TriageBackGroundA.SetActive(true);
+                            patientImage.SetActive(true);
                             break;
 
                         case "patient-B":
                             TriageBackGroundB.SetActive(true);
+                            patientImage2.SetActive(true);
                             break;
 
                         case "patient-C":
                             TriageBackGroundC.SetActive(true);
+                            patientImage3.SetActive(true);
                             break;
                         default:
                             break;

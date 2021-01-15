@@ -18,9 +18,6 @@ public class MenuScript : MonoBehaviour
     public GameObject textMiddle;
     public GameObject crossHair;
     public GameObject verpleegster;
-    public GameObject foto1;
-    public GameObject foto2;
-    public GameObject foto3;
     public GameObject radialFoto1;
     public GameObject radialFoto2;
     public GameObject radialFoto3;
@@ -98,30 +95,7 @@ public class MenuScript : MonoBehaviour
             updateDone = false;
         }
 
-        if (patientA.GetComponent<Patient>().traideDone == true)
-        {
-            foto1.SetActive(true);
-        }
-        else
-        {
-            foto1.SetActive(false);
-        }
-        if (patientB.GetComponent<Patient>().traideDone == true)
-        {
-            foto2.SetActive(true);
-        }
-        else
-        {
-            foto2.SetActive(false);
-        }
-        if (patientC.GetComponent<Patient>().traideDone == true)
-        {
-            foto3.SetActive(true);
-        }
-        else
-        {
-            foto3.SetActive(false);
-        }
+        
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -390,7 +364,7 @@ public class MenuScript : MonoBehaviour
 
                     if (hasProblem == true && hit.GetComponent<Patient>().isDead == false)
                     {
-                        analyseText.text = "Patient is unconscious and is unresponsive";
+                        analyseText.text = "Patient is unconscious and unresponsive";
                         analyseText.enabled = true;
                         timeWhenDisappear = Time.time + timeToAppear;
                         hit.GetComponent<Patient>().InfoBewust.enabled = true;
@@ -909,7 +883,7 @@ public class MenuScript : MonoBehaviour
                             firstTimeA = true;
                         }
                         hit.GetComponent<Patient>().traideDone = true;
-                        foto1.SetActive(true);
+                        
                     }
                     break;
 
@@ -924,7 +898,7 @@ public class MenuScript : MonoBehaviour
                             firstTimeB = true;
                         }
                         hit.GetComponent<Patient>().traideDone = true;
-                        foto2.SetActive(true);
+                       
                     }
                     break;
 
@@ -939,7 +913,7 @@ public class MenuScript : MonoBehaviour
                             firstTimeC = true;
                         }
                         hit.GetComponent<Patient>().traideDone = true;
-                        foto3.SetActive(true);
+                       
                     }
                     break;
 
