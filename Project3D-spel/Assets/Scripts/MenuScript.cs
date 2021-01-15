@@ -344,6 +344,8 @@ public class MenuScript : MonoBehaviour
                         hit.GetComponent<Patient>().GetComponent<AudioSource>().Play();
                         hit.GetComponent<Patient>().ShowHeart("80");
                         hit.GetComponent<Patient>().ShowVisuale(hasProblem);
+                        hit.GetComponent<Patient>().InfoHeart.enabled = true;
+                        hit.GetComponent<Patient>().InfoHeart.GetComponent<Image>().color = Color.green;
                         hit.GetComponent<Patient>().CirculatingStatus.GetComponent<Image>().color = Color.green;
 
                     }
@@ -351,6 +353,8 @@ public class MenuScript : MonoBehaviour
                     {
                         hit.GetComponent<Patient>().ShowHeart("0");
                         hit.GetComponent<Patient>().ShowVisuale(hasProblem);
+                        hit.GetComponent<Patient>().InfoHeart.enabled = true;
+                        hit.GetComponent<Patient>().InfoHeart.GetComponent<Image>().color = Color.red;
                         hit.GetComponent<Patient>().CirculatingStatus.GetComponent<Image>().color = Color.red;
                     }
                     hit.GetComponent<Patient>().analysedC = true;
