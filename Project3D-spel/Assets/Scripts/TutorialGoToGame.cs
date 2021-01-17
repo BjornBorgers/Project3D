@@ -19,7 +19,7 @@ public class TutorialGoToGame : MonoBehaviour
         {
             if (hit.name == "Player")
             {
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("TitleAnimated");
             }
         }
     }

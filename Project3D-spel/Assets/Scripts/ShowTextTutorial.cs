@@ -5,6 +5,8 @@ using UnityEngine;
 public class ShowTextTutorial : MonoBehaviour
 {
     public GameObject textTutorial;
+
+
     // Start is called before the first frame update
     void Start()
     {
