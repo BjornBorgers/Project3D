@@ -4,19 +4,25 @@ ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
-      74: 1190641059542590028
-    second: rp_carla_rigged_001|rp_carla_rigged_001|mixamo.com|Layer0.002
+      74: -6200226723900313131
+    second: rp_carla_rigged_001|CarlaTest
   - first:
-      74: 8587484647198052899
-    second: rp_carla_rigged_001|rp_carla_rigged_001|mixamo.com|Layer0.002 (1)
+      74: -3422307558524700191
+    second: rp_carla_rigged_001|rp_carla_rigged_001.001|mixamo.com|Layer0
   - first:
-      74: -6134920540210158186
-    second: OnbewustCarla
+      74: 1683434659411129202
+    second: rp_carla_rigged_001|rp_carla_rigged_001.001|mixamo.com|Layer0.001
   - first:
-      74: 2181179327015428515
-    second: BewustCarla
+      74: -5497297146223103591
+    second: rp_carla_rigged_001|rp_carla_rigged_001.001|mixamo.com|Layer0.002
   - first:
-      74: 392256475092254516
+      74: 3987131422433824016
+    second: rp_carla_rigged_001|rp_carla_rigged_001|mixamo.com|Layer0
+  - first:
+      74: -1994984894566442971
+    second: rp_carla_rigged_001|rp_carla_rigged_001|mixamo.com|Layer0.001
+  - first:
+      74: 6690078083698921897
     second: CarlaOnbewust
   - first:
       74: 1189674027840325424
@@ -50,8 +56,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: rp_carla_rigged_001|rp_carla_rigged_001|mixamo.com|Layer0.002
-      takeName: rp_carla_rigged_001|rp_carla_rigged_001|mixamo.com|Layer0.002
+      name: rp_carla_rigged_001|CarlaTest
+      takeName: rp_carla_rigged_001|CarlaTest
       internalID: 0
       firstFrame: 0
       lastFrame: 104
@@ -79,11 +85,69 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: rp_carla_rigged_001|rp_carla_rigged_001|mixamo.com|Layer0.002 (1)
-      takeName: rp_carla_rigged_001|rp_carla_rigged_001|mixamo.com|Layer0.002
+      name: rp_carla_rigged_001|rp_carla_rigged_001.001|mixamo.com|Layer0
+      takeName: rp_carla_rigged_001|rp_carla_rigged_001.001|mixamo.com|Layer0
       internalID: 0
       firstFrame: 0
-      lastFrame: 104
+      lastFrame: 92
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: rp_carla_rigged_001|rp_carla_rigged_001.001|mixamo.com|Layer0.001
+      takeName: rp_carla_rigged_001|rp_carla_rigged_001.001|mixamo.com|Layer0.001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: rp_carla_rigged_001|rp_carla_rigged_001.001|mixamo.com|Layer0.002
+      takeName: rp_carla_rigged_001|rp_carla_rigged_001.001|mixamo.com|Layer0.002
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 25
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -109,7 +173,7 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: CarlaOnbewust
-      takeName: rp_carla_rigged_001|rp_carla_rigged_001|mixamo.com|Layer0.002
+      takeName: rp_carla_rigged_001|CarlaTest
       internalID: 0
       firstFrame: 0
       lastFrame: 44
@@ -119,8 +183,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -138,7 +202,7 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: CarlaBewust
-      takeName: rp_carla_rigged_001|rp_carla_rigged_001|mixamo.com|Layer0.002
+      takeName: rp_carla_rigged_001|CarlaTest
       internalID: 0
       firstFrame: 55
       lastFrame: 80
@@ -148,8 +212,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -228,7 +292,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
