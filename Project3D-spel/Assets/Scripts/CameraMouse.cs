@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraMouse : MonoBehaviour
 {
@@ -9,7 +10,10 @@ public class CameraMouse : MonoBehaviour
 
     void Start()
     {
-        rotation.y = 180;
+        if (SceneManager.GetActiveScene().name == "SampleScene")
+        {
+            rotation.y = 180;
+        }
     }
     void Update()
     {
