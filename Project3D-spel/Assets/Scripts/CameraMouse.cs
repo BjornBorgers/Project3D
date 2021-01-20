@@ -18,7 +18,7 @@ public class CameraMouse : MonoBehaviour
         rotation.x += -Input.GetAxis("Mouse Y");
 
         //Restrict up/down camera movement
-        rotation.x = Mathf.Clamp(rotation.x, -10f, 10f);
-        this.gameObject.transform.localRotation = Quaternion.Euler(rotation.x * lookSpeed, rotation.y * lookSpeed, 0);
+        //rotation.x = Mathf.Clamp(rotation.x, -10f, 10f);
+        //this.gameObject.transform.localRotation = Quaternion.Euler(rotation.x * lookSpeed, rotation.y * lookSpeed, 0);
     }
 }

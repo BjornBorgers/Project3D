@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 215.50381, g: 226.6093, b: 204.48856, a: 1}
+  m_IndirectSpecularColor: {r: 215.6193, g: 226.90349, b: 204.93503, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3730,6 +3730,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone
       objectReference: {fileID: 0}
+    - target: {fileID: -7247470814274129004, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3755d09a1c8fb6f4d857dbe03066652a, type: 2}
+    - target: {fileID: 807010913114725677, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3755d09a1c8fb6f4d857dbe03066652a, type: 2}
     - target: {fileID: 919132149155446097, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
       propertyPath: m_Name
       value: patient-B
@@ -6711,6 +6719,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone
       objectReference: {fileID: 0}
+    - target: {fileID: -7247470814274129004, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3755d09a1c8fb6f4d857dbe03066652a, type: 2}
+    - target: {fileID: 807010913114725677, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3755d09a1c8fb6f4d857dbe03066652a, type: 2}
     - target: {fileID: 919132149155446097, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
       propertyPath: m_Name
       value: patient-B
@@ -10413,6 +10429,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone
       objectReference: {fileID: 0}
+    - target: {fileID: -7247470814274129004, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3755d09a1c8fb6f4d857dbe03066652a, type: 2}
+    - target: {fileID: 807010913114725677, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3755d09a1c8fb6f4d857dbe03066652a, type: 2}
     - target: {fileID: 919132149155446097, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
       propertyPath: m_Name
       value: patient-B
@@ -24992,7 +25016,7 @@ PrefabInstance:
     - target: {fileID: 4454557259604221263, guid: 532f5cc8d1884ae4ebb24da4f79059c6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 702989ab3ec3edc4f8cc0f807629249f, type: 2}
+      objectReference: {fileID: 2100000, guid: 7e686d8a9fefe2f48989a830924d3e32, type: 2}
     - target: {fileID: 4525529000070442348, guid: 532f5cc8d1884ae4ebb24da4f79059c6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -40266,6 +40290,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone
       objectReference: {fileID: 0}
+    - target: {fileID: -7247470814274129004, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3755d09a1c8fb6f4d857dbe03066652a, type: 2}
+    - target: {fileID: 807010913114725677, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3755d09a1c8fb6f4d857dbe03066652a, type: 2}
     - target: {fileID: 919132149155446097, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
       propertyPath: m_Name
       value: patient-B
@@ -46584,6 +46616,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone
       objectReference: {fileID: 0}
+    - target: {fileID: -7247470814274129004, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3755d09a1c8fb6f4d857dbe03066652a, type: 2}
+    - target: {fileID: 807010913114725677, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3755d09a1c8fb6f4d857dbe03066652a, type: 2}
     - target: {fileID: 919132149155446097, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
       propertyPath: m_Name
       value: patient-B
@@ -64475,7 +64515,7 @@ PrefabInstance:
     - target: {fileID: -8432316785492117190, guid: c1ad13ff72a80dc40b74c2a5246d395e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f651e0d9fef6998488539153b6cf6961, type: 2}
+      objectReference: {fileID: 2100000, guid: 11156089c39fcc6438216586007dae4a, type: 2}
     - target: {fileID: -8391222552659086748, guid: c1ad13ff72a80dc40b74c2a5246d395e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -80492,6 +80532,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone
       objectReference: {fileID: 0}
+    - target: {fileID: -7247470814274129004, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3755d09a1c8fb6f4d857dbe03066652a, type: 2}
+    - target: {fileID: 807010913114725677, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3755d09a1c8fb6f4d857dbe03066652a, type: 2}
     - target: {fileID: 919132149155446097, guid: 15b2445ed1a3afb449a97d05094248d1, type: 3}
       propertyPath: m_Name
       value: patient-B
