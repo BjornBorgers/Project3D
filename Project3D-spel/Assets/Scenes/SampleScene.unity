@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 215.6193, g: 226.90349, b: 204.93503, a: 1}
+  m_IndirectSpecularColor: {r: 215.68716, g: 227.10051, b: 205.24399, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3798,7 +3798,6 @@ MonoBehaviour:
   boneLeg: {fileID: 143540552}
   armSpaak: {fileID: 143540555}
   legSpaak: {fileID: 143540554}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 143540558}
@@ -6780,7 +6779,6 @@ MonoBehaviour:
   boneLeg: {fileID: 211409947}
   armSpaak: {fileID: 211409950}
   legSpaak: {fileID: 211409949}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 211409953}
@@ -10483,7 +10481,6 @@ MonoBehaviour:
   boneLeg: {fileID: 297307229}
   armSpaak: {fileID: 297307232}
   legSpaak: {fileID: 297307231}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 297307235}
@@ -13113,7 +13110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4a98d68139a712446936ac8038ec9d3b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2088956319619156798, guid: 4a98d68139a712446936ac8038ec9d3b, type: 3}
       propertyPath: m_Name
@@ -13163,10 +13160,9 @@ MonoBehaviour:
   heartText: {fileID: 220819066}
   heartVisuale: {fileID: 848081040}
   boneArm: {fileID: 347083605}
-  boneLeg: {fileID: 0}
+  boneLeg: {fileID: 347083611}
   armSpaak: {fileID: 347083603}
   legSpaak: {fileID: 347083604}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 347083608}
@@ -13362,6 +13358,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &347083611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 4a98d68139a712446936ac8038ec9d3b, type: 3}
+  m_PrefabInstance: {fileID: 347083601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &349625080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17376,10 +17377,9 @@ MonoBehaviour:
   heartText: {fileID: 220819066}
   heartVisuale: {fileID: 848081040}
   boneArm: {fileID: 472868819}
-  boneLeg: {fileID: 0}
+  boneLeg: {fileID: 472868825}
   armSpaak: {fileID: 472868817}
   legSpaak: {fileID: 472868818}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 472868822}
@@ -17575,6 +17575,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &472868825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 4a98d68139a712446936ac8038ec9d3b, type: 3}
+  m_PrefabInstance: {fileID: 472868815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &473446929 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 947e228912a30d349b54db54af103bdf, type: 3}
@@ -30842,10 +30847,9 @@ MonoBehaviour:
   heartText: {fileID: 220819066}
   heartVisuale: {fileID: 848081040}
   boneArm: {fileID: 807314872}
-  boneLeg: {fileID: 0}
+  boneLeg: {fileID: 807314878}
   armSpaak: {fileID: 807314870}
   legSpaak: {fileID: 807314871}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 807314875}
@@ -31041,6 +31045,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &807314878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 4a98d68139a712446936ac8038ec9d3b, type: 3}
+  m_PrefabInstance: {fileID: 807314868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &813902807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37867,7 +37876,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3ea94dd99c72dc745aa29a8f0f34f1ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01cbbce9e6bbe2e4fa499bddb9349e07, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -40594,7 +40603,6 @@ MonoBehaviour:
   boneLeg: {fileID: 1044644013}
   armSpaak: {fileID: 1044644016}
   legSpaak: {fileID: 1044644015}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 1044644019}
@@ -46913,7 +46921,6 @@ MonoBehaviour:
   boneLeg: {fileID: 1163519572}
   armSpaak: {fileID: 1163519575}
   legSpaak: {fileID: 1163519574}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 1163519578}
@@ -47490,10 +47497,9 @@ MonoBehaviour:
   heartText: {fileID: 220819066}
   heartVisuale: {fileID: 848081040}
   boneArm: {fileID: 1171420669}
-  boneLeg: {fileID: 0}
+  boneLeg: {fileID: 1171420675}
   armSpaak: {fileID: 1171420667}
   legSpaak: {fileID: 1171420668}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 1171420672}
@@ -47689,6 +47695,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &1171420675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 4a98d68139a712446936ac8038ec9d3b, type: 3}
+  m_PrefabInstance: {fileID: 1171420665}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1174911709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3194118851158719256, guid: c5313681b29ba804b909c4704407b6d4, type: 3}
@@ -48285,7 +48296,6 @@ MonoBehaviour:
   boneLeg: {fileID: 1719587429}
   armSpaak: {fileID: 1719587428}
   legSpaak: {fileID: 1719587427}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 1194515716}
@@ -51505,7 +51515,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312207441}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 6.392, y: 15.188, z: 1.5}
+  m_LocalPosition: {x: 7.167, y: 15.188, z: 1.226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 75209877}
@@ -54906,7 +54916,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a241ba86f225e9a4c9eb3f958ab59fe0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a7bc5b24ffbc1a74487a309d7a32274e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -58031,7 +58041,6 @@ MonoBehaviour:
   boneLeg: {fileID: 0}
   armSpaak: {fileID: 1661201761}
   legSpaak: {fileID: 1181674083}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 1492549592}
@@ -69292,10 +69301,9 @@ MonoBehaviour:
   heartText: {fileID: 220819066}
   heartVisuale: {fileID: 848081040}
   boneArm: {fileID: 1747480315}
-  boneLeg: {fileID: 0}
+  boneLeg: {fileID: 1747480321}
   armSpaak: {fileID: 1747480313}
   legSpaak: {fileID: 1747480314}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 1747480318}
@@ -69491,6 +69499,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &1747480321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 4a98d68139a712446936ac8038ec9d3b, type: 3}
+  m_PrefabInstance: {fileID: 1747480311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1747791258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5568371526223589888, guid: 362b98c893dfe1847a9b2d8b89ed1a27, type: 3}
@@ -76359,10 +76372,9 @@ MonoBehaviour:
   heartText: {fileID: 220819066}
   heartVisuale: {fileID: 848081040}
   boneArm: {fileID: 1966261006}
-  boneLeg: {fileID: 0}
+  boneLeg: {fileID: 1966261012}
   armSpaak: {fileID: 1966261004}
   legSpaak: {fileID: 1966261005}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 1966261009}
@@ -76558,6 +76570,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &1966261012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 4a98d68139a712446936ac8038ec9d3b, type: 3}
+  m_PrefabInstance: {fileID: 1966261002}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1967233014
 GameObject:
   m_ObjectHideFlags: 0
@@ -80322,7 +80339,6 @@ MonoBehaviour:
   boneLeg: {fileID: 2065108829}
   armSpaak: {fileID: 2065108832}
   legSpaak: {fileID: 2065108831}
-  bindingSpaak: {fileID: 0}
   heartClip: {fileID: 32900000, guid: 13a6e3b5228617f4ab994de925af6004, type: 3}
   blackClip: {fileID: 32900000, guid: 8e07415cb6cae4442a6f59ababebdbcd, type: 3}
   patientAnimator: {fileID: 2065108835}
