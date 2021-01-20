@@ -650,6 +650,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-A":
                     if (hit.GetComponent<Patient>().analysedE==true)
                     {
+                        if (!TriadeWarningA.activeSelf)
+                        {
+                            TriadeWarningA.SetActive(true);
+                        }
                         TriadeBackGroundA.color = Color.blue;
                         TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlue;
                         if (firstTimeA == false)
@@ -664,6 +668,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-B":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningB.activeSelf)
+                        {
+                            TriadeWarningB.SetActive(true);
+                        }
                         TriadeBackGroundB.color = Color.blue;
                         TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlue;
                         if (firstTimeB == false)
@@ -678,6 +686,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-C":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningC.activeSelf)
+                        {
+                            TriadeWarningC.SetActive(true);
+                        }
                         TriadeBackGroundC.color = Color.blue;
                         TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlue;
                         if (firstTimeC == false)
@@ -706,6 +718,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-A":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningA.activeSelf)
+                        {
+                            TriadeWarningA.SetActive(true);
+                        }
                         TriadeBackGroundA.color = Color.green;
                         TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialGreen;
                         if (firstTimeA == false)
@@ -720,6 +736,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-B":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningB.activeSelf)
+                        {
+                            TriadeWarningB.SetActive(true);
+                        }
                         TriadeBackGroundB.color = Color.green;
                         TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialGreen;
                         if (firstTimeB == false)
@@ -734,6 +754,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-C":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningC.activeSelf)
+                        {
+                            TriadeWarningC.SetActive(true);
+                        }
                         TriadeBackGroundC.color = Color.green;
                         TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialGreen;
                         if (firstTimeC == false)
@@ -762,6 +786,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-A":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningA.activeSelf)
+                        {
+                            TriadeWarningA.SetActive(true);
+                        }
                         TriadeBackGroundA.color = new Color(255, 100, 0);
                         TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialYellow;
                         if (firstTimeA == false)
@@ -776,6 +804,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-B":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningB.activeSelf)
+                        {
+                            TriadeWarningB.SetActive(true);
+                        }
                         TriadeBackGroundB.color = new Color(255, 100, 0);
                         TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialYellow;
                         if (firstTimeB == false)
@@ -790,6 +822,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-C":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningC.activeSelf)
+                        {
+                            TriadeWarningC.SetActive(true);
+                        }
                         TriadeBackGroundC.color = new Color(255, 100, 0);
                         TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialYellow;
                         if (firstTimeC == false)
@@ -819,6 +855,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-A":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningA.activeSelf)
+                        {
+                            TriadeWarningA.SetActive(true);
+                        }
                         TriadeBackGroundA.color = Color.yellow;
                         TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialOrange;
                         if (firstTimeA == false)
@@ -833,6 +873,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-B":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningB.activeSelf)
+                        {
+                            TriadeWarningB.SetActive(true);
+                        }
                         TriadeBackGroundB.color = Color.yellow;
                         TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialOrange;
                         if (firstTimeB == false)
@@ -847,6 +891,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-C":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningC.activeSelf)
+                        {
+                            TriadeWarningC.SetActive(true);
+                        }
                         TriadeBackGroundC.color = Color.yellow;
                         TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialOrange;
                         if (firstTimeC == false)
@@ -875,6 +923,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-A":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningA.activeSelf)
+                        {
+                            TriadeWarningA.SetActive(true);
+                        }
                         TriadeBackGroundA.color = Color.red;
                         TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialRed;
                         if (firstTimeA == false)
@@ -890,6 +942,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-B":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningB.activeSelf)
+                        {
+                            TriadeWarningB.SetActive(true);
+                        }
                         TriadeBackGroundB.color = Color.red;
                         TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialRed;
                         if (firstTimeB == false)
@@ -905,6 +961,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-C":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningC.activeSelf)
+                        {
+                            TriadeWarningC.SetActive(true);
+                        }
                         TriadeBackGroundC.color = Color.red;
                         TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialRed;
                         if (firstTimeC == false)
@@ -934,6 +994,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-A":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningA.activeSelf)
+                        {
+                            TriadeWarningA.SetActive(true);
+                        }
                         TriadeBackGroundA.color = Color.black;
                         TriadeWarningA.GetComponent<MeshRenderer>().material = MaterialBlack;
                         if (firstTimeA == false)
@@ -948,6 +1012,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-B":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningB.activeSelf)
+                        {
+                            TriadeWarningB.SetActive(true);
+                        }
                         TriadeBackGroundB.color = Color.black;
                         TriadeWarningB.GetComponent<MeshRenderer>().material = MaterialBlack;
                         if (firstTimeB == false)
@@ -962,6 +1030,10 @@ public class MenuScript : MonoBehaviour
                 case "patient-C":
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
+                        if (!TriadeWarningC.activeSelf)
+                        {
+                            TriadeWarningC.SetActive(true);
+                        }
                         TriadeBackGroundC.color = Color.black;
                         TriadeWarningC.GetComponent<MeshRenderer>().material = MaterialBlack;
                         if (firstTimeC == false)
