@@ -482,7 +482,6 @@ public class MenuScript : MonoBehaviour
                             hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
                             hit.GetComponent<Patient>().boneLeg.SetActive(false);
                             hit.GetComponent<Patient>().legSpaak.SetActive(true);
-                            hit.GetComponent<Patient>().bindingSpaak.SetActive(true);
                             hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
                         }
 
@@ -501,7 +500,6 @@ public class MenuScript : MonoBehaviour
                             hit.GetComponent<Patient>().problemsList.Remove(hit.GetComponent<Patient>().problemsList[i]);
                             hit.GetComponent<Patient>().boneLeg.SetActive(false);
                             hit.GetComponent<Patient>().legSpaak.SetActive(true);
-                            hit.GetComponent<Patient>().bindingSpaak.SetActive(true);
                             hit.GetComponent<Patient>().InfoLeg.GetComponent<Image>().color = Color.green;
                         }
 
