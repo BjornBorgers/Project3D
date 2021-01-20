@@ -19,7 +19,7 @@ public class StartGameButton : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Intro");
     }
     public void StartTutorial()
     {
