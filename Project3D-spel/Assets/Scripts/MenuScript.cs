@@ -648,6 +648,10 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
+                    if (TriadeWarningA.activeSelf == false)
+                    {
+                        TriadeWarningA.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE==true)
                     {
                         TriadeBackGroundA.color = Color.blue;
@@ -662,6 +666,10 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-B":
+                    if (TriadeWarningB.activeSelf == false)
+                    {
+                        TriadeWarningB.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundB.color = Color.blue;
@@ -676,6 +684,10 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-C":
+                    if (TriadeWarningC.activeSelf == false)
+                    {
+                        TriadeWarningC.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundC.color = Color.blue;
@@ -704,6 +716,10 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
+                    if (TriadeWarningA.activeSelf == false)
+                    {
+                        TriadeWarningA.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundA.color = Color.green;
@@ -718,6 +734,10 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-B":
+                    if (TriadeWarningB.activeSelf == false)
+                    {
+                        TriadeWarningB.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundB.color = Color.green;
@@ -732,6 +752,10 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-C":
+                    if (TriadeWarningC.activeSelf == false)
+                    {
+                        TriadeWarningC.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundC.color = Color.green;
@@ -760,6 +784,10 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
+                    if (TriadeWarningA.activeSelf == false)
+                    {
+                        TriadeWarningA.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundA.color = new Color(255, 100, 0);
@@ -774,6 +802,10 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-B":
+                    if (TriadeWarningB.activeSelf == false)
+                    {
+                        TriadeWarningB.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundB.color = new Color(255, 100, 0);
@@ -788,6 +820,10 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-C":
+                    if (TriadeWarningC.activeSelf == false)
+                    {
+                        TriadeWarningC.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundC.color = new Color(255, 100, 0);
@@ -817,6 +853,10 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
+                    if (TriadeWarningA.activeSelf == false)
+                    {
+                        TriadeWarningA.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundA.color = Color.yellow;
@@ -831,6 +871,10 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-B":
+                    if (TriadeWarningB.activeSelf == false)
+                    {
+                        TriadeWarningB.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundB.color = Color.yellow;
@@ -845,6 +889,10 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-C":
+                    if (TriadeWarningC.activeSelf == false)
+                    {
+                        TriadeWarningC.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundC.color = Color.yellow;
@@ -873,6 +921,10 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
+                    if (TriadeWarningA.activeSelf == false)
+                    {
+                        TriadeWarningA.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundA.color = Color.red;
@@ -888,6 +940,10 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-B":
+                    if (TriadeWarningB.activeSelf == false)
+                    {
+                        TriadeWarningB.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundB.color = Color.red;
@@ -903,6 +959,10 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-C":
+                    if (TriadeWarningC.activeSelf == false)
+                    {
+                        TriadeWarningC.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundC.color = Color.red;
@@ -932,6 +992,10 @@ public class MenuScript : MonoBehaviour
             switch (hit.name)
             {
                 case "patient-A":
+                    if (TriadeWarningA.activeSelf == false)
+                    {
+                        TriadeWarningA.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundA.color = Color.black;
@@ -946,6 +1010,10 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-B":
+                    if (TriadeWarningB.activeSelf == false)
+                    {
+                        TriadeWarningB.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundB.color = Color.black;
@@ -960,6 +1028,10 @@ public class MenuScript : MonoBehaviour
                     break;
 
                 case "patient-C":
+                    if (TriadeWarningC.activeSelf == false)
+                    {
+                        TriadeWarningC.SetActive(true);
+                    }
                     if (hit.GetComponent<Patient>().analysedE == true)
                     {
                         TriadeBackGroundC.color = Color.black;
